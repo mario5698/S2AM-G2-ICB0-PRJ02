@@ -16,5 +16,10 @@ namespace SecureCore
         {
             InitializeComponent();
         }
+
+        void Exit(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
