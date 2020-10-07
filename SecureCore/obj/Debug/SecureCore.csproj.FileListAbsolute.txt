@@ -8,3 +8,13 @@ C:\Users\Snake\source\repos\SecureCore\obj\Debug\SecureCore.csproj.GenerateResou
 C:\Users\Snake\source\repos\SecureCore\obj\Debug\SecureCore.csproj.CoreCompileInputs.cache
 C:\Users\Snake\source\repos\SecureCore\obj\Debug\SecureCore.exe
 C:\Users\Snake\source\repos\SecureCore\obj\Debug\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe.config
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Login.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
