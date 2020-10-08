@@ -27,7 +27,7 @@ namespace SecureCore
                 txtPassword.Text == "admin")
             {
                 Menu obj = new Menu();
-                this.Hide();
+                this.Close();
                 obj.Show();
             }
             else

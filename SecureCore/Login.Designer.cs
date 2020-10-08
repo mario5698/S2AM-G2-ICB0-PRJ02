@@ -62,11 +62,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(46, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 46);
+            this.label1.Size = new System.Drawing.Size(256, 46);
             this.label1.TabIndex = 8;
             this.label1.Text = "Secure Core";
             // 
@@ -103,22 +103,22 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.ForeColor = System.Drawing.Color.White;
+            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.ForeColor = System.Drawing.Color.Black;
             this.lblPass.Location = new System.Drawing.Point(30, 217);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(75, 31);
+            this.lblPass.Size = new System.Drawing.Size(79, 31);
             this.lblPass.TabIndex = 5;
             this.lblPass.Text = "Pass";
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Black;
             this.lblUser.Location = new System.Drawing.Point(30, 169);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(72, 31);
+            this.lblUser.Size = new System.Drawing.Size(76, 31);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "User";
             // 
@@ -166,6 +166,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

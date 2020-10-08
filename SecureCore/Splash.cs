@@ -23,9 +23,9 @@ namespace SecureCore
             else
             {
                 timer.Enabled = false;
-                Menu menu = new Menu();
-                menu.Show();
+                Login menu = new Login();
                 this.Hide();
+                menu.Show();
             }
             
         }
