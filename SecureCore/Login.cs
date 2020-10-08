@@ -17,9 +17,24 @@ namespace SecureCore
             InitializeComponent();
         }
 
+        void LogIn(object sender, EventArgs e)
+        {
+            String message;
+            if (txtUsername.Text == "admin" &&
+                txtPassword.Text == "admin")
+            {
+                message = "OK";
+            }
+            else
+            {
+                message = "NOT OK";
+            }
+            MessageBox.Show(message);
+        }
+
         void Exit(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Application.Exit();
         }
     }
 }
