@@ -18,3 +18,4 @@ C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.csp
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.csproj.CoreCompileInputs.cache
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Splash.resources

@@ -16,5 +16,18 @@ namespace SecureCore
         {
             InitializeComponent();
         }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (progressBar.Value < progressBar.Maximum) progressBar.Value += 10;
+            else
+            {
+                timer.Enabled = false;
+                Menu menu = new Menu();
+                menu.Show();
+                this.Hide();
+            }
+            
+        }
     }
 }
