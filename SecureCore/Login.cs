@@ -19,17 +19,24 @@ namespace SecureCore
 
         void LogIn(object sender, EventArgs e)
         {
-            String message;
+            String message, titulo_Msgbox;
+            message = ("Usuario o Contraseña incorrecta");
+            titulo_Msgbox ="ERROR";
+            MessageBoxButtons botones;
             if (txtUsername.Text == "admin" &&
                 txtPassword.Text == "admin")
             {
-                message = "OK";
+                Menu obj = new Menu();
+                this.Hide();
+                obj.Show();
             }
             else
             {
-                message = "NOT OK";
+
+                botones = MessageBoxButtons.YesNo;
+                MessageBox.Show(message, titulo_Msgbox, botones);
             }
-            MessageBox.Show(message);
+          
         }
 
         void Exit(object sender, EventArgs e)
