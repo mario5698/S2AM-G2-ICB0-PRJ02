@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.SuspendLayout();
-            // 
-=======
+            
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -145,18 +143,14 @@
             this.panel5.TabIndex = 2;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
->>>>>>> f71af301f1e08271ae13934ff2047da8a601ccfa
-            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Menu";
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-=======
             this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -166,7 +160,6 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
->>>>>>> f71af301f1e08271ae13934ff2047da8a601ccfa
             this.ResumeLayout(false);
 
         }
