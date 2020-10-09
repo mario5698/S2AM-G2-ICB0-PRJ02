@@ -108,7 +108,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:SecureCore/SecureCore.csproj
     <None Include="sounds\alert.wav" />
+=======
+    <None Include="Resources\Chart_D-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jedi-Emblem_Olympic_Blue.jpg" />
+>>>>>>> f71af301f1e08271ae13934ff2047da8a601ccfa:SecureCore/maps.csproj
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
