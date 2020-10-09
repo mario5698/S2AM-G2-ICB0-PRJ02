@@ -82,9 +82,29 @@ namespace SecureCore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fade {
+            get {
+                object obj = ResourceManager.GetObject("fade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jedi_Emblem_Olympic_Blue {
             get {
                 object obj = ResourceManager.GetObject("Jedi-Emblem_Olympic_Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_black {
+            get {
+                object obj = ResourceManager.GetObject("logo_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -119,5 +119,11 @@
   <ItemGroup>
     <None Include="sounds\alert.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_black.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
