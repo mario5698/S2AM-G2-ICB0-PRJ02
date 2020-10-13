@@ -15,7 +15,7 @@ namespace SecureCore
     {
 
         bool esconder=false;
-        int maxsize=200, minsize=0;
+        int maxsize=200, minsize=0,RigthPanelsize=600;
         public Menu()
         {
             InitializeComponent();
@@ -37,19 +37,19 @@ namespace SecureCore
 
             if (esconder != true)
             {
-
                 for (int i =maxsize;i>=minsize;i--)
                 {
-                    panel4.Size = new Size(i, panel4.Height);
+                    pnl_left.Size = new Size(i, pnl_left.Height);
+            
                 }
-                //panel4.Size = new Size(0, panel4.Height);
                 esconder = true;
             }
             else
             {
                 for (int i = minsize; i <= maxsize; i++)
                 {
-                    panel4.Size = new Size(i, panel4.Height);
+                    pnl_left.Size = new Size(i, pnl_left.Height);
+                    
                 }
                 esconder = false;
             }
@@ -61,22 +61,33 @@ namespace SecureCore
         private void btn_Opt2_Click(object sender, EventArgs e)
         {
 
+            MaintenancePage();
         }
 
         private void btn_Opt1_Click(object sender, EventArgs e)
         {
 
             Reto1 myForm = new Reto1();
-            myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            panel5.Controls.Add(myForm);
-            myForm.Show();
+            ShowFroms(myForm);
 
         }
 
+        private void ShowFroms( Form myForm ) 
+        {
+            pnl_rigth.Controls.Clear();
+            myForm.TopLevel = false;
+            myForm.AutoScroll = false;
+            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+            pnl_rigth.Controls.Add(myForm);
+            myForm.Show();
+
+
+        }
+
+
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-          //  panel5.BackgroundImageLayout = ImageLayout.Stretch;
+  
 
         }
 
@@ -84,5 +95,14 @@ namespace SecureCore
         {
 
         }
+
+        private void MaintenancePage()
+        {
+            Mantenimiento myForm = new Mantenimiento();
+            ShowFroms(myForm);
+
+
+        }
+
     }
 }

@@ -25,3 +25,4 @@ C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.Co
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe.config
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Mantenimiento.resources
