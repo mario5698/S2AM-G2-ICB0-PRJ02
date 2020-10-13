@@ -29,8 +29,8 @@ namespace SecureCore
             if (txtUsername.Text == "admin" &&
                 txtPassword.Text == "admin")
             {
-                Menu obj = new Menu();
-                this.Close();
+                Splash obj = new Splash();
+                this.Hide();
                 obj.Show();
             }
             else

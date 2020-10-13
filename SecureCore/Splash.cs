@@ -23,7 +23,7 @@ namespace SecureCore
             else
             {
                 timer.Enabled = false;
-                Login menu = new Login();
+                Menu menu = new Menu();
                 this.Hide();
                 menu.Show();
             }
