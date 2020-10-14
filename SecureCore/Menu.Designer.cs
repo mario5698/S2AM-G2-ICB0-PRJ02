@@ -66,7 +66,7 @@
             // 
             // pnl_left
             // 
-            this.pnl_left.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             this.pnl_left.Controls.Add(this.btn_Opt4);
             this.pnl_left.Controls.Add(this.btn_Opt3);
             this.pnl_left.Controls.Add(this.btn_Opt2);
@@ -80,49 +80,62 @@
             // 
             // btn_Opt4
             // 
+            this.btn_Opt4.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt4.ForeColor = System.Drawing.Color.Red;
             this.btn_Opt4.Location = new System.Drawing.Point(0, 237);
             this.btn_Opt4.Name = "btn_Opt4";
             this.btn_Opt4.Size = new System.Drawing.Size(200, 79);
             this.btn_Opt4.TabIndex = 3;
             this.btn_Opt4.Text = "button4";
-            this.btn_Opt4.UseVisualStyleBackColor = true;
+            this.btn_Opt4.UseVisualStyleBackColor = false;
             // 
             // btn_Opt3
             // 
+            this.btn_Opt3.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt3.ForeColor = System.Drawing.Color.Red;
             this.btn_Opt3.Location = new System.Drawing.Point(0, 158);
             this.btn_Opt3.Name = "btn_Opt3";
             this.btn_Opt3.Size = new System.Drawing.Size(200, 79);
             this.btn_Opt3.TabIndex = 2;
             this.btn_Opt3.Text = "button3";
-            this.btn_Opt3.UseVisualStyleBackColor = true;
+            this.btn_Opt3.UseVisualStyleBackColor = false;
             this.btn_Opt3.Click += new System.EventHandler(this.btn_Opt3_Click);
             // 
             // btn_Opt2
             // 
+            this.btn_Opt2.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt2.ForeColor = System.Drawing.Color.Red;
             this.btn_Opt2.Location = new System.Drawing.Point(0, 79);
             this.btn_Opt2.Name = "btn_Opt2";
             this.btn_Opt2.Size = new System.Drawing.Size(200, 79);
             this.btn_Opt2.TabIndex = 1;
             this.btn_Opt2.Text = "button2";
-            this.btn_Opt2.UseVisualStyleBackColor = true;
+            this.btn_Opt2.UseVisualStyleBackColor = false;
             this.btn_Opt2.Click += new System.EventHandler(this.btn_Opt2_Click);
             // 
             // btn_Opt1
             // 
+            this.btn_Opt1.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt1.ForeColor = System.Drawing.Color.Red;
             this.btn_Opt1.Location = new System.Drawing.Point(0, 0);
             this.btn_Opt1.Name = "btn_Opt1";
             this.btn_Opt1.Size = new System.Drawing.Size(200, 79);
             this.btn_Opt1.TabIndex = 0;
             this.btn_Opt1.Text = "button1";
-            this.btn_Opt1.UseVisualStyleBackColor = true;
+            this.btn_Opt1.UseVisualStyleBackColor = false;
             this.btn_Opt1.Click += new System.EventHandler(this.btn_Opt1_Click);
             // 
             // pnl_top
             // 
+            this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.pnl_top.Controls.Add(this.btn_HideLeftPanel);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
@@ -146,7 +159,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.BackgroundImage = global::SecureCore.Properties.Resources.fade;
             this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.Black;

@@ -14,11 +14,13 @@ namespace SecureCore
     public partial class Menu : Form
     {
 
-        bool esconder=false;
-        int maxsize=200, minsize=0,RigthPanelsize=600;
+        bool esconder = false;
+        int maxsize = 200, minsize = 0, extencion = 0;
+        Form InUse;
         public Menu()
         {
             InitializeComponent();
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -28,19 +30,18 @@ namespace SecureCore
 
         private void panel4_Paint_1(object sender, PaintEventArgs e)
         {
-           
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
 
-
             if (esconder != true)
             {
-                for (int i =maxsize;i>=minsize;i--)
+                for (int i = maxsize; i >= minsize; i--)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-            
+                    InUse.Size = new Size(pnl_rigth.Width - minsize, pnl_rigth.Height);
                 }
                 esconder = true;
             }
@@ -49,14 +50,12 @@ namespace SecureCore
                 for (int i = minsize; i <= maxsize; i++)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                    
+                     InUse.Size =new Size(pnl_rigth.Width, pnl_rigth.Height);
                 }
                 esconder = false;
             }
-
-           
-
         }
+
 
         private void btn_Opt2_Click(object sender, EventArgs e)
         {
@@ -69,7 +68,7 @@ namespace SecureCore
 
             Reto1 myForm = new Reto1();
             ShowFroms(myForm);
-
+            InUse = myForm;
         }
 
         private void ShowFroms( Form myForm ) 
@@ -77,7 +76,7 @@ namespace SecureCore
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
-            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+           myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
             pnl_rigth.Controls.Add(myForm);
             myForm.Show();
 
@@ -91,6 +90,10 @@ namespace SecureCore
 
         }
 
+        private void pnl_left_Resize(object sender, EventArgs e)
+        {
+        }
+
         private void btn_Opt3_Click(object sender, EventArgs e)
         {
 
@@ -100,7 +103,7 @@ namespace SecureCore
         {
             Mantenimiento myForm = new Mantenimiento();
             ShowFroms(myForm);
-
+            InUse = myForm;
 
         }
 
