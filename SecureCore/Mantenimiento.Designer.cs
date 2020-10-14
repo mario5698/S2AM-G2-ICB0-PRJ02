@@ -54,7 +54,7 @@
             this.lblText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.ForeColor = System.Drawing.Color.White;
+            this.lblText.ForeColor = System.Drawing.Color.Red;
             this.lblText.Location = new System.Drawing.Point(0, 138);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(350, 312);
@@ -67,7 +67,7 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.ForeColor = System.Drawing.Color.DarkRed;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(350, 138);
