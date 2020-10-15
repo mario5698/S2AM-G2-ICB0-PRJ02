@@ -18,14 +18,24 @@ namespace SecureCore
         int Max_Size = 200, Min_Size = 0;
         // Esta variable guardar el formulario en uso y despues poder cambiar el tamaño de este cuando el panel izquierdo se esconda
         Form InUse;
-        public Menu()
+        public Menu(String name_user)
         {
+
             InitializeComponent();
+            Welcome myForm = new Welcome(name_user);
+            ShowFroms(myForm);
+            InUse = myForm;
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            if (Hide_Panel != true)
+            Hide_panel_left(Hide_Panel);
+         
+        }
+
+        private void Hide_panel_left(bool  hide_panel) 
+        {
+            if (hide_panel != true)
             {
                 for (int i = Max_Size; i >= Min_Size; i--)
                 {
@@ -39,7 +49,7 @@ namespace SecureCore
                 for (int i = Min_Size; i <= Max_Size; i++)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                     InUse.Size =new Size(pnl_rigth.Width, pnl_rigth.Height);
+                    InUse.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
                 }
                 Hide_Panel = false;
             }
@@ -83,6 +93,11 @@ namespace SecureCore
         private void btn_Opt3_Click(object sender, EventArgs e)
         {
             MaintenancePage();
+        }
+
+        private void pnl_rigth_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void MaintenancePage()

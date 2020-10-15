@@ -29,7 +29,7 @@ namespace SecureCore
             if (txtUsername.Text == "admin" &&
                 txtPassword.Text == "admin")
             {
-                Menu obj = new Menu();
+                Menu obj = new Menu(txtUsername.Text);
                 this.Close();
                 obj.Show();
             }
@@ -74,5 +74,7 @@ namespace SecureCore
         {
             txtPassword.PasswordChar = '\0';
         }
+
+       
     }
 }

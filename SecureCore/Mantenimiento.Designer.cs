@@ -32,9 +32,9 @@
             this.panelLogin = new System.Windows.Forms.Panel();
             this.lblText = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptb_Logo = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLogin
@@ -75,19 +75,19 @@
             this.lblTitle.Text = "Mantenimiento";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // ptb_Logo
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ptb_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(450, 450);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.ptb_Logo.BackColor = System.Drawing.Color.Transparent;
+            this.ptb_Logo.Image = ((System.Drawing.Image)(resources.GetObject("ptb_Logo.Image")));
+            this.ptb_Logo.Location = new System.Drawing.Point(0, 0);
+            this.ptb_Logo.Name = "ptb_Logo";
+            this.ptb_Logo.Size = new System.Drawing.Size(450, 450);
+            this.ptb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Logo.TabIndex = 5;
+            this.ptb_Logo.TabStop = false;
             // 
             // Mantenimiento
             // 
@@ -96,13 +96,13 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelLogin);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptb_Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento";
             this.panelLogin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,7 +111,7 @@
 
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptb_Logo;
         private System.Windows.Forms.Label lblText;
     }
 }
