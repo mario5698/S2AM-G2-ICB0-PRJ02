@@ -28,56 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_HideLeftPanel = new System.Windows.Forms.Button();
-            this.btn_Opt1 = new System.Windows.Forms.Button();
-            this.btn_Opt2 = new System.Windows.Forms.Button();
-            this.btn_Opt3 = new System.Windows.Forms.Button();
+            this.pnl_rigth = new System.Windows.Forms.Panel();
+            this.pnl_left = new System.Windows.Forms.Panel();
             this.btn_Opt4 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_Opt3 = new System.Windows.Forms.Button();
+            this.btn_Opt2 = new System.Windows.Forms.Button();
+            this.btn_Opt1 = new System.Windows.Forms.Button();
+            this.pnl_top = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_HideLeftPanel = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnl_left.SuspendLayout();
+            this.pnl_top.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.pnl_rigth);
+            this.panel2.Controls.Add(this.pnl_left);
+            this.panel2.Controls.Add(this.pnl_top);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(784, 411);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel1
+            // pnl_rigth
             // 
-            this.panel1.Controls.Add(this.btn_HideLeftPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 29);
-            this.panel1.TabIndex = 0;
+            this.pnl_rigth.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_rigth.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_rigth.Location = new System.Drawing.Point(200, 29);
+            this.pnl_rigth.Name = "pnl_rigth";
+            this.pnl_rigth.Size = new System.Drawing.Size(584, 382);
+            this.pnl_rigth.TabIndex = 2;
+            this.pnl_rigth.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_rigth_Paint);
             // 
-            // panel4
+            // pnl_left
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.btn_Opt4);
-            this.panel4.Controls.Add(this.btn_Opt3);
-            this.panel4.Controls.Add(this.btn_Opt2);
-            this.panel4.Controls.Add(this.btn_Opt1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 29);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 382);
-            this.panel4.TabIndex = 0;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
+            this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.pnl_left.Controls.Add(this.btn_Opt4);
+            this.pnl_left.Controls.Add(this.btn_Opt3);
+            this.pnl_left.Controls.Add(this.btn_Opt2);
+            this.pnl_left.Controls.Add(this.btn_Opt1);
+            this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_left.Location = new System.Drawing.Point(0, 29);
+            this.pnl_left.Name = "pnl_left";
+            this.pnl_left.Size = new System.Drawing.Size(200, 382);
+            this.pnl_left.TabIndex = 0;
+            // 
+            // btn_Opt4
+            // 
+            this.btn_Opt4.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt4.ForeColor = System.Drawing.Color.Red;
+            this.btn_Opt4.Location = new System.Drawing.Point(0, 237);
+            this.btn_Opt4.Name = "btn_Opt4";
+            this.btn_Opt4.Size = new System.Drawing.Size(200, 79);
+            this.btn_Opt4.TabIndex = 3;
+            this.btn_Opt4.Text = "button4";
+            this.btn_Opt4.UseVisualStyleBackColor = false;
+            this.btn_Opt4.Click += new System.EventHandler(this.btn_Opt4_Click);
+            // 
+            // btn_Opt3
+            // 
+            this.btn_Opt3.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt3.ForeColor = System.Drawing.Color.Red;
+            this.btn_Opt3.Location = new System.Drawing.Point(0, 158);
+            this.btn_Opt3.Name = "btn_Opt3";
+            this.btn_Opt3.Size = new System.Drawing.Size(200, 79);
+            this.btn_Opt3.TabIndex = 2;
+            this.btn_Opt3.Text = "button3";
+            this.btn_Opt3.UseVisualStyleBackColor = false;
+            this.btn_Opt3.Click += new System.EventHandler(this.btn_Opt3_Click);
+            // 
+            // btn_Opt2
+            // 
+            this.btn_Opt2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt2.ForeColor = System.Drawing.Color.Red;
+            this.btn_Opt2.Location = new System.Drawing.Point(0, 79);
+            this.btn_Opt2.Name = "btn_Opt2";
+            this.btn_Opt2.Size = new System.Drawing.Size(200, 79);
+            this.btn_Opt2.TabIndex = 1;
+            this.btn_Opt2.Text = "button2";
+            this.btn_Opt2.UseVisualStyleBackColor = false;
+            this.btn_Opt2.Click += new System.EventHandler(this.btn_Opt2_Click);
+            // 
+            // btn_Opt1
+            // 
+            this.btn_Opt1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Opt1.ForeColor = System.Drawing.Color.Red;
+            this.btn_Opt1.Location = new System.Drawing.Point(0, 0);
+            this.btn_Opt1.Name = "btn_Opt1";
+            this.btn_Opt1.Size = new System.Drawing.Size(200, 79);
+            this.btn_Opt1.TabIndex = 0;
+            this.btn_Opt1.Text = "button1";
+            this.btn_Opt1.UseVisualStyleBackColor = false;
+            this.btn_Opt1.Click += new System.EventHandler(this.btn_Opt1_Click);
+            // 
+            // pnl_top
+            // 
+            this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.pnl_top.Controls.Add(this.button1);
+            this.pnl_top.Controls.Add(this.btn_HideLeftPanel);
+            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_top.Location = new System.Drawing.Point(0, 0);
+            this.pnl_top.Name = "pnl_top";
+            this.pnl_top.Size = new System.Drawing.Size(784, 29);
+            this.pnl_top.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(737, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_HideLeftPanel
             // 
@@ -90,89 +165,35 @@
             this.btn_HideLeftPanel.UseVisualStyleBackColor = true;
             this.btn_HideLeftPanel.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // btn_Opt1
-            // 
-            this.btn_Opt1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Opt1.Location = new System.Drawing.Point(0, 0);
-            this.btn_Opt1.Name = "btn_Opt1";
-            this.btn_Opt1.Size = new System.Drawing.Size(200, 79);
-            this.btn_Opt1.TabIndex = 0;
-            this.btn_Opt1.Text = "button1";
-            this.btn_Opt1.UseVisualStyleBackColor = true;
-            this.btn_Opt1.Click += new System.EventHandler(this.btn_Opt1_Click);
-            // 
-            // btn_Opt2
-            // 
-            this.btn_Opt2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Opt2.Location = new System.Drawing.Point(0, 79);
-            this.btn_Opt2.Name = "btn_Opt2";
-            this.btn_Opt2.Size = new System.Drawing.Size(200, 79);
-            this.btn_Opt2.TabIndex = 1;
-            this.btn_Opt2.Text = "button2";
-            this.btn_Opt2.UseVisualStyleBackColor = true;
-            this.btn_Opt2.Click += new System.EventHandler(this.btn_Opt2_Click);
-            // 
-            // btn_Opt3
-            // 
-            this.btn_Opt3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Opt3.Location = new System.Drawing.Point(0, 158);
-            this.btn_Opt3.Name = "btn_Opt3";
-            this.btn_Opt3.Size = new System.Drawing.Size(200, 79);
-            this.btn_Opt3.TabIndex = 2;
-            this.btn_Opt3.Text = "button3";
-            this.btn_Opt3.UseVisualStyleBackColor = true;
-            this.btn_Opt3.Click += new System.EventHandler(this.btn_Opt3_Click);
-            // 
-            // btn_Opt4
-            // 
-            this.btn_Opt4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Opt4.Location = new System.Drawing.Point(0, 237);
-            this.btn_Opt4.Name = "btn_Opt4";
-            this.btn_Opt4.Size = new System.Drawing.Size(200, 79);
-            this.btn_Opt4.TabIndex = 3;
-            this.btn_Opt4.Text = "button4";
-            this.btn_Opt4.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.DimGray;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(200, 29);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(584, 382);
-            this.panel5.TabIndex = 2;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Menu";
-            this.Text = "Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.pnl_left.ResumeLayout(false);
+            this.pnl_top.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_rigth;
+        private System.Windows.Forms.Panel pnl_left;
+        private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Button btn_HideLeftPanel;
         private System.Windows.Forms.Button btn_Opt4;
         private System.Windows.Forms.Button btn_Opt3;
         private System.Windows.Forms.Button btn_Opt2;
         private System.Windows.Forms.Button btn_Opt1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -10,13 +10,22 @@ using System.Windows.Forms;
 
 namespace SecureCore
 {
-    public partial class Mantenimiento : Form
+    public partial class Welcome : Form
     {
-        public Mantenimiento()
+        public Welcome(String nombre)
         {
             InitializeComponent();
+            Logged_User_Name.Text = "Welcome "+nombre;
         }
 
-      
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

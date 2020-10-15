@@ -79,7 +79,6 @@ namespace SecureCore
 
         private void txtBestreta_Validating(object sender, CancelEventArgs e)
         {
-
            if (txtBestreta.Text != "") {
                 if (int.Parse(txtBestreta.Text) > 120)
                 {
@@ -87,10 +86,6 @@ namespace SecureCore
                     txtBestreta.BackColor = Color.Red;
                 }
             }
-            
-           
-
-
         }
     }
 }

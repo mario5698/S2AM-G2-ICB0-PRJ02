@@ -13,75 +13,98 @@ namespace SecureCore
 {
     public partial class Menu : Form
     {
-
-        bool esconder=false;
-        int maxsize=200, minsize=0;
-        public Menu()
+        // Declaracion de variables 
+        bool Hide_Panel = false;
+        int Max_Size = 200, Min_Size = 0;
+        // Esta variable guardar el formulario en uso y despues poder cambiar el tamaño de este cuando el panel izquierdo se esconda
+        Form InUse;
+        public Menu(String name_user)
         {
+
             InitializeComponent();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint_1(object sender, PaintEventArgs e)
-        {
-           
+            Welcome myForm = new Welcome(name_user);
+            ShowFroms(myForm);
+            InUse = myForm;
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            Hide_panel_left(Hide_Panel);
+         
+        }
 
-
-            if (esconder != true)
+        private void Hide_panel_left(bool  hide_panel) 
+        {
+            if (hide_panel != true)
             {
-
-                for (int i =maxsize;i>=minsize;i--)
+                for (int i = Max_Size; i >= Min_Size; i--)
                 {
-                    panel4.Size = new Size(i, panel4.Height);
+                    pnl_left.Size = new Size(i, pnl_left.Height);
+                    InUse.Size = new Size(pnl_rigth.Width - Min_Size, pnl_rigth.Height);
                 }
-                //panel4.Size = new Size(0, panel4.Height);
-                esconder = true;
+                Hide_Panel = true;
             }
             else
             {
-                for (int i = minsize; i <= maxsize; i++)
+                for (int i = Min_Size; i <= Max_Size; i++)
                 {
-                    panel4.Size = new Size(i, panel4.Height);
+                    pnl_left.Size = new Size(i, pnl_left.Height);
+                    InUse.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
                 }
-                esconder = false;
+                Hide_Panel = false;
             }
-
-           
-
-        }
-
-        private void btn_Opt2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_Opt1_Click(object sender, EventArgs e)
         {
-
             Reto1 myForm = new Reto1();
+            ShowFroms(myForm);
+            InUse = myForm;
+        }
+
+        private void ShowFroms( Form myForm ) 
+        {
+            pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
-            myForm.AutoScroll = true;
-            panel5.Controls.Add(myForm);
+            myForm.AutoScroll = false;
+           myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+            pnl_rigth.Controls.Add(myForm);
             myForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-          //  panel5.BackgroundImageLayout = ImageLayout.Stretch;
 
+        private void btn_Opt2_Click(object sender, EventArgs e)
+        {
+
+            MaintenancePage();
+        }
+
+        private void btn_Opt4_Click(object sender, EventArgs e)
+        {
+            MaintenancePage();
         }
 
         private void btn_Opt3_Click(object sender, EventArgs e)
         {
+            MaintenancePage();
+        }
+
+        private void pnl_rigth_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MaintenancePage()
+        {
+            Mantenimiento myForm = new Mantenimiento();
+            ShowFroms(myForm);
+            InUse = myForm;
 
         }
     }
