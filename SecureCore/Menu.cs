@@ -13,59 +13,40 @@ namespace SecureCore
 {
     public partial class Menu : Form
     {
-
-        bool esconder = false;
-        int maxsize = 200, minsize = 0, extencion = 0;
+        // Declaracion de variables 
+        bool Hide_Panel = false;
+        int Max_Size = 200, Min_Size = 0;
+        // Esta variable guardar el formulario en uso y despues poder cambiar el tamaño de este cuando el panel izquierdo se esconda
         Form InUse;
         public Menu()
         {
             InitializeComponent();
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-
-            if (esconder != true)
+            if (Hide_Panel != true)
             {
-                for (int i = maxsize; i >= minsize; i--)
+                for (int i = Max_Size; i >= Min_Size; i--)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                    InUse.Size = new Size(pnl_rigth.Width - minsize, pnl_rigth.Height);
+                    InUse.Size = new Size(pnl_rigth.Width - Min_Size, pnl_rigth.Height);
                 }
-                esconder = true;
+                Hide_Panel = true;
             }
             else
             {
-                for (int i = minsize; i <= maxsize; i++)
+                for (int i = Min_Size; i <= Max_Size; i++)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
                      InUse.Size =new Size(pnl_rigth.Width, pnl_rigth.Height);
                 }
-                esconder = false;
+                Hide_Panel = false;
             }
-        }
-
-
-        private void btn_Opt2_Click(object sender, EventArgs e)
-        {
-
-            MaintenancePage();
         }
 
         private void btn_Opt1_Click(object sender, EventArgs e)
         {
-
             Reto1 myForm = new Reto1();
             ShowFroms(myForm);
             InUse = myForm;
@@ -79,24 +60,29 @@ namespace SecureCore
            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
             pnl_rigth.Controls.Add(myForm);
             myForm.Show();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
 
         }
 
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void btn_Opt2_Click(object sender, EventArgs e)
         {
-  
 
+            MaintenancePage();
         }
 
-        private void pnl_left_Resize(object sender, EventArgs e)
+        private void btn_Opt4_Click(object sender, EventArgs e)
         {
+            MaintenancePage();
         }
 
         private void btn_Opt3_Click(object sender, EventArgs e)
         {
-
+            MaintenancePage();
         }
 
         private void MaintenancePage()
@@ -106,6 +92,5 @@ namespace SecureCore
             InUse = myForm;
 
         }
-
     }
 }

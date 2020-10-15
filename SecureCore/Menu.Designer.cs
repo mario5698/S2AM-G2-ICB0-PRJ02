@@ -37,6 +37,7 @@
             this.btn_Opt1 = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.btn_HideLeftPanel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnl_left.SuspendLayout();
             this.pnl_top.SuspendLayout();
@@ -52,7 +53,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(784, 411);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pnl_rigth
             // 
@@ -62,7 +62,6 @@
             this.pnl_rigth.Name = "pnl_rigth";
             this.pnl_rigth.Size = new System.Drawing.Size(584, 382);
             this.pnl_rigth.TabIndex = 2;
-            this.pnl_rigth.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // pnl_left
             // 
@@ -76,7 +75,6 @@
             this.pnl_left.Name = "pnl_left";
             this.pnl_left.Size = new System.Drawing.Size(200, 382);
             this.pnl_left.TabIndex = 0;
-            this.pnl_left.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
             // btn_Opt4
             // 
@@ -90,6 +88,7 @@
             this.btn_Opt4.TabIndex = 3;
             this.btn_Opt4.Text = "button4";
             this.btn_Opt4.UseVisualStyleBackColor = false;
+            this.btn_Opt4.Click += new System.EventHandler(this.btn_Opt4_Click);
             // 
             // btn_Opt3
             // 
@@ -136,6 +135,7 @@
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.pnl_top.Controls.Add(this.button1);
             this.pnl_top.Controls.Add(this.btn_HideLeftPanel);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
@@ -153,6 +153,16 @@
             this.btn_HideLeftPanel.Text = "≡";
             this.btn_HideLeftPanel.UseVisualStyleBackColor = true;
             this.btn_HideLeftPanel.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(737, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
@@ -183,5 +193,6 @@
         private System.Windows.Forms.Button btn_Opt3;
         private System.Windows.Forms.Button btn_Opt2;
         private System.Windows.Forms.Button btn_Opt1;
+        private System.Windows.Forms.Button button1;
     }
 }
