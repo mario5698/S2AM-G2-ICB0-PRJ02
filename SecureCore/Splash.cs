@@ -12,9 +12,12 @@ namespace SecureCore
 {
     public partial class Splash : Form
     {
-        public Splash()
+        String user;
+
+        public Splash(String user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -23,7 +26,7 @@ namespace SecureCore
             else
             {
                 timer.Enabled = false;
-                Menu menu = new Menu();
+                Menu menu = new Menu(user);
                 this.Hide();
                 menu.Show();
             }

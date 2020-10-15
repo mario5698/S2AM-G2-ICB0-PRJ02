@@ -18,13 +18,14 @@ namespace SecureCore
         int Max_Size = 200, Min_Size = 0;
         // Esta variable guardar el formulario en uso y despues poder cambiar el tamaño de este cuando el panel izquierdo se esconda
         Form InUse;
-        public Menu(String name_user)
+        public Menu(String user)
         {
 
             InitializeComponent();
-            Welcome myForm = new Welcome(name_user);
+            Welcome myForm = new Welcome(user);
             ShowFroms(myForm);
             InUse = myForm;
+            lblUser.Text = user;
         }
 
         private void button1_Click_2(object sender, EventArgs e)

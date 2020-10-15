@@ -29,7 +29,7 @@ namespace SecureCore
             if (txtUsername.Text == "admin" &&
                 txtPassword.Text == "admin")
             {
-                Splash obj = new Splash();
+                Splash obj = new Splash(txtUsername.Text);
                 this.Hide();
                 obj.Show();
             }

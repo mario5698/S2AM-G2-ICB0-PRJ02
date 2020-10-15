@@ -38,6 +38,7 @@
             this.pnl_top = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_HideLeftPanel = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pnl_left.SuspendLayout();
             this.pnl_top.SuspendLayout();
@@ -136,6 +137,7 @@
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.pnl_top.Controls.Add(this.lblUser);
             this.pnl_top.Controls.Add(this.button1);
             this.pnl_top.Controls.Add(this.btn_HideLeftPanel);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -165,6 +167,17 @@
             this.btn_HideLeftPanel.UseVisualStyleBackColor = true;
             this.btn_HideLeftPanel.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Red;
+            this.lblUser.Location = new System.Drawing.Point(49, 6);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(36, 17);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "user";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +193,7 @@
             this.panel2.ResumeLayout(false);
             this.pnl_left.ResumeLayout(false);
             this.pnl_top.ResumeLayout(false);
+            this.pnl_top.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Button btn_Opt2;
         private System.Windows.Forms.Button btn_Opt1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblUser;
     }
 }
