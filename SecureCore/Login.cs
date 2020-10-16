@@ -8,6 +8,8 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace SecureCore
 {
@@ -35,11 +37,14 @@ namespace SecureCore
             }
             else
             {
+                VolMax(4);
                 System.IO.Stream str = Properties.Resources.alert;
                 SoundPlayer snd = new System.Media.SoundPlayer(str);
+                
                 snd.Play();
                 botones = MessageBoxButtons.OK;
                 MessageBox.Show(message, titulo_Msgbox, botones);
+                VolMin();
             }
         }
 
@@ -73,6 +78,30 @@ namespace SecureCore
         private void timerPassword_Tick(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = '\0';
+        }
+
+        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
+        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        private const int WM_APPCOMMAND = 0x319;
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
+            IntPtr wParam, IntPtr lParam);
+
+        private void VolMax(int up) { for (int i = 0; i < up; i++) VolUp(); }
+
+        private void VolMin()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+               SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle, (IntPtr)APPCOMMAND_VOLUME_DOWN);
+            }
+        }
+
+        private void VolUp()
+        {
+            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle, (IntPtr)APPCOMMAND_VOLUME_UP);
         }
     }
 }

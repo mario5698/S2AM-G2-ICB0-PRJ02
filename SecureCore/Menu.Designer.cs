@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_rigth = new System.Windows.Forms.Panel();
             this.pnl_left = new System.Windows.Forms.Panel();
@@ -164,7 +163,9 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = global::SecureCore.Properties.Resources.exit;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,7 +178,7 @@
             // 
             // btn_HideLeftPanel
             // 
-            this.btn_HideLeftPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_HideLeftPanel.BackgroundImage")));
+            this.btn_HideLeftPanel.BackgroundImage = global::SecureCore.Properties.Resources.menu;
             this.btn_HideLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_HideLeftPanel.FlatAppearance.BorderSize = 0;
             this.btn_HideLeftPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -201,6 +202,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.pnl_left.ResumeLayout(false);
             this.pnl_top.ResumeLayout(false);
