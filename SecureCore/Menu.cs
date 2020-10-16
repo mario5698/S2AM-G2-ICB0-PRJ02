@@ -24,7 +24,6 @@ namespace SecureCore
             InitializeComponent();
             Welcome myForm = new Welcome(name_user);
             ShowFroms(myForm);
-            InUse = myForm;
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -59,11 +58,11 @@ namespace SecureCore
         {
             Reto1 myForm = new Reto1();
             ShowFroms(myForm);
-            InUse = myForm;
         }
 
         private void ShowFroms( Form myForm ) 
         {
+            InUse = myForm;
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
@@ -92,7 +91,8 @@ namespace SecureCore
 
         private void btn_Opt3_Click(object sender, EventArgs e)
         {
-            MaintenancePage();
+            TestForm myForm = new TestForm();
+            ShowFroms(myForm);
         }
 
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)
@@ -104,7 +104,6 @@ namespace SecureCore
         {
             Mantenimiento myForm = new Mantenimiento();
             ShowFroms(myForm);
-            InUse = myForm;
 
         }
     }
