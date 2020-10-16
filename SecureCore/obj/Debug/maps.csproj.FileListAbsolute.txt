@@ -33,3 +33,19 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.TestF
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Welcome.resources
 >>>>>>> 37e8fa21b951e9a268af4cdde698423f6d255b2f
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe.config
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.pdb
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Login.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Mantenimiento.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Menu.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Properties.Resources.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Reto1.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Splash.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Welcome.resources
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.GenerateResource.cache
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
+>>>>>>> 4e393a8240ac41b53f2cef97b928d193b30ee218
