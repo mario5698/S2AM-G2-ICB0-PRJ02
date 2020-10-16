@@ -13,7 +13,7 @@ namespace SecureCore
     public partial class Splash : Form
     {
         String user;
-
+        int contador = 1;
         public Splash(String user)
         {
             InitializeComponent();
@@ -22,15 +22,22 @@ namespace SecureCore
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (progressBar.Value < progressBar.Maximum) progressBar.Value += 10;
-            else
+            contador += 1;
+            progressBar.Increment(4);
+            if (contador == 31)
             {
-                timer.Enabled = false;
                 Menu menu = new Menu(user);
                 this.Hide();
                 menu.Show();
+                timer.Enabled = false;
+
             }
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
