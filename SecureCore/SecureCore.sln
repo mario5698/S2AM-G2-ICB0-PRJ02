@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maps", "maps.csproj", "{395D367E-52F2-4646-B935-AADBBB723E94}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassConnection", "..\ClassConnection\ClassConnection.csproj", "{CAF3B1C2-B8BF-449C-94A8-C7EB62CBBDCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF3B1C2-B8BF-449C-94A8-C7EB62CBBDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF3B1C2-B8BF-449C-94A8-C7EB62CBBDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF3B1C2-B8BF-449C-94A8-C7EB62CBBDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF3B1C2-B8BF-449C-94A8-C7EB62CBBDCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
