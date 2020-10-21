@@ -37,6 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll</HintPath>
     </Reference>
+    <Reference Include="BlibliotecaG2">
+      <HintPath>..\BlibliotecaG2\obj\Debug\BlibliotecaG2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
