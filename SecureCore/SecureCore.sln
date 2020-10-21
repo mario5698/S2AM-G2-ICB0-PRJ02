@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maps", "maps.csproj", "{395D367E-52F2-4646-B935-AADBBB723E94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acceso_Dades", "..\..\..\..\..\source\repos\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj", "{CFF4959D-DC40-4103-855D-B5F76864326E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

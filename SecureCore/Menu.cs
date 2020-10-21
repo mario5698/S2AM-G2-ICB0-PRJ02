@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acceso_Dades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -103,7 +104,7 @@ namespace SecureCore
 
         private void MaintenancePage()
         {
-            Mantenimiento myForm = new Mantenimiento();
+            Users myForm = new Users();
             ShowFroms(myForm);
             InUse = myForm;
 

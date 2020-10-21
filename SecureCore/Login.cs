@@ -8,6 +8,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Acceso_Dades;
 
 namespace SecureCore
 {
@@ -16,7 +17,7 @@ namespace SecureCore
         public Login()
         {
             InitializeComponent();
-            
+
         }
 
         void LogIn(object sender, EventArgs e)
@@ -26,8 +27,11 @@ namespace SecureCore
             titulo_Msgbox ="ERROR";
 
             MessageBoxButtons botones;
-            if (txtUsername.Text == "admin" &&
-                txtPassword.Text == "admin")
+
+            Acceso acc = new Acceso();
+            acc.Verficar_User(txtUsername.Text, txtPassword.Text); 
+
+            if (acc.Verficar_User(txtUsername.Text, txtPassword.Text) == true)
             {
                 Splash obj = new Splash(txtUsername.Text);
                 this.Hide();
@@ -73,6 +77,11 @@ namespace SecureCore
         private void timerPassword_Tick(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = '\0';
+        }
+
+        private void panelLogin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
