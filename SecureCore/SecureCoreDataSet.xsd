@@ -7,6 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SecureCoreConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SecureCoreConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SecureCore.Properties.Settings.GlobalReference.Default.SecureCoreConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AgenciesTableAdapter" GeneratorDataComponentClassName="AgenciesTableAdapter" Name="Agencies" UserDataComponentName="AgenciesTableAdapter">
             <MainSource>
@@ -1632,12 +1633,16 @@ SELECT idUser, CodeUser, UserName, Login, Password, idUserRank, idUserCategory, 
 =======
         <Tables />
 >>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
+=======
+        <Tables />
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="SecureCoreDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SecureCoreDataSet" msprop:Generator_UserDSName="SecureCoreDataSet">
     <xs:complexType>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Agencies" msprop:Generator_TableClassName="AgenciesDataTable" msprop:Generator_TableVarName="tableAgencies" msprop:Generator_TablePropName="Agencies" msprop:Generator_RowDeletingName="AgenciesRowDeleting" msprop:Generator_RowChangingName="AgenciesRowChanging" msprop:Generator_RowEvHandlerName="AgenciesRowChangeEventHandler" msprop:Generator_RowDeletedName="AgenciesRowDeleted" msprop:Generator_UserTableName="Agencies" msprop:Generator_RowChangedName="AgenciesRowChanged" msprop:Generator_RowEvArgName="AgenciesRowChangeEvent" msprop:Generator_RowClassName="AgenciesRow">
@@ -2366,6 +2371,11 @@ SELECT idUser, CodeUser, UserName, Login, Password, idUserRank, idUserCategory, 
       <msdata:Relationship name="FK_Users_UserRanks" msdata:parent="UserRanks" msdata:child="Users" msdata:parentkey="idUserRank" msdata:childkey="idUserRank" msprop:Generator_UserChildTable="Users" msprop:Generator_ChildPropName="GetUsersRows" msprop:Generator_UserRelationName="FK_Users_UserRanks" msprop:Generator_ParentPropName="UserRanksRow" msprop:Generator_RelationVarName="relationFK_Users_UserRanks" msprop:Generator_UserParentTable="UserRanks" />
     </xs:appinfo>
   </xs:annotation>
+=======
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
 =======
       <xs:choice minOccurs="0" maxOccurs="unbounded" />
     </xs:complexType>
