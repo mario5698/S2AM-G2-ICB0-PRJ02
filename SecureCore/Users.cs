@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acceso_Dades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace SecureCore
 {
-    public partial class BaseForms : Form
+    public partial class Users : Form
     {
-        public BaseForms()
+        public Users()
         {
             InitializeComponent();
+            Acceso obj = new Acceso();
+            dtgUsers.DataSource = obj.Traer_Datos();
+        }
+
+        private void Users_Load(object sender, EventArgs e)
+        {
         }
     }
 }

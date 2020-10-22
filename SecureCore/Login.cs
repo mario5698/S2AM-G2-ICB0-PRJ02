@@ -8,8 +8,14 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using ClassConnection;
+using System.Data.SqlClient;
+=======
+using Acceso_Dades;
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
 
 namespace SecureCore
 {
@@ -18,7 +24,10 @@ namespace SecureCore
         public Login()
         {
             InitializeComponent();
-            
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
         }
 
         void LogIn(object sender, EventArgs e)
@@ -28,8 +37,11 @@ namespace SecureCore
             titulo_Msgbox ="ERROR";
 
             MessageBoxButtons botones;
-            if (txtUsername.Text == "admin" &&
-                txtPassword.Text == "admin")
+
+            Acceso acc = new Acceso();
+            acc.Verficar_User(txtUsername.Text, txtPassword.Text); 
+
+            if (acc.Verficar_User(txtUsername.Text, txtPassword.Text) == true)
             {
                 Splash obj = new Splash(txtUsername.Text);
                 this.Hide();
@@ -37,14 +49,11 @@ namespace SecureCore
             }
             else
             {
-                VolMax(4);
                 System.IO.Stream str = Properties.Resources.alert;
                 SoundPlayer snd = new System.Media.SoundPlayer(str);
-                
                 snd.Play();
                 botones = MessageBoxButtons.OK;
                 MessageBox.Show(message, titulo_Msgbox, botones);
-                VolMin();
             }
         }
 
@@ -80,28 +89,9 @@ namespace SecureCore
             txtPassword.PasswordChar = '\0';
         }
 
-        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
-        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
-        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
-        private const int WM_APPCOMMAND = 0x319;
-
-        [DllImport("user32.dll")]
-        public static extern IntPtr SendMessageW(IntPtr hWnd, int Msg,
-            IntPtr wParam, IntPtr lParam);
-
-        private void VolMax(int up) { for (int i = 0; i < up; i++) VolUp(); }
-
-        private void VolMin()
+        private void panelLogin_Paint(object sender, PaintEventArgs e)
         {
-            for (int i = 0; i < 100; i++)
-            {
-               SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle, (IntPtr)APPCOMMAND_VOLUME_DOWN);
-            }
-        }
 
-        private void VolUp()
-        {
-            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle, (IntPtr)APPCOMMAND_VOLUME_UP);
         }
     }
 }

@@ -16,7 +16,11 @@ namespace SecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu("admin"));
+            Application.Run(new Login());
+<<<<<<< HEAD
+            //Application.Run(new Menu("admin"));
+=======
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
         }
     }
 }

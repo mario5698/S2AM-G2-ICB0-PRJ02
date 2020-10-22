@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acceso_Dades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll</HintPath>
+    </Reference>
+    <Reference Include="BlibliotecaG2">
+      <HintPath>..\BlibliotecaG2\obj\Debug\BlibliotecaG2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForms.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForms.Designer.cs">
-      <DependentUpon>BaseForms.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,11 @@
     </Compile>
     <Compile Include="Reto1.Designer.cs">
       <DependentUpon>Reto1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecureCoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -89,15 +95,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaseForms.resx">
-      <DependentUpon>BaseForms.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +127,9 @@
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,17 +147,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SecureCoreDataSet.xsc">
+      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SecureCoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecureCoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SecureCoreDataSet.xss">
+      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="sounds\alert.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fade.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo_black.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\menu.png" />
   </ItemGroup>
@@ -154,9 +175,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassConnection\ClassConnection.csproj">
-      <Project>{caf3b1c2-b8bf-449c-94a8-c7eb62cbbdca}</Project>
+      <Project>{3f234929-daed-46fa-b31e-6b7d690efb8d}</Project>
       <Name>ClassConnection</Name>
     </ProjectReference>
   </ItemGroup>
+=======
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
