@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maps", "maps.csproj", "{395
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acceso_Dades", "..\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj", "{CFF4959D-DC40-4103-855D-B5F76864326E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlibliotecaG2", "..\BlibliotecaG2\BlibliotecaG2.csproj", "{67032F4E-7F9B-4F43-84B5-82C737A1573A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CFF4959D-DC40-4103-855D-B5F76864326E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFF4959D-DC40-4103-855D-B5F76864326E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFF4959D-DC40-4103-855D-B5F76864326E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67032F4E-7F9B-4F43-84B5-82C737A1573A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67032F4E-7F9B-4F43-84B5-82C737A1573A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67032F4E-7F9B-4F43-84B5-82C737A1573A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67032F4E-7F9B-4F43-84B5-82C737A1573A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
