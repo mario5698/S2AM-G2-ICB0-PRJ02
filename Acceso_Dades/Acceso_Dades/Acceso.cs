@@ -12,44 +12,56 @@ namespace Acceso_Dades
 {
     public class Acceso
     {
-        #region varibles globales 
-        private string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
-        private SqlConnection conn;
-        private string query;
+        private string connectionString;
+        private SqlConnection conexion;
+        SqlDataAdapter adaptador;
+        String query;
         DataSet dts;
-        #endregion
-        SqlDataAdapter adapter;
+
 
         public Acceso()
         {
-            conn = new SqlConnection(connectionString);
+            connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
+            conexion = new SqlConnection(connectionString);
         }
 
-        #region Events 
-        public DataTable Traer_Datos(string tabla)
+        private void Conectar(string query)
         {
-            conn.Close();
+            if (query != null && query != "")
+            {
+                adaptador = new SqlDataAdapter(query, conexion);
+                
+                if (conexion.State == ConnectionState.Closed) conexion.Open();
+            }
+        }
+
+        public DataTable Traer_Tabla(string tabla)
+        {
             dts = new DataSet();
-            query = "select * from users";
-            adapter = new SqlDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(dts, tabla);
+            query = "select * from " + tabla;
+            Conectar(query);
+            adaptador.Fill(dts, tabla);
             return dts.Tables[tabla];   
         }
 
         public bool Verficar_User(String user, String password)
         {
-            conn.Close();
             dts = new DataSet();
             query = "select * from users where login = '" + user + "' and password = '" + password + "'";
-            adapter = new SqlDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(dts, "Users");
-
+            Conectar(query);
+            adaptador.Fill(dts, "Users");
             return dts.Tables["Users"].Rows.Count > 0;
         }
 
-        #endregion
+        public void Actualizar(DataSet ds)
+        {
+            Conectar(query);
+            adaptador.Update(ds);
+        }
 
+        public void Ejecutar(string query)
+        {
+            Conectar(query);
+        }
     }
 }
