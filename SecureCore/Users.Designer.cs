@@ -1,6 +1,6 @@
 ﻿namespace SecureCore
 {
-    partial class BaseForms
+    partial class Users
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dtgUsers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
             this.SuspendLayout();
             // 
-            // BaseForms
+            // dtgUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgUsers.Location = new System.Drawing.Point(35, 62);
+            this.dtgUsers.Name = "dtgUsers";
+            this.dtgUsers.RowHeadersWidth = 62;
+            this.dtgUsers.RowTemplate.Height = 28;
+            this.dtgUsers.Size = new System.Drawing.Size(732, 360);
+            this.dtgUsers.TabIndex = 0;
+            // 
+            // Users
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BaseForms";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BaseForms";
+            this.Controls.Add(this.dtgUsers);
+            this.Name = "Users";
+            this.Text = "Users";
+            this.Load += new System.EventHandler(this.Users_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dtgUsers;
     }
 }

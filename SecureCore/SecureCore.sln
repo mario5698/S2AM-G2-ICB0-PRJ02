@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maps", "maps.csproj", "{395D367E-52F2-4646-B935-AADBBB723E94}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassConnection", "..\ClassConnection\ClassConnection.csproj", "{3F234929-DAED-46FA-B31E-6B7D690EFB8D}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acceso_Dades", "..\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj", "{CFF4959D-DC40-4103-855D-B5F76864326E}"
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,17 @@ Global
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{395D367E-52F2-4646-B935-AADBBB723E94}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{3F234929-DAED-46FA-B31E-6B7D690EFB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F234929-DAED-46FA-B31E-6B7D690EFB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F234929-DAED-46FA-B31E-6B7D690EFB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F234929-DAED-46FA-B31E-6B7D690EFB8D}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF4959D-DC40-4103-855D-B5F76864326E}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

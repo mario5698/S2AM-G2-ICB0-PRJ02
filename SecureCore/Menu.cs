@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acceso_Dades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,6 @@ namespace SecureCore
             InitializeComponent();
             Welcome myForm = new Welcome(user);
             ShowFroms(myForm);
-
             InUse = myForm;
             lblUser.Text = user;
         }
@@ -61,11 +61,11 @@ namespace SecureCore
         {
             Reto1 myForm = new Reto1();
             ShowFroms(myForm);
+            InUse = myForm;
         }
 
         private void ShowFroms( Form myForm ) 
         {
-            InUse = myForm;
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
@@ -95,7 +95,6 @@ namespace SecureCore
         private void btn_Opt3_Click(object sender, EventArgs e)
         {
             MaintenancePage();
-
         }
 
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)
@@ -105,8 +104,9 @@ namespace SecureCore
 
         private void MaintenancePage()
         {
-            Mantenimiento myForm = new Mantenimiento();
+            Users myForm = new Users();
             ShowFroms(myForm);
+            InUse = myForm;
 
         }
     }

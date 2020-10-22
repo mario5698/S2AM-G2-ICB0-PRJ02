@@ -72,9 +72,9 @@ namespace SecureCore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit {
+        internal static System.Drawing.Bitmap Chart_D_512 {
             get {
-                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                object obj = ResourceManager.GetObject("Chart_D-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,16 +105,6 @@ namespace SecureCore.Properties {
         internal static System.Drawing.Bitmap logo_black {
             get {
                 object obj = ResourceManager.GetObject("logo_black", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu {
-            get {
-                object obj = ResourceManager.GetObject("menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

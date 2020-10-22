@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acceso_Dades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll</HintPath>
+    </Reference>
+    <Reference Include="BlibliotecaG2">
+      <HintPath>..\BlibliotecaG2\obj\Debug\BlibliotecaG2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForms.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForms.Designer.cs">
-      <DependentUpon>BaseForms.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,15 +95,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaseForms.resx">
-      <DependentUpon>BaseForms.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -157,11 +164,9 @@
     <None Include="Resources\fade.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo_black.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\menu.png" />
   </ItemGroup>
@@ -174,5 +179,7 @@
       <Name>ClassConnection</Name>
     </ProjectReference>
   </ItemGroup>
+=======
+>>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
