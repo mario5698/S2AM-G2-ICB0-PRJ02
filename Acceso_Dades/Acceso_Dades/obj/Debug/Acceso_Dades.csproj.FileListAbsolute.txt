@@ -4,3 +4,9 @@ C:\Users\Miguel\source\repos\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.cs
 C:\Users\Miguel\source\repos\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csproj.CoreCompileInputs.cache
 C:\Users\Miguel\source\repos\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll
 C:\Users\Miguel\source\repos\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.pdb
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Acceso_Dades\Acceso_Dades\bin\Debug\Acceso_Dades.dll
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Acceso_Dades\Acceso_Dades\bin\Debug\Acceso_Dades.pdb
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csprojAssemblyReference.cache
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.pdb

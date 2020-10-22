@@ -31,7 +31,7 @@ namespace SecureCore
             Acceso acc = new Acceso();
             acc.Verficar_User(txtUsername.Text, txtPassword.Text); 
 
-            if (acc.Verficar_User(txtUsername.Text, txtPassword.Text) == true)
+            if (acc.Verficar_User(txtUsername.Text, txtPassword.Text))
             {
                 Splash obj = new Splash(txtUsername.Text);
                 this.Hide();
