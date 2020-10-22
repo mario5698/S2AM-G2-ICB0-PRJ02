@@ -1,9 +1,26 @@
+<<<<<<< HEAD
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe.config
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.pdb
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\ClassConnection.dll
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\ClassConnection.pdb
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.BaseForms.resources
+=======
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe.config
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.exe
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Login.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Menu.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Reto1.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Splash.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
+>>>>>>> parent of 4ba4869... add user control
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Login.resources
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Mantenimiento.resources
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Menu.resources
@@ -78,6 +95,7 @@ C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.Cor
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CopyComplete
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
+<<<<<<< HEAD
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\Acceso_Dades.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\Acceso_Dades.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Users.resources
@@ -85,3 +103,5 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.Copy
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.pdb
 >>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
+=======
+>>>>>>> parent of 4ba4869... add user control
