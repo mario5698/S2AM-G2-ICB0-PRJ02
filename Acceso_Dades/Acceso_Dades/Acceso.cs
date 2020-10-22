@@ -12,7 +12,7 @@ namespace Acceso_Dades
     {
         #region varibles globales 
         private SqlConnection conn;
-        private string cnx = "Data Source=LAPTOP-99OC5OLH\\SQLEXPRESS;Initial Catalog=SecureCore;Persist Security Info=True;User ID=sa;Password=Bo201501";
+        private string cnx = "Data Source=ATHERIS\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=True";
         private string query;
         DataSet dts;
         #endregion
