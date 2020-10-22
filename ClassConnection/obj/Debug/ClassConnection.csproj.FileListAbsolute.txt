@@ -1,0 +1,5 @@
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ClassConnection\obj\Debug\ClassConnection.csproj.CoreCompileInputs.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ClassConnection\bin\Debug\ClassConnection.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ClassConnection\bin\Debug\ClassConnection.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ClassConnection\obj\Debug\ClassConnection.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ClassConnection\obj\Debug\ClassConnection.pdb

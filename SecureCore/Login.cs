@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using ClassConnection;
+using System.Data.SqlClient;
 
 namespace SecureCore
 {
@@ -18,7 +20,6 @@ namespace SecureCore
         public Login()
         {
             InitializeComponent();
-            
         }
 
         void LogIn(object sender, EventArgs e)

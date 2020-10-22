@@ -69,6 +69,11 @@
     <Compile Include="Reto1.Designer.cs">
       <DependentUpon>Reto1.cs</DependentUpon>
     </Compile>
+    <Compile Include="SecureCoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +140,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SecureCoreDataSet.xsc">
+      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SecureCoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecureCoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SecureCoreDataSet.xss">
+      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="sounds\alert.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -154,7 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassConnection\ClassConnection.csproj">
-      <Project>{caf3b1c2-b8bf-449c-94a8-c7eb62cbbdca}</Project>
+      <Project>{3f234929-daed-46fa-b31e-6b7d690efb8d}</Project>
       <Name>ClassConnection</Name>
     </ProjectReference>
   </ItemGroup>
