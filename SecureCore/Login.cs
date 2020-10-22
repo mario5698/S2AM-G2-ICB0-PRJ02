@@ -8,14 +8,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using ClassConnection;
-using System.Data.SqlClient;
-=======
 using Acceso_Dades;
->>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
 
 namespace SecureCore
 {
@@ -24,10 +17,7 @@ namespace SecureCore
         public Login()
         {
             InitializeComponent();
-<<<<<<< HEAD
-=======
 
->>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
         }
 
         void LogIn(object sender, EventArgs e)

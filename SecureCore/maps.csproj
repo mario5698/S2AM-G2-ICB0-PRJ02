@@ -37,6 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll</HintPath>
     </Reference>
+    <Reference Include="BlibliotecaG2">
+      <HintPath>..\BlibliotecaG2\obj\Debug\BlibliotecaG2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -163,20 +166,5 @@
   <ItemGroup>
     <None Include="Resources\logo_black.png" />
   </ItemGroup>
-<<<<<<< HEAD
-  <ItemGroup>
-    <None Include="Resources\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassConnection\ClassConnection.csproj">
-      <Project>{3f234929-daed-46fa-b31e-6b7d690efb8d}</Project>
-      <Name>ClassConnection</Name>
-    </ProjectReference>
-  </ItemGroup>
-=======
->>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

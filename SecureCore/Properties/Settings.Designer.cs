@@ -26,13 +26,8 @@ namespace SecureCore.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-<<<<<<< HEAD
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ATHERIS\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=Tru" +
-            "e")]
-=======
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-99OC5OLH\\SQLEXPRESS;Initial Catalog=SecureCore;Persist Securit" +
             "y Info=True;User ID=sa;Password=Bo201501")]
->>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
         public string SecureCoreConnectionString {
             get {
                 return ((string)(this["SecureCoreConnectionString"]));
