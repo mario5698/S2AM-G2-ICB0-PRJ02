@@ -96,6 +96,7 @@ C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.Cop
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\Acceso_Dades.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\Acceso_Dades.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Users.resources
@@ -103,5 +104,7 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.Copy
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.pdb
 >>>>>>> 4ba48699e29bad24df9c4f48a4b7c3eae118b942
+=======
+>>>>>>> parent of 4ba4869... add user control
 =======
 >>>>>>> parent of 4ba4869... add user control
