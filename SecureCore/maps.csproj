@@ -180,9 +180,9 @@
       <Project>{cff4959d-dc40-4103-855d-b5f76864326e}</Project>
       <Name>Acceso_Dades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BlibliotecaG2\BlibliotecaG2.csproj">
+    <ProjectReference Include="..\BlibliotecaG2\BibliotecaG2.csproj">
       <Project>{67032f4e-7f9b-4f43-84b5-82c737a1573a}</Project>
-      <Name>BlibliotecaG2</Name>
+      <Name>BibliotecaG2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
