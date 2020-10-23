@@ -91,4 +91,8 @@ C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\Acceso_Dades.p
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.pdb
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Users.resources
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.pdb
+=======
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
+>>>>>>> dcf73996837e36ddae85def7be6efcc44915369d

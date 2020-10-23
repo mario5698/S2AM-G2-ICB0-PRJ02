@@ -10,9 +10,18 @@ C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csproj.CoreCompileInputs.cache
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.pdb
+<<<<<<< HEAD
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\bin\Debug\Acceso_Dades.dll
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\bin\Debug\Acceso_Dades.pdb
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csprojAssemblyReference.cache
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csproj.CoreCompileInputs.cache
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.pdb
+=======
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\bin\Debug\Acceso_Dades.dll
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\bin\Debug\Acceso_Dades.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.pdb
+>>>>>>> dcf73996837e36ddae85def7be6efcc44915369d

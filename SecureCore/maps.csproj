@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BlibliotecaG2">
-      <HintPath>..\BlibliotecaG2\obj\Debug\BlibliotecaG2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +67,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SecureCoreDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecureCoreDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -154,6 +156,17 @@
     <None Include="SecureCoreDataSet.xss">
       <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
     </None>
+    <None Include="SecureCoreDataSet1.xsc">
+      <DependentUpon>SecureCoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SecureCoreDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecureCoreDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SecureCoreDataSet1.xss">
+      <DependentUpon>SecureCoreDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="sounds\alert.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +179,10 @@
     <ProjectReference Include="..\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj">
       <Project>{cff4959d-dc40-4103-855d-b5f76864326e}</Project>
       <Name>Acceso_Dades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlibliotecaG2\BibliotecaG2.csproj">
+      <Project>{67032f4e-7f9b-4f43-84b5-82c737a1573a}</Project>
+      <Name>BibliotecaG2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

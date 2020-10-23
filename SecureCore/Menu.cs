@@ -1,13 +1,5 @@
-﻿using Acceso_Dades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SecureCore
@@ -32,10 +24,10 @@ namespace SecureCore
         private void button1_Click_2(object sender, EventArgs e)
         {
             Hide_panel_left(Hide_Panel);
-         
+
         }
 
-        private void Hide_panel_left(bool  hide_panel) 
+        private void Hide_panel_left(bool hide_panel)
         {
             if (hide_panel != true)
             {
@@ -64,12 +56,12 @@ namespace SecureCore
             InUse = myForm;
         }
 
-        private void ShowFroms( Form myForm ) 
+        private void ShowFroms(Form myForm)
         {
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
-           myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
             pnl_rigth.Controls.Add(myForm);
             myForm.Show();
         }
