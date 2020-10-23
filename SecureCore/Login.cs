@@ -29,9 +29,9 @@ namespace SecureCore
             MessageBoxButtons botones;
 
             Acceso acc = new Acceso();
-            acc.Verficar_User(txtUsername.Text, txtPassword.Text); 
+            string consulta = "select * from users where login = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
 
-            if (acc.Verficar_User(txtUsername.Text, txtPassword.Text))
+            if (acc.Verficar_User(consulta))
             {
                 Splash obj = new Splash(txtUsername.Text);
                 this.Hide();

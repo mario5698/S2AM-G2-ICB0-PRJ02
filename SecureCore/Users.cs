@@ -17,16 +17,17 @@ namespace SecureCore
         {
             InitializeComponent();
             Acceso obj = new Acceso();
-            DataTable tabla = obj.Traer_Datos();
-            
-            dtgUsers.DataSource = tabla;
+            DataTable info_tabla = obj.Traer_Tabla("factories");
+            dtgUsers.DataSource = info_tabla;
 
-            textBox10.DataBindings.Clear();
-            DataTable t = tabla;
-            textBox1.DataBindings.Add("Text", t, "idUser");
+            textBox1.DataBindings.Clear();
+            textBox2.DataBindings.Clear();
+            DataTable t = info_tabla;
+            textBox1.DataBindings.Add("Text", t, "idFactory");
             textBox1.Validated += new System.EventHandler(this.ValidarTextBox);
-            textBox2.DataBindings.Add("Text", t, "CodeUser");
+            textBox2.DataBindings.Add("Text", t, "codeFactory");
             textBox2.Validated += new System.EventHandler(this.ValidarTextBox);
+           
         }
         private void ValidarTextBox(object sender, EventArgs e)
         {
@@ -35,13 +36,20 @@ namespace SecureCore
         private void Users_Load(object sender, EventArgs e)
         {
         }
-        private void Blindings(DataTable tabla)
-        {
-        }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      //  private void Crear_Textbox()
+        //{
+          //  for
+        //}
     }
 }

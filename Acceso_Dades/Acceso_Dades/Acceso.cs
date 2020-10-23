@@ -5,57 +5,62 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Acceso_Dades
 {
     public class Acceso
     {
-        #region varibles globales 
-        private SqlConnection conn;
-        private string cnx = "Data Source=LAPTOP-99OC5OLH\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=True";
-        private string query;
+        private string connectionString;
+        private SqlConnection conexion;
+        SqlDataAdapter adaptador;
+        String query;
         DataSet dts;
-        #endregion
 
-        #region Events 
-        public DataTable Traer_Datos()
+
+        public Acceso()
         {
-            //Configurar_Conexion();
-            conn = new SqlConnection(cnx);
-            SqlDataAdapter adapter;
-            dts = new DataSet();
-            query = "select * from users";
-            adapter = new SqlDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(dts, "Users");
-            return dts.Tables["Users"];   
+            connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
+            conexion = new SqlConnection(connectionString);
         }
-        public bool Verficar_User(String user, String password)
+
+        private void Conectar(string query)
         {
-            //Configurar_Conexion();
-            bool correct_user;
-            conn = new SqlConnection(cnx);
-            SqlDataAdapter adapter;
+            if (query != null && query != "")
+            {
+                adaptador = new SqlDataAdapter(query, conexion);
+                
+                if (conexion.State == ConnectionState.Closed) conexion.Open();
+            }
+        }
+
+        public DataTable Traer_Tabla(string tabla)
+        {
             dts = new DataSet();
-            query = "select * from users where login = '" + user + "' and password = '" + password + "'";
-            adapter = new SqlDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(dts, "Users");
-
-            if (dts.Tables["Users"].Rows.Count > 0)
-            {
-                correct_user = true;
-
-            } else
-            {
-                correct_user = false;
-            };
-
-            return correct_user;
+            query = "select * from " + tabla;
+            Conectar(query);
+            adaptador.Fill(dts, tabla);
+            return dts.Tables[tabla];   
         }
 
-        }
-        #endregion
+        public bool Verficar_User(String consulta)
+        {
+            dts = new DataSet();
 
+            Conectar(consulta);
+            adaptador.Fill(dts, "Users");
+            return dts.Tables["Users"].Rows.Count > 0;
+        }
+
+        public void Actualizar(DataSet ds)
+        {
+            Conectar(query);
+            adaptador.Update(ds);
+        }
+
+        public void Ejecutar(string query)
+        {
+            Conectar(query);
+        }
     }
-
+}

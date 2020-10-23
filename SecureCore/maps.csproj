@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BlibliotecaG2">
+      <HintPath>..\BlibliotecaG2\obj\Debug\BlibliotecaG2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,11 +70,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SecureCoreDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SecureCoreDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -155,17 +153,6 @@
     </None>
     <None Include="SecureCoreDataSet.xss">
       <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SecureCoreDataSet1.xsc">
-      <DependentUpon>SecureCoreDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SecureCoreDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SecureCoreDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SecureCoreDataSet1.xss">
-      <DependentUpon>SecureCoreDataSet1.xsd</DependentUpon>
     </None>
     <None Include="sounds\alert.wav" />
   </ItemGroup>
