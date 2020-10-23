@@ -44,6 +44,17 @@ namespace Acceso_Dades
             return dts.Tables[tabla];   
         }
 
+        public DataTable Traer_Por_Consulta(string tabla)
+        {
+            dts = new DataSet();
+            query = "select * from " + tabla;
+            Conectar(query);
+            adaptador.Fill(dts, tabla);
+            return dts.Tables[tabla];
+        }
+
+
+
         public bool Verficar_User(String user, String password)
         {
             dts = new DataSet();
