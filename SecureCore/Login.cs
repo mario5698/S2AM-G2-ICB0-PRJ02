@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Acceso_Dades;
+using System.Data.SqlClient;
 
 namespace SecureCore
 {
@@ -22,28 +23,34 @@ namespace SecureCore
 
         void LogIn(object sender, EventArgs e)
         {
-            String message, titulo_Msgbox;
-            message = ("Usuario o Contraseña incorrecta");
-            titulo_Msgbox ="ERROR";
-
-            MessageBoxButtons botones;
-
-            Acceso acc = new Acceso();
-            string consulta = "select * from users where login = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
-
-            if (acc.Verficar_User(consulta))
+            try
             {
-                Splash obj = new Splash(txtUsername.Text);
-                this.Hide();
-                obj.Show();
+                String message, titulo_Msgbox;
+                message = ("Usuario o Contraseña incorrecta");
+                titulo_Msgbox = "ERROR";
+                MessageBoxButtons botones;
+
+                Acceso acc = new Acceso();
+                string consulta = "select * from users where login = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
+
+                if (acc.Verficar_User(consulta))
+                {
+                    Splash obj = new Splash(txtUsername.Text);
+                    this.Hide();
+                    obj.Show();
+                }
+                else
+                {
+                    System.IO.Stream str = Properties.Resources.alert;
+                    SoundPlayer snd = new SoundPlayer(str);
+                    snd.Play();
+                    botones = MessageBoxButtons.OK;
+                    MessageBox.Show(message, titulo_Msgbox, botones);
+                }
             }
-            else
+            catch (SqlException ex)
             {
-                System.IO.Stream str = Properties.Resources.alert;
-                SoundPlayer snd = new System.Media.SoundPlayer(str);
-                snd.Play();
-                botones = MessageBoxButtons.OK;
-                MessageBox.Show(message, titulo_Msgbox, botones);
+                MessageBox.Show(ex.Message);
             }
         }
 

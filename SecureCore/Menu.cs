@@ -27,6 +27,17 @@ namespace SecureCore
             ShowFroms(myForm);
             InUse = myForm;
             lblUser.Text = user;
+
+
+            Acceso obj = new Acceso();
+            int x = obj.Ejecutar("select * from users");
+
+            NotifyIcon notificacion = new NotifyIcon();
+            notificacion.Visible = true;
+            notificacion.BalloonTipTitle = "select * from users";
+            notificacion.BalloonTipText = x.ToString() + " Registros afectados";
+            notificacion.Icon = SystemIcons.Warning;
+            notificacion.ShowBalloonTip(5000);
         }
 
         private void button1_Click_2(object sender, EventArgs e)

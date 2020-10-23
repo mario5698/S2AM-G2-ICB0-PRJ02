@@ -17,37 +17,51 @@ namespace Acceso_Dades
         String query;
         DataSet dts;
 
-
         public Acceso()
         {
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
             conexion = new SqlConnection(connectionString);
         }
 
-        private void Conectar(string query)
+        private void Conectar(string consulta)
         {
-            if (query != null && query != "")
+            if (consulta != null && consulta != "")
             {
-                adaptador = new SqlDataAdapter(query, conexion);
-                
-                if (conexion.State == ConnectionState.Closed) conexion.Open();
+                adaptador = new SqlDataAdapter(consulta, conexion);
             }
+
+            if (conexion.State == ConnectionState.Closed) conexion.Open();
         }
 
         public DataTable Traer_Tabla(string tabla)
         {
-            dts = new DataSet();
             query = "select * from " + tabla;
             Conectar(query);
+            dts = new DataSet();
             adaptador.Fill(dts, tabla);
             return dts.Tables[tabla];   
         }
 
-        public bool Verficar_User(String consulta)
+        public DataSet Traer_Por_Consulta(string consulta)
         {
-            dts = new DataSet();
-
             Conectar(consulta);
+            DataSet ds = new DataSet();
+            adaptador.Fill(ds);
+            return ds;
+        }
+
+        public DataSet Traer_Por_Consulta(string consulta, string nombreDataTable)
+        {
+            Conectar(consulta);
+            DataSet ds = new DataSet();
+            adaptador.Fill(ds, nombreDataTable);
+            return ds;
+        }
+
+        public bool Verficar_User(string consulta)
+        {
+            Conectar(consulta);
+            dts = new DataSet();
             adaptador.Fill(dts, "Users");
             return dts.Tables["Users"].Rows.Count > 0;
         }
@@ -58,9 +72,14 @@ namespace Acceso_Dades
             adaptador.Update(ds);
         }
 
-        public void Ejecutar(string query)
+        public int Ejecutar(string consulta)
         {
-            Conectar(query);
+            Conectar(consulta);
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            int registrosAfectados = comando.ExecuteNonQuery();
+            comando.Dispose();
+            return registrosAfectados;
+            //retornar int para mostrar en notify icon
         }
     }
 }

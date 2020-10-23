@@ -1,0 +1,4 @@
+results/*
+SecureCore/.vs/*
+SecureCore/obj/*
+SecureCore/App.config

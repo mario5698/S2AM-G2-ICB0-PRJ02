@@ -94,3 +94,4 @@ C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.Co
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.pdb
 C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\SecureCore\bin\Debug\BlibliotecaG2.pdb
 C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\SecureCore\bin\Debug\BlibliotecaG2.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\bin\Debug\BlibliotecaG2.dll
