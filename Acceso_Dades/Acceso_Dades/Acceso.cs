@@ -14,7 +14,7 @@ namespace Acceso_Dades
         private string connectionString;
         private SqlConnection conexion;
         SqlDataAdapter adaptador;
-        String query;
+        string query;
         DataSet dts;
 
 
@@ -40,7 +40,19 @@ namespace Acceso_Dades
             query = "select * from " + tabla;
             Conectar(query);
             adaptador.Fill(dts, tabla);
+            conexion.Close();
             return dts.Tables[tabla];   
+        }
+
+        public void Actualizar_BBDD()
+        {
+            conexion.Open();
+            SqlDataAdapter adaptador;
+            adaptador = new SqlDataAdapter(query, conexion);
+            SqlCommandBuilder cmdBuilder;
+            cmdBuilder = new SqlCommandBuilder(adaptador);
+            adaptador.Update(dts.Tables["users"]);
+            conexion.Close();
         }
 
         public bool Verficar_User(String consulta)
@@ -51,16 +63,10 @@ namespace Acceso_Dades
             adaptador.Fill(dts, "Users");
             return dts.Tables["Users"].Rows.Count > 0;
         }
-
-        public void Actualizar(DataSet ds)
-        {
-            Conectar(query);
-            adaptador.Update(ds);
-        }
-
         public void Ejecutar(string query)
         {
             Conectar(query);
         }
+
     }
 }

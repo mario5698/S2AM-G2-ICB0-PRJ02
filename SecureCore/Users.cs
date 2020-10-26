@@ -13,43 +13,51 @@ namespace SecureCore
 {
     public partial class Users : Form
     {
+        Acceso obj = new Acceso();
+        DataTable info_tabla;
+        string tabla = "users";
         public Users()
         {
             InitializeComponent();
-            Acceso obj = new Acceso();
-            DataTable info_tabla = obj.Traer_Tabla("factories");
+            info_tabla = obj.Traer_Tabla(tabla);
             dtgUsers.DataSource = info_tabla;
+        }
 
-            textBox1.DataBindings.Clear();
-            textBox2.DataBindings.Clear();
-            DataTable t = info_tabla;
-            textBox1.DataBindings.Add("Text", t, "idFactory");
-            textBox1.Validated += new System.EventHandler(this.ValidarTextBox);
-            textBox2.DataBindings.Add("Text", t, "codeFactory");
-            textBox2.Validated += new System.EventHandler(this.ValidarTextBox);
-           
+        private void Info_Textbox()
+        {
+            foreach (Control ctr in panel1.Controls)
+            {
+                if (ctr.GetType() == typeof(TextBox))
+                {
+                    ctr.DataBindings.Add("Text", info_tabla, ctr.Tag.ToString());
+                    ctr.Validated += new System.EventHandler(this.ValidarTextBox);
+                }
+            }
         }
         private void ValidarTextBox(object sender, EventArgs e)
         {
             ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
+
+
         private void Users_Load(object sender, EventArgs e)
         {
+            Info_Textbox();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-      //  private void Crear_Textbox()
+        private void button1_Click(object sender, EventArgs e)
+        {
+            obj.Actualizar_BBDD();
+
+        }
+
+        //  private void Crear_Textbox()
         //{
-          //  for
+        //  for
         //}
     }
 }
