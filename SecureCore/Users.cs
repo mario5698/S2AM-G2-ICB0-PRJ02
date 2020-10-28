@@ -43,6 +43,7 @@ namespace SecureCore
         private void Users_Load(object sender, EventArgs e)
         {
             Info_Textbox();
+            obj.Store();
         }
 
         private void label1_Click(object sender, EventArgs e)
