@@ -14,13 +14,13 @@ namespace SecureCore
     public partial class Users : Form
     {
         Acceso obj = new Acceso();
-        DataTable info_tabla;
+        DataTable infotabla;
         string tabla = "users";
         public Users()
         {
             InitializeComponent();
-            info_tabla = obj.Traer_Tabla(tabla);
-            dtgUsers.DataSource = info_tabla;
+            infotabla = obj.PortarTaula(tabla);
+            dtgUsers.DataSource = infotabla;
         }
 
         private void Info_Textbox()
@@ -29,7 +29,7 @@ namespace SecureCore
             {
                 if (ctr.GetType() == typeof(TextBox))
                 {
-                    ctr.DataBindings.Add("Text", info_tabla, ctr.Tag.ToString());
+                    ctr.DataBindings.Add("Text", infotabla, ctr.Tag.ToString());
                     ctr.Validated += new System.EventHandler(this.ValidarTextBox);
                 }
             }
@@ -44,20 +44,23 @@ namespace SecureCore
         {
             Info_Textbox();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            obj.Actualizar_BBDD();
+            obj.Actualitzar();
 
         }
 
-        //  private void Crear_Textbox()
-        //{
-        //  for
-        //}
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(obj.Executa(nonquery.Text).ToString());
+            DataTable infotabla = obj.PortarTaula(tabla);
+            dtgUsers.DataSource = infotabla;
+        }
     }
 }

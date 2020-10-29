@@ -21,11 +21,12 @@ namespace Acceso_Dades
         public Acceso()
         {
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
-            conexion = new SqlConnection(connectionString);
         }
 
         private void Conectar(string query)
         {
+            conexion = new SqlConnection(connectionString);
+
             if (query != null && query != "")
             {
                 adaptador = new SqlDataAdapter(query, conexion);
@@ -34,7 +35,7 @@ namespace Acceso_Dades
             }
         }
 
-        public DataTable Traer_Tabla(string tabla)
+        public DataTable PortarTaula(string tabla)
         {
             dts = new DataSet();
             query = "select * from " + tabla;
@@ -44,7 +45,7 @@ namespace Acceso_Dades
             return dts.Tables[tabla];   
         }
 
-        public void Actualizar_BBDD()
+        public void Actualitzar()
         {
             conexion.Open();
             SqlDataAdapter adaptador;
@@ -55,18 +56,28 @@ namespace Acceso_Dades
             conexion.Close();
         }
 
-        public bool Verficar_User(String consulta)
+        public DataSet PortarPerConsulta(string consulta)
         {
             dts = new DataSet();
-
             Conectar(consulta);
-            adaptador.Fill(dts, "Users");
-            return dts.Tables["Users"].Rows.Count > 0;
+            adaptador.Fill(dts);
+            conexion.Close();
+            return dts;
         }
-        public void Ejecutar(string query)
+        public DataSet PortarPerConsulta(string consulta, string tabla)
         {
-            Conectar(query);
+            dts = new DataSet();
+            Conectar(consulta);
+            adaptador.Fill(dts, tabla);
+            conexion.Close();
+            return dts;
         }
-
+        public int Executa(string consult)
+        {
+            Conectar(consult);
+            SqlCommand cmd = new SqlCommand(consult, conexion);
+            int registresAfectats = cmd.ExecuteNonQuery();
+            return registresAfectats;
+        }
     }
 }

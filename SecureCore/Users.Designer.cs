@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Actualizar_Base = new System.Windows.Forms.Button();
             this.dtgUsers = new System.Windows.Forms.DataGridView();
             this.txb1 = new System.Windows.Forms.TextBox();
             this.txb2 = new System.Windows.Forms.TextBox();
@@ -51,19 +51,21 @@
             this.txb10 = new System.Windows.Forms.TextBox();
             this.lbl10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.nonquery = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // Actualizar_Base
             // 
-            this.button1.Location = new System.Drawing.Point(347, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 43);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Actualizar_Base.Location = new System.Drawing.Point(44, 248);
+            this.Actualizar_Base.Name = "Actualizar_Base";
+            this.Actualizar_Base.Size = new System.Drawing.Size(114, 43);
+            this.Actualizar_Base.TabIndex = 20;
+            this.Actualizar_Base.Text = "SAVE";
+            this.Actualizar_Base.UseVisualStyleBackColor = true;
+            this.Actualizar_Base.Click += new System.EventHandler(this.button1_Click);
             // 
             // dtgUsers
             // 
@@ -274,14 +276,35 @@
             this.panel1.Size = new System.Drawing.Size(795, 203);
             this.panel1.TabIndex = 23;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(661, 248);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 43);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "EJECUTAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // nonquery
+            // 
+            this.nonquery.Location = new System.Drawing.Point(221, 256);
+            this.nonquery.Name = "nonquery";
+            this.nonquery.Size = new System.Drawing.Size(416, 26);
+            this.nonquery.TabIndex = 40;
+            this.nonquery.Tag = "";
+            this.nonquery.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.nonquery);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgUsers);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Actualizar_Base);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Users";
             this.Text = "Users";
@@ -290,11 +313,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Actualizar_Base;
         private System.Windows.Forms.DataGridView dtgUsers;
         private System.Windows.Forms.TextBox txb1;
         private System.Windows.Forms.TextBox txb2;
@@ -317,5 +341,7 @@
         private System.Windows.Forms.TextBox txb10;
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox nonquery;
     }
 }
