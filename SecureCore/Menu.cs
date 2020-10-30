@@ -17,7 +17,6 @@ namespace SecureCore
         // Declaracion de variables 
         bool Hide_Panel = false;
         int Max_Size = 200, Min_Size = 0;
-        // Esta variable guardar el formulario en uso y despues poder cambiar el tamaño de este cuando el panel izquierdo se esconda
         Form InUse;
         public Menu(String user)
         {

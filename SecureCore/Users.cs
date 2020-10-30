@@ -56,10 +56,5 @@ namespace SecureCore
             obj.Actualizar_BBDD();
 
         }
-
-        //  private void Crear_Textbox()
-        //{
-        //  for
-        //}
     }
 }

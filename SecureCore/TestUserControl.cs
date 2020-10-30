@@ -17,12 +17,16 @@ namespace SecureCore
             InitializeComponent();
         }
 
-        private void TestUserControl_Leave(object sender, EventArgs e)
+     
+
+        private void swTextbox1_TextChanged(object sender, EventArgs e)
         {
+
         }
 
-        private void swCodi1_Load(object sender, EventArgs e)
+        private void swTextbox1_Leave(object sender, EventArgs e)
         {
+            swTextbox1.dada = swTextbox1.Text;
         }
     }
 }
