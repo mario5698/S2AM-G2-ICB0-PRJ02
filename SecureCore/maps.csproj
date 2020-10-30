@@ -175,16 +175,6 @@
       <Project>{67032f4e-7f9b-4f43-84b5-82c737a1573a}</Project>
       <Name>BibliotecaG2</Name>
     </ProjectReference>
-<<<<<<< HEAD
-    <ProjectReference Include="..\Form_Base\Form_Base.csproj">
-      <Project>{c24f59f5-5af2-4ef5-ba01-9603f1a1310f}</Project>
-      <Name>Form_Base</Name>
-=======
-    <ProjectReference Include="..\Controles_Usuario\Controles_Usuario.csproj">
-      <Project>{49db4e3f-ea22-4fd4-91f8-d99c5eee9126}</Project>
-      <Name>Controles_Usuario</Name>
->>>>>>> fce938f036f64483f2b1c2f2401f05d506a63f51
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

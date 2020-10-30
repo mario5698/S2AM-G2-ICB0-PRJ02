@@ -26,7 +26,7 @@ namespace SecureCore
 
         private void swTextbox1_Leave(object sender, EventArgs e)
         {
-            swTextbox1.dada = swTextbox1.Text;
+            //swTextbox1.dada = swTextbox1.Text;
         }
     }
 }
