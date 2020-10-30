@@ -81,12 +81,15 @@ namespace SecureCore
                 }
             }
         }
+<<<<<<< HEAD
 
         private void cancel_Click(object sender, EventArgs e)
         {
             Info_Textbox();
             cancel.Hide();
         }
+=======
+>>>>>>> fce938f036f64483f2b1c2f2401f05d506a63f51
     }
 }
 
