@@ -16,6 +16,8 @@ namespace SecureCore
         Acceso obj = new Acceso();
         DataTable infotabla;
         string tabla = "users";
+        bool nuevo = false;
+        DataRow row;
         public Users()
         {
             InitializeComponent();
@@ -36,6 +38,7 @@ namespace SecureCore
         }
         private void ValidarTextBox(object sender, EventArgs e)
         {
+            if (!nuevo)
             ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
 
@@ -43,24 +46,47 @@ namespace SecureCore
         private void Users_Load(object sender, EventArgs e)
         {
             Info_Textbox();
+            cancel.Hide();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (nuevo)
+            {
+                foreach (Control ctr in panel1.Controls)
+                {
+                    if (ctr.GetType() == typeof(TextBox))
+                    {
+                        row[ctr.Tag.ToString()] = ctr.Text;
+                    }
+                }
+                infotabla.Rows.Add(row);
+            }
             obj.Actualitzar();
-
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void add_Click(object sender, EventArgs e)
         {
-
+            cancel.Show();
+            row = infotabla.NewRow();
+            nuevo = true;
+            foreach (Control ctr in panel1.Controls)
+            {
+                if (ctr.GetType() == typeof(TextBox))
+                {
+                    ctr.DataBindings.Clear();
+                    ctr.Text = string.Empty;
+                    txb1.Text = "AUTO";
+                }
+            }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void cancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(obj.Executa(nonquery.Text).ToString());
-            DataTable infotabla = obj.PortarTaula(tabla);
-            dtgUsers.DataSource = infotabla;
+            Info_Textbox();
+            cancel.Hide();
         }
     }
 }
+

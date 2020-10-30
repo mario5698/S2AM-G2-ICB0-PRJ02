@@ -89,7 +89,8 @@ namespace SecureCore
 
         private void btn_Opt4_Click(object sender, EventArgs e)
         {
-            MaintenancePage();
+            Form_Base.Form_Base frm = new Form_Base.Form_Base();
+            frm.Show();
         }
 
         private void btn_Opt3_Click(object sender, EventArgs e)

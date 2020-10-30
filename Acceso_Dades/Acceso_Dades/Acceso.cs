@@ -13,10 +13,9 @@ namespace Acceso_Dades
     {
         private string connectionString;
         private SqlConnection conexion;
-        SqlDataAdapter adaptador;
+        private SqlDataAdapter adaptador;
         string query;
         DataSet dts;
-
 
         public Acceso()
         {
@@ -28,10 +27,17 @@ namespace Acceso_Dades
             conexion = new SqlConnection(connectionString);
 
             if (query != null && query != "")
+            try
             {
-                adaptador = new SqlDataAdapter(query, conexion);
-                
-                if (conexion.State == ConnectionState.Closed) conexion.Open();
+                if (query != null && query != "")
+                {
+                    adaptador = new SqlDataAdapter(query, conexion);
+                    if (conexion.State == ConnectionState.Closed) conexion.Open();
+                }
+            }
+            catch (SqlException)
+            {
+
             }
         }
 
@@ -52,7 +58,7 @@ namespace Acceso_Dades
             adaptador = new SqlDataAdapter(query, conexion);
             SqlCommandBuilder cmdBuilder;
             cmdBuilder = new SqlCommandBuilder(adaptador);
-            adaptador.Update(dts.Tables["users"]);
+            adaptador.Update(dts.Tables[0]);
             conexion.Close();
         }
 
@@ -72,12 +78,38 @@ namespace Acceso_Dades
             conexion.Close();
             return dts;
         }
+
         public int Executa(string consult)
         {
             Conectar(consult);
             SqlCommand cmd = new SqlCommand(consult, conexion);
             int registresAfectats = cmd.ExecuteNonQuery();
             return registresAfectats;
+        }
+
+        public int NoSQLInjection(string user, string pass)
+        {
+            conexion.Open();
+            SqlCommand command = conexion.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT COUNT(*) FROM [Users] " +
+            "WHERE [Login] = @User " +
+            "AND [Password] = @Password";
+            command.Parameters.Add(new SqlParameter("@User", user));
+            command.Parameters.Add(new SqlParameter("@Password", pass));
+            int x = (int) command.ExecuteScalar();
+            conexion.Close();
+            return x;
+        }
+
+        public void Store()
+        {
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand("Ten Most Expensive Products", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@Login", "1"));
+            cmd.ExecuteNonQuery();
+            conexion.Close();
         }
     }
 }
