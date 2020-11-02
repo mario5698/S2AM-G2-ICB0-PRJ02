@@ -70,7 +70,7 @@ namespace SecureCore
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
-           myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
             pnl_rigth.Controls.Add(myForm);
             myForm.Show();
         }
@@ -90,7 +90,8 @@ namespace SecureCore
 
         private void btn_Opt4_Click(object sender, EventArgs e)
         {
-            MaintenancePage();
+            //Form_Base.Form_Base frm = new Form_Base.Form_Base();
+            //frm.Show();
         }
 
         private void btn_Opt3_Click(object sender, EventArgs e)

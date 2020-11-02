@@ -83,6 +83,8 @@
             // 
             this.btn_Opt4.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt4.ForeColor = System.Drawing.Color.PaleGreen;
@@ -98,6 +100,8 @@
             // 
             this.btn_Opt3.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt3.ForeColor = System.Drawing.Color.PaleGreen;
@@ -113,6 +117,8 @@
             // 
             this.btn_Opt2.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt2.ForeColor = System.Drawing.Color.PaleGreen;
@@ -128,6 +134,8 @@
             // 
             this.btn_Opt1.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt1.ForeColor = System.Drawing.Color.PaleGreen;

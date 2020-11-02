@@ -20,11 +20,13 @@ namespace Acceso_Dades
         public Acceso()
         {
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
-            conexion = new SqlConnection(connectionString);
         }
 
         private void Conectar(string query)
         {
+            conexion = new SqlConnection(connectionString);
+
+            if (query != null && query != "")
             try
             {
                 if (query != null && query != "")
@@ -39,7 +41,7 @@ namespace Acceso_Dades
             }
         }
 
-        public DataTable Traer_Tabla(string tabla)
+        public DataTable PortarTaula(string tabla)
         {
             dts = new DataSet();
             query = "select * from " + tabla;
@@ -49,36 +51,40 @@ namespace Acceso_Dades
             return dts.Tables[tabla];   
         }
 
-        public void Actualizar_BBDD()
+        public void Actualitzar()
         {
             conexion.Open();
             SqlDataAdapter adaptador;
             adaptador = new SqlDataAdapter(query, conexion);
             SqlCommandBuilder cmdBuilder;
             cmdBuilder = new SqlCommandBuilder(adaptador);
-            adaptador.Update(dts.Tables["users"]);
+            adaptador.Update(dts.Tables[0]);
             conexion.Close();
         }
 
-        public bool Verficar_User(String consulta)
+        public DataSet PortarPerConsulta(string consulta)
         {
             dts = new DataSet();
-            try
-            {
-                Conectar(consulta);
-                adaptador.Fill(dts, "Users");
-                return dts.Tables["Users"].Rows.Count > 0;
-            }
-            catch(SqlException)
-            {
-
-            }
-            return dts.Tables["Users"].Rows.Count > 0;
+            Conectar(consulta);
+            adaptador.Fill(dts);
+            conexion.Close();
+            return dts;
+        }
+        public DataSet PortarPerConsulta(string consulta, string tabla)
+        {
+            dts = new DataSet();
+            Conectar(consulta);
+            adaptador.Fill(dts, tabla);
+            conexion.Close();
+            return dts;
         }
 
-        public void Ejecutar(string query)
+        public int Executa(string consult)
         {
-            Conectar(query);
+            Conectar(consult);
+            SqlCommand cmd = new SqlCommand(consult, conexion);
+            int registresAfectats = cmd.ExecuteNonQuery();
+            return registresAfectats;
         }
 
         public int NoSQLInjection(string user, string pass)

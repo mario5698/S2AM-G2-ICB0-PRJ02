@@ -14,13 +14,15 @@ namespace SecureCore
     public partial class Users : Form
     {
         Acceso obj = new Acceso();
-        DataTable info_tabla;
+        DataTable infotabla;
         string tabla = "users";
+        bool nuevo = false;
+        DataRow row;
         public Users()
         {
             InitializeComponent();
-            info_tabla = obj.Traer_Tabla(tabla);
-            dtgUsers.DataSource = info_tabla;
+            infotabla = obj.PortarTaula(tabla);
+            dtgUsers.DataSource = infotabla;
         }
 
         private void Info_Textbox()
@@ -29,13 +31,14 @@ namespace SecureCore
             {
                 if (ctr.GetType() == typeof(TextBox))
                 {
-                    ctr.DataBindings.Add("Text", info_tabla, ctr.Tag.ToString());
+                    ctr.DataBindings.Add("Text", infotabla, ctr.Tag.ToString());
                     ctr.Validated += new System.EventHandler(this.ValidarTextBox);
                 }
             }
         }
         private void ValidarTextBox(object sender, EventArgs e)
         {
+            if (!nuevo)
             ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
 
@@ -43,18 +46,46 @@ namespace SecureCore
         private void Users_Load(object sender, EventArgs e)
         {
             Info_Textbox();
-            obj.Store();
+            cancel.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            obj.Actualizar_BBDD();
+            if (nuevo)
+            {
+                foreach (Control ctr in panel1.Controls)
+                {
+                    if (ctr.GetType() == typeof(TextBox))
+                    {
+                        row[ctr.Tag.ToString()] = ctr.Text;
+                    }
+                }
+                infotabla.Rows.Add(row);
+            }
+            obj.Actualitzar();
+        }
 
+        private void add_Click(object sender, EventArgs e)
+        {
+            cancel.Show();
+            row = infotabla.NewRow();
+            nuevo = true;
+            foreach (Control ctr in panel1.Controls)
+            {
+                if (ctr.GetType() == typeof(TextBox))
+                {
+                    ctr.DataBindings.Clear();
+                    ctr.Text = string.Empty;
+                    txb1.Text = "AUTO";
+                }
+            }
+        }
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            Info_Textbox();
+            cancel.Hide();
         }
     }
 }
+

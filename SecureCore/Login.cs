@@ -26,16 +26,12 @@ namespace SecureCore
             String message, titulo_Msgbox;
             message = ("Usuario o Contraseña incorrecta");
             titulo_Msgbox ="ERROR";
-
             MessageBoxButtons botones;
-
             Acceso acc = new Acceso();
 
-
-
             string consulta = "select * from users where login = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
-
-            if (acc.Verficar_User(consulta))
+            string tabla = "users";
+            if (acc.PortarPerConsulta(consulta, tabla).Tables[tabla].Rows.Count > 0)
             {
                 
                 
@@ -59,7 +55,7 @@ namespace SecureCore
         }
 
 
-        private void Enter(object sender, KeyPressEventArgs e)
+        private new void Enter(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13) LogIn(sender, e);
         }

@@ -175,10 +175,6 @@
       <Project>{67032f4e-7f9b-4f43-84b5-82c737a1573a}</Project>
       <Name>BibliotecaG2</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Controles_Usuario\Controles_Usuario.csproj">
-      <Project>{49db4e3f-ea22-4fd4-91f8-d99c5eee9126}</Project>
-      <Name>Controles_Usuario</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
