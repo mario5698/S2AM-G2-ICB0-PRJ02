@@ -68,7 +68,7 @@ namespace SecureCore
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
-           myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
             pnl_rigth.Controls.Add(myForm);
             myForm.Show();
         }
