@@ -56,10 +56,19 @@ namespace Acceso_Dades
             conexion.Open();
             SqlDataAdapter adaptador;
             adaptador = new SqlDataAdapter(query, conexion);
+            adaptador.RowUpdated += new SqlRowUpdatedEventHandler(OnRowUpdated);
             SqlCommandBuilder cmdBuilder;
             cmdBuilder = new SqlCommandBuilder(adaptador);
             adaptador.Update(dts.Tables[0]);
             conexion.Close();
+        }
+
+        private void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
+        {
+            if (args.Status == UpdateStatus.ErrorsOccurred)
+            {
+                args.Status = UpdateStatus.SkipCurrentRow;
+            }
         }
 
         public DataSet PortarPerConsulta(string consulta)

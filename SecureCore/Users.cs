@@ -21,8 +21,28 @@ namespace SecureCore
         public Users()
         {
             InitializeComponent();
+            Portar_Dades();
+        }
+
+        private void Portar_Dades()
+        {
             infotabla = obj.PortarTaula(tabla);
             dtgUsers.DataSource = infotabla;
+        }
+
+
+        private void Dtg_header()
+        {
+            dtgUsers.Columns[0].HeaderText = "ID";
+            dtgUsers.Columns[1].HeaderText = "U_CODE";
+            dtgUsers.Columns[2].HeaderText = "U_NAME";
+            dtgUsers.Columns[3].HeaderText = "LOGIN";
+            dtgUsers.Columns[4].HeaderText = "PASS";
+            dtgUsers.Columns[5].HeaderText = "U_ID_RANK";
+            dtgUsers.Columns[6].HeaderText = "U_ID_CATEG";
+            dtgUsers.Columns[7].HeaderText = "PHOTO";
+            dtgUsers.Columns[8].HeaderText = "PLANET_ID";
+            dtgUsers.Columns[9].HeaderText = "SPECIE_ID";
         }
 
         private void Info_Textbox()
@@ -31,6 +51,8 @@ namespace SecureCore
             {
                 if (ctr.GetType() == typeof(TextBox))
                 {
+                    ctr.DataBindings.Clear();
+                    ctr.Text = string.Empty;
                     ctr.DataBindings.Add("Text", infotabla, ctr.Tag.ToString());
                     ctr.Validated += new System.EventHandler(this.ValidarTextBox);
                 }
@@ -46,9 +68,9 @@ namespace SecureCore
         private void Users_Load(object sender, EventArgs e)
         {
             Info_Textbox();
+            Dtg_header();
             cancel.Hide();
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -63,7 +85,11 @@ namespace SecureCore
                 }
                 infotabla.Rows.Add(row);
             }
+            nuevo = false;
             obj.Actualitzar();
+            Portar_Dades();
+            Info_Textbox();
+            cancel.Hide();
         }
 
         private void add_Click(object sender, EventArgs e)
@@ -77,13 +103,14 @@ namespace SecureCore
                 {
                     ctr.DataBindings.Clear();
                     ctr.Text = string.Empty;
-                    txb1.Text = "AUTO";
+                    txb1.Text = "0";
                 }
             }
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            nuevo = false;
             Info_Textbox();
             cancel.Hide();
         }

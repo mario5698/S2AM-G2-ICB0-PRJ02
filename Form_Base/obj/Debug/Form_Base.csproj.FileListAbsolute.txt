@@ -9,3 +9,14 @@ C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\bin\Debug\Form_Base.dll
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\bin\Debug\Form_Base.pdb
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\bin\Debug\Acceso_Dades.dll
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\bin\Debug\Acceso_Dades.pdb
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.csprojAssemblyReference.cache
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.Form_Base.resources
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.csproj.GenerateResource.cache
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.dll
+C:\Users\Miguel\Desktop\GitHub\SECURE_CORE_\S2AM-G2-Team-master\Form_Base\obj\Debug\Form_Base.pdb
