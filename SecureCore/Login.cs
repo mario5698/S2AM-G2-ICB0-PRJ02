@@ -18,7 +18,6 @@ namespace SecureCore
         public Login()
         {
             InitializeComponent();
-
         }
 
         void LogIn(object sender, EventArgs e)
@@ -28,13 +27,12 @@ namespace SecureCore
             titulo_Msgbox ="ERROR";
             MessageBoxButtons botones;
             Acceso acc = new Acceso();
+            
 
             string consulta = "select * from users where login = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
             string tabla = "users";
             if (acc.PortarPerConsulta(consulta, tabla).Tables[tabla].Rows.Count > 0)
             {
-                
-                
                 Splash obj = new Splash(txtUsername.Text);
                 this.Hide();
                 obj.Show();
