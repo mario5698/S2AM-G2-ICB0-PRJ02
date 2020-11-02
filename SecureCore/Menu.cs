@@ -23,8 +23,10 @@ namespace SecureCore
 
             InitializeComponent();
             Welcome myForm = new Welcome(user);
-            ShowFroms(myForm);
             InUse = myForm;
+            InUse.Size = new Size(pnl_rigth.Width , pnl_rigth.Height);
+            ShowFroms(myForm);
+            
             lblUser.Text = user;
         }
 
