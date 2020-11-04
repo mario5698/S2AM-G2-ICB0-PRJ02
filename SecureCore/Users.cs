@@ -72,26 +72,6 @@ namespace SecureCore
             cancel.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (nuevo)
-            {
-                foreach (Control ctr in panel1.Controls)
-                {
-                    if (ctr.GetType() == typeof(TextBox))
-                    {
-                        row[ctr.Tag.ToString()] = ctr.Text;
-                    }
-                }
-                infotabla.Rows.Add(row);
-            }
-            nuevo = false;
-            obj.Actualitzar();
-            Portar_Dades();
-            Info_Textbox();
-            cancel.Hide();
-        }
-
         private void add_Click(object sender, EventArgs e)
         {
             cancel.Show();
@@ -111,6 +91,26 @@ namespace SecureCore
         private void cancel_Click(object sender, EventArgs e)
         {
             nuevo = false;
+            Info_Textbox();
+            cancel.Hide();
+        }
+
+        private void Actualizar_Base_Click(object sender, EventArgs e)
+        {
+            if (nuevo)
+            {
+                foreach (Control ctr in panel1.Controls)
+                {
+                    if (ctr.GetType() == typeof(TextBox))
+                    {
+                        row[ctr.Tag.ToString()] = ctr.Text;
+                    }
+                }
+                infotabla.Rows.Add(row);
+            }
+            nuevo = false;
+            obj.Actualitzar();
+            Portar_Dades();
             Info_Textbox();
             cancel.Hide();
         }

@@ -17,15 +17,16 @@ namespace SecureCore
         // Declaracion de variables 
         bool Hide_Panel = false;
         int Max_Size = 200, Min_Size = 0;
-        // Esta variable guardar el formulario en uso y despues poder cambiar el tamaño de este cuando el panel izquierdo se esconda
         Form InUse;
         public Menu(String user)
         {
 
             InitializeComponent();
             Welcome myForm = new Welcome(user);
-            ShowFroms(myForm);
             InUse = myForm;
+            InUse.Size = new Size(pnl_rigth.Width , pnl_rigth.Height);
+            ShowFroms(myForm);
+            
             lblUser.Text = user;
         }
 
@@ -69,7 +70,7 @@ namespace SecureCore
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;
-           myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
+            myForm.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
             pnl_rigth.Controls.Add(myForm);
             myForm.Show();
         }
@@ -89,8 +90,8 @@ namespace SecureCore
 
         private void btn_Opt4_Click(object sender, EventArgs e)
         {
-            Form_Base.Form_Base frm = new Form_Base.Form_Base();
-            frm.Show();
+            //Form_Base.Form_Base frm = new Form_Base.Form_Base();
+            //frm.Show();
         }
 
         private void btn_Opt3_Click(object sender, EventArgs e)

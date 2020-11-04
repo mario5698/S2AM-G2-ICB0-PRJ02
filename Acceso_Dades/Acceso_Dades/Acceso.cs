@@ -117,7 +117,7 @@ namespace Acceso_Dades
             SqlCommand cmd = new SqlCommand("Ten Most Expensive Products", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@Login", "1"));
-            cmd.ExecuteNonQuery();
+         //   cmd.ExecuteNonQuery();
             conexion.Close();
         }
     }

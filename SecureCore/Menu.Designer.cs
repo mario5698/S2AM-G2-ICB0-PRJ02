@@ -53,7 +53,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(784, 411);
+            this.panel2.Size = new System.Drawing.Size(1386, 788);
             this.panel2.TabIndex = 2;
             // 
             // pnl_rigth
@@ -62,7 +62,7 @@
             this.pnl_rigth.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_rigth.Location = new System.Drawing.Point(200, 29);
             this.pnl_rigth.Name = "pnl_rigth";
-            this.pnl_rigth.Size = new System.Drawing.Size(584, 382);
+            this.pnl_rigth.Size = new System.Drawing.Size(1186, 759);
             this.pnl_rigth.TabIndex = 2;
             this.pnl_rigth.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_rigth_Paint);
             // 
@@ -76,13 +76,15 @@
             this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_left.Location = new System.Drawing.Point(0, 29);
             this.pnl_left.Name = "pnl_left";
-            this.pnl_left.Size = new System.Drawing.Size(200, 382);
+            this.pnl_left.Size = new System.Drawing.Size(200, 759);
             this.pnl_left.TabIndex = 0;
             // 
             // btn_Opt4
             // 
             this.btn_Opt4.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt4.ForeColor = System.Drawing.Color.PaleGreen;
@@ -98,6 +100,8 @@
             // 
             this.btn_Opt3.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt3.ForeColor = System.Drawing.Color.PaleGreen;
@@ -113,6 +117,8 @@
             // 
             this.btn_Opt2.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt2.ForeColor = System.Drawing.Color.PaleGreen;
@@ -128,6 +134,8 @@
             // 
             this.btn_Opt1.BackColor = System.Drawing.Color.Transparent;
             this.btn_Opt1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Opt1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Opt1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
             this.btn_Opt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Opt1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Opt1.ForeColor = System.Drawing.Color.PaleGreen;
@@ -148,7 +156,7 @@
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(784, 29);
+            this.pnl_top.Size = new System.Drawing.Size(1386, 29);
             this.pnl_top.TabIndex = 0;
             // 
             // lblUser
@@ -166,11 +174,12 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(737, 4);
+            this.button1.Location = new System.Drawing.Point(1346, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 23);
+            this.button1.Size = new System.Drawing.Size(40, 29);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -179,12 +188,13 @@
             // 
             this.btn_HideLeftPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_HideLeftPanel.BackgroundImage")));
             this.btn_HideLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_HideLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_HideLeftPanel.FlatAppearance.BorderSize = 0;
             this.btn_HideLeftPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HideLeftPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HideLeftPanel.Location = new System.Drawing.Point(3, 3);
+            this.btn_HideLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.btn_HideLeftPanel.Name = "btn_HideLeftPanel";
-            this.btn_HideLeftPanel.Size = new System.Drawing.Size(40, 23);
+            this.btn_HideLeftPanel.Size = new System.Drawing.Size(40, 29);
             this.btn_HideLeftPanel.TabIndex = 0;
             this.btn_HideLeftPanel.UseVisualStyleBackColor = true;
             this.btn_HideLeftPanel.Click += new System.EventHandler(this.button1_Click_2);
@@ -194,13 +204,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.pnl_left.ResumeLayout(false);
             this.pnl_top.ResumeLayout(false);
