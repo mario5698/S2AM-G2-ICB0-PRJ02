@@ -8,8 +8,6 @@ namespace Acceso_Dades
 {
      public class testcodi
     {
-
-
         public  String getdesc(String codigo)
         {
             

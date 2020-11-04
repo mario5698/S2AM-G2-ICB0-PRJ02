@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Acceso_Dades;
+using BlibliotecaG2;
 
 namespace Controles_Usuario
 {
@@ -27,8 +28,6 @@ namespace Controles_Usuario
         #region Declarar Variables
 
         private bool _Requerit;
-
-        private String _codigo;
 
         private String _NomCodi;
 
@@ -61,16 +60,16 @@ namespace Controles_Usuario
             set { _NomTaula = value; }
         }
 
-        public String NomCOdi
+        public String NomCodi
         {
             get { return _NomCodi; }
-            set { _NomCodi = value; }
+            set { _NomCodi = TXT_SWCodi.Text; }
         }
 
         public String NomDesc   
         {
             get { return _NomDesc; }
-            set { _NomDesc = value; }
+            set { _NomDesc = TXT_SWDesc.Text; }
         }
 
         public String NomId 
@@ -102,6 +101,8 @@ namespace Controles_Usuario
 
         private void TXT_SWCodi_Leave(object sender, EventArgs e)
         {
+            MessageBox.Show(TXT_SWCodi.Text);
+
             TXT_SWDesc.Text = obj.getdesc(TXT_SWCodi.Text);
 
             if (_Requerit && (TXT_SWCodi.Text == ""))

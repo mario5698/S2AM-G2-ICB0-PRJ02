@@ -34,3 +34,14 @@ C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.cspro
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb
 >>>>>>> 5b785695b5fd8948eb0ca6e600d13ddba123c27f
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\bin\Debug\Form_Base.dll
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\bin\Debug\Form_Base.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\bin\Debug\Acceso_Dades.dll
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\bin\Debug\Acceso_Dades.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.Form_Base.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb
