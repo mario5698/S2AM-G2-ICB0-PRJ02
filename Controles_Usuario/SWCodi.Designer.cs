@@ -38,8 +38,9 @@
             this.TXT_SWCodi.Dock = System.Windows.Forms.DockStyle.Left;
             this.TXT_SWCodi.Font = new System.Drawing.Font("Arial", 10F);
             this.TXT_SWCodi.Location = new System.Drawing.Point(0, 0);
+            this.TXT_SWCodi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TXT_SWCodi.Name = "TXT_SWCodi";
-            this.TXT_SWCodi.Size = new System.Drawing.Size(70, 23);
+            this.TXT_SWCodi.Size = new System.Drawing.Size(103, 30);
             this.TXT_SWCodi.TabIndex = 0;
             this.TXT_SWCodi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TXT_SWCodi.TextChanged += new System.EventHandler(this.TXT_SWCodi_TextChanged);
@@ -51,9 +52,10 @@
             this.TXT_SWDesc.Enabled = false;
             this.TXT_SWDesc.Font = new System.Drawing.Font("Arial", 10F);
             this.TXT_SWDesc.HideSelection = false;
-            this.TXT_SWDesc.Location = new System.Drawing.Point(116, 0);
+            this.TXT_SWDesc.Location = new System.Drawing.Point(176, 0);
+            this.TXT_SWDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TXT_SWDesc.Name = "TXT_SWDesc";
-            this.TXT_SWDesc.Size = new System.Drawing.Size(229, 23);
+            this.TXT_SWDesc.Size = new System.Drawing.Size(342, 30);
             this.TXT_SWDesc.TabIndex = 1;
             this.TXT_SWDesc.TextChanged += new System.EventHandler(this.TXT_SWDesc_TextChanged);
             // 
@@ -64,9 +66,10 @@
             this.SW_CodiText.Enabled = false;
             this.SW_CodiText.Font = new System.Drawing.Font("Arial", 10F);
             this.SW_CodiText.ForeColor = System.Drawing.Color.Red;
-            this.SW_CodiText.Location = new System.Drawing.Point(126, 29);
+            this.SW_CodiText.Location = new System.Drawing.Point(189, 45);
+            this.SW_CodiText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SW_CodiText.Name = "SW_CodiText";
-            this.SW_CodiText.Size = new System.Drawing.Size(176, 23);
+            this.SW_CodiText.Size = new System.Drawing.Size(262, 30);
             this.SW_CodiText.TabIndex = 2;
             this.SW_CodiText.Text = "* Requerit";
             this.SW_CodiText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -74,14 +77,15 @@
             // 
             // SWCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.SW_CodiText);
             this.Controls.Add(this.TXT_SWDesc);
             this.Controls.Add(this.TXT_SWCodi);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(345, 53);
+            this.Size = new System.Drawing.Size(518, 82);
             this.ResumeLayout(false);
             this.PerformLayout();
 

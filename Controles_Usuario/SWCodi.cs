@@ -14,16 +14,11 @@ namespace Controles_Usuario
 {
     public partial class SWCodi: UserControl
     {
-
-        testcodi obj = new testcodi();
-
         public SWCodi()
         {
             InitializeComponent();
             SW_CodiText.Visible = false;
         }
-
-
 
         #region Declarar Variables
 
@@ -63,13 +58,13 @@ namespace Controles_Usuario
         public String NomCodi
         {
             get { return _NomCodi; }
-            set { _NomCodi = TXT_SWCodi.Text; }
+            set { _NomCodi = value; }
         }
 
         public String NomDesc   
         {
             get { return _NomDesc; }
-            set { _NomDesc = TXT_SWDesc.Text; }
+            set { _NomDesc = value; }
         }
 
         public String NomId 
@@ -101,18 +96,20 @@ namespace Controles_Usuario
 
         private void TXT_SWCodi_Leave(object sender, EventArgs e)
         {
-            MessageBox.Show(TXT_SWCodi.Text);
+            Acceso acc = new Acceso();
 
-            TXT_SWDesc.Text = obj.getdesc(TXT_SWCodi.Text);
+            string consulta = "select * from " + _NomTaula + " where " + _NomCodi + "= '" + TXT_SWCodi.Text + "'";
+            DataSet dts = acc.PortarPerConsulta(consulta);
 
-            if (_Requerit && (TXT_SWCodi.Text == ""))
+            if (dts.Tables[0].Rows.Count > 0)
             {
-                SW_CodiText.Visible = _Requerit;
+                TXT_SWDesc.Text = dts.Tables[0].Rows[0][_NomDesc].ToString();
             }
             else
             {
-                SW_CodiText.Visible = !_Requerit;
+                TXT_SWDesc.Text = "Unknow Data";
             }
+
         }
 
         private void TXT_SWDesc_TextChanged(object sender, EventArgs e)

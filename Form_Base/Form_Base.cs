@@ -45,12 +45,5 @@ namespace Form_Base
         {
             obj.Actualitzar();
         }
-
-        //private void button1_Click_1(object sender, EventArgs e)
-        //{
-        //    MessageBox.Show(obj.Executa(nonquery.Text).ToString());
-        //    DataTable infotabla = obj.PortarTaula(tabla);
-        //    dtgUsers.DataSource = infotabla;
-        //}
     }
 }
