@@ -60,17 +60,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reto1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reto1.Designer.cs">
-      <DependentUpon>Reto1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SecureCoreDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +106,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reto1.resx">
-      <DependentUpon>Reto1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,17 +127,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SecureCoreDataSet.xsc">
-      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SecureCoreDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SecureCoreDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SecureCoreDataSet.xss">
-      <DependentUpon>SecureCoreDataSet.xsd</DependentUpon>
-    </None>
     <None Include="sounds\alert.wav" />
   </ItemGroup>
   <ItemGroup>

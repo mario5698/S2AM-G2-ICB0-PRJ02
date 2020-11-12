@@ -1,0 +1,5 @@
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.Reto1.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\SecureCore.Users.resources
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.CoreCompileInputs.cache

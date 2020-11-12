@@ -45,3 +45,5 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Form_Base.dll
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Form_Base.pdb

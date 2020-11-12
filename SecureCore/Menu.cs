@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,16 +20,15 @@ namespace SecureCore
         // Declaracion de variables 
         bool Hide_Panel = false;
         int Max_Size = 200, Min_Size = 0;
-        Form InUse;
+        String InUse;
         public Menu(String user, String rango)
         {
             InitializeComponent();
             traerForms(rango);
-            Welcome myForm = new Welcome(user);
-            InUse = myForm;
-          //  InUse.Size = new Size(pnl_rigth.Width , pnl_rigth.Height);
-            ShowFroms(myForm);
             lblUser.Text = user;
+            Welcome myForm = new Welcome(user);
+            ShowFroms(myForm);
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -38,19 +38,36 @@ namespace SecureCore
          
         }
 
-
         private void traerForms(String rango)
         {
             String tabla = "forms";
             String consulta = "select namespace, form from " + tabla + " where Rank < " + rango;
             DataSet dts = acc.PortarPerConsulta(consulta, tabla);
             int numeroForms = dts.Tables[tabla].Rows.Count;
+            String dll = "";
+            String FormName = "";
 
-
-            for (int i = 0; i < numeroForms; i++) create();
+            for (int i = 0; i < numeroForms; i++)
+            {
+                dll = dts.Tables[0].Rows[i]["Namespaces"].ToString();
+                FormName = dts.Tables[0].Rows[i]["form"].ToString();
+                 loadForm(dll, FormName, i );
+            };
         }
 
-        Button create()
+
+        private void loadForm(string dll, string FormName, int i)
+        {
+            Object dllBD;
+            Type tipus;
+            Assembly ensamblat = Assembly.LoadFrom(dll);
+            tipus = ensamblat.GetType(FormName + "." + FormName);
+            dllBD = Activator.CreateInstance(tipus);
+            Form formulario = ((Form)dllBD);
+            create(formulario, i );
+        }
+
+        Button create(Form newFormulario, int i )
         {
             Button myButton = new Button();
             myButton.Text = "some text";
@@ -59,9 +76,14 @@ namespace SecureCore
             myButton.FlatStyle = FlatStyle.Flat;
             myButton.ForeColor = Color.PaleGreen;
             myButton.Size = new Size(200, 79);
+            myButton.Click += new EventHandler(myButton_click);
             return myButton;
         }
 
+        private void myButton_click (object sender, EventArgs e)
+        {
+
+        }
 
 
         private void Hide_panel_left(bool  hide_panel) 
@@ -71,7 +93,6 @@ namespace SecureCore
                 for (int i = Max_Size; i >= Min_Size; i--)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                    InUse.Size = new Size(pnl_rigth.Width - Min_Size, pnl_rigth.Height);
                 }
                 Hide_Panel = true;
             }
@@ -80,19 +101,12 @@ namespace SecureCore
                 for (int i = Min_Size; i <= Max_Size; i++)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                    InUse.Size = new Size(pnl_rigth.Width, pnl_rigth.Height);
                 }
                 Hide_Panel = false;
             }
         }
 
-        private void btn_Opt1_Click(object sender, EventArgs e)
-        {
-            Reto1 myForm = new Reto1();
-            ShowFroms(myForm);
-            InUse = myForm;
-        }
-
+  
         private void ShowFroms( Form myForm ) 
         {
             pnl_rigth.Controls.Clear();
@@ -112,16 +126,6 @@ namespace SecureCore
 
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-      
-
-        private void MaintenancePage()
-        {
-            Users myForm = new Users();
-            ShowFroms(myForm);
-            InUse = myForm;
 
         }
     }
