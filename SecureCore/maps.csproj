@@ -139,6 +139,10 @@
       <Project>{49db4e3f-ea22-4fd4-91f8-d99c5eee9126}</Project>
       <Name>Controles_Usuario</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Formularios\Formularios.csproj">
+      <Project>{d7e42c39-5862-4080-962c-929c9377fe15}</Project>
+      <Name>Formularios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Form_Base\Form_Base.csproj">
       <Project>{c24f59f5-5af2-4ef5-ba01-9603f1a1310f}</Project>
       <Name>Form_Base</Name>

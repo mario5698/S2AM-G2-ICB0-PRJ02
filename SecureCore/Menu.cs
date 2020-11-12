@@ -11,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Formularios; 
 
 namespace SecureCore
 {
@@ -122,6 +123,11 @@ namespace SecureCore
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Users form = new Users();
+            ShowFroms(form);
+        }
 
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)
         {

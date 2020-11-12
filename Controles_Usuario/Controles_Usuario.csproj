@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\ejecutables\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,12 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Component1.Designer.cs">
-      <DependentUpon>Component1.cs</DependentUpon>
-    </Compile>
     <Compile Include="SWCodi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,10 +60,6 @@
     <ProjectReference Include="..\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj">
       <Project>{cff4959d-dc40-4103-855d-b5f76864326e}</Project>
       <Name>Acceso_Dades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BlibliotecaG2\BibliotecaG2.csproj">
-      <Project>{67032f4e-7f9b-4f43-84b5-82c737a1573a}</Project>
-      <Name>BibliotecaG2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

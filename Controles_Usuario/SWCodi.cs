@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Acceso_Dades;
-using BlibliotecaG2;
+//using BlibliotecaG2;
 
 namespace Controles_Usuario
 {
@@ -17,7 +17,6 @@ namespace Controles_Usuario
         public SWCodi()
         {
             InitializeComponent();
-            SW_CodiText.Visible = false;
         }
 
         #region Declarar Variables
@@ -48,7 +47,16 @@ namespace Controles_Usuario
             get { return _Requerit; }
             set { _Requerit = value; }
         }
-        
+
+        private string _Text;
+        public override String  Text
+        {
+            get { return _Text; }
+            set { _Text = value;
+                InfoCodi(value);
+            }
+        }
+
         public String NomTaula
         {
             get { return _NomTaula; }
@@ -96,25 +104,64 @@ namespace Controles_Usuario
 
         private void TXT_SWCodi_Leave(object sender, EventArgs e)
         {
+            TXT_SWDesc.BackColor = Color.PaleGreen;
+            TXT_SWDesc.ForeColor = Color.FromArgb(50, 60, 70);
+            TXT_SWCodi.BackColor = Color.PaleGreen;
+            TXT_SWCodi.ForeColor = Color.FromArgb(50, 60, 70);
+
             Acceso acc = new Acceso();
 
             string consulta = "select * from " + _NomTaula + " where " + _NomCodi + "= '" + TXT_SWCodi.Text + "'";
             DataSet dts = acc.PortarPerConsulta(consulta);
 
-            if (dts.Tables[0].Rows.Count > 0)
+            Form frm = this.FindForm();
+            foreach (Control ctr in frm.Controls)
+            {
+
+                if (dts.Tables[0].Rows.Count > 0)
             {
                 TXT_SWDesc.Text = dts.Tables[0].Rows[0][_NomDesc].ToString();
+                if (ctr.Name == _ControlID)
+                {
+                    ctr.Text = dts.Tables[0].Rows[0][_NomId].ToString();
+                }
             }
             else
             {
                 TXT_SWDesc.Text = "Unknow Data";
+                    if (ctr.Name == _ControlID)
+                    {
+                        ctr.Text = "";
+                    }
+                }
             }
+        }
+
+        private void SWCodi_Load(object sender, EventArgs e)
+        {
+        
+        }
+
+        public void InfoCodi(string datos)
+        {
+            Acceso acc = new Acceso();
+            string consulta = "select * from " + _NomTaula + " where " + _NomId + "= '" + datos + "'";
+            DataSet dts = acc.PortarPerConsulta(consulta);
+            if (dts.Tables[0].Rows.Count > 0)
+            {
+                TXT_SWDesc.Text = dts.Tables[0].Rows[0][_NomDesc].ToString();
+                TXT_SWCodi.Text = dts.Tables[0].Rows[0][_NomCodi].ToString();
+            }
+          
 
         }
 
-        private void TXT_SWDesc_TextChanged(object sender, EventArgs e)
+        private void TXT_SWCodi_Enter(object sender, EventArgs e)
         {
-
+            TXT_SWDesc.ForeColor = Color.PaleGreen;
+            TXT_SWDesc.BackColor = Color.FromArgb(50, 60, 70);
+            TXT_SWCodi.ForeColor = Color.PaleGreen;
+            TXT_SWCodi.BackColor = Color.FromArgb(50, 60, 70);
         }
 
         private void TXT_SWCodi_TextChanged(object sender, EventArgs e)

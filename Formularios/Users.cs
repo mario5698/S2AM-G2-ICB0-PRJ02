@@ -1,4 +1,6 @@
 ﻿using Acceso_Dades;
+using BlibliotecaG2;
+using Controles_Usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SecureCore
+namespace Formularios
 {
     public partial class Users : Form
     {
@@ -30,7 +32,6 @@ namespace SecureCore
             dtgUsers.DataSource = infotabla;
         }
 
-
         private void Dtg_header()
         {
             dtgUsers.Columns[0].HeaderText = "ID";
@@ -47,13 +48,15 @@ namespace SecureCore
 
         private void Info_Textbox()
         {
-            foreach (Control ctr in panel1.Controls)
+            foreach (Control ctr in this.Controls)
             {
-                if (ctr.GetType() == typeof(TextBox))
+                if (ctr.GetType() == typeof(SWTextbox))
                 {
+                    ctr.BackColor = Color.PaleGreen;
+                    ctr.ForeColor = Color.FromArgb(50, 60, 70);
                     ctr.DataBindings.Clear();
                     ctr.Text = string.Empty;
-                    ctr.DataBindings.Add("Text", infotabla, ctr.Tag.ToString());
+                    ctr.DataBindings.Add("Text", infotabla, ((SWTextbox)ctr).Nom_BBDD.ToString());
                     ctr.Validated += new System.EventHandler(this.ValidarTextBox);
                 }
             }
@@ -61,7 +64,7 @@ namespace SecureCore
         private void ValidarTextBox(object sender, EventArgs e)
         {
             if (!nuevo)
-            ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
 
 
@@ -77,13 +80,14 @@ namespace SecureCore
             cancel.Show();
             row = infotabla.NewRow();
             nuevo = true;
-            foreach (Control ctr in panel1.Controls)
+            foreach (Control ctr in this.Controls)
             {
-                if (ctr.GetType() == typeof(TextBox))
+                if (ctr.GetType() == typeof(SWTextbox))
                 {
                     ctr.DataBindings.Clear();
                     ctr.Text = string.Empty;
-                    txb1.Text = "0";
+                    user_id_swtxb.Text = "0";
+                    specie_id_swtxb.Text = "0";
                 }
             }
         }
@@ -97,22 +101,49 @@ namespace SecureCore
 
         private void Actualizar_Base_Click(object sender, EventArgs e)
         {
+            bool vacios = false;
             if (nuevo)
             {
-                foreach (Control ctr in panel1.Controls)
+                foreach (Control ctr in this.Controls)
                 {
-                    if (ctr.GetType() == typeof(TextBox))
+                    if (ctr.GetType() == typeof(SWTextbox))
                     {
-                        row[ctr.Tag.ToString()] = ctr.Text;
+                        if (((SWTextbox)ctr).obligatorio && ctr.Text == string.Empty)
+                        {
+                            vacios = true;
+                        }
+                        else
+                        {
+                             row[((SWTextbox)ctr).Nom_BBDD.ToString()] = ctr.Text;
+                        }
                     }
                 }
-                infotabla.Rows.Add(row);
+                if (!vacios)
+                {
+                    infotabla.Rows.Add(row);
+                }
+                else
+                {
+                    MessageBox.Show("CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             nuevo = false;
             obj.Actualitzar();
             Portar_Dades();
             Info_Textbox();
             cancel.Hide();
+        }
+
+        private void specie_id_swtxb_TextChanged(object sender, EventArgs e)
+        {
+            if (Int32.TryParse((specie_id_swtxb.Text), out int outbound))
+            {
+                if (outbound < 0 || outbound > 17)
+                {
+                    MessageBox.Show("DATO FUERA DE RANGO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    specie_id_swtxb.Text = string.Empty;
+                }
+            }
         }
     }
 }

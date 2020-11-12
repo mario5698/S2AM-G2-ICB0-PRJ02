@@ -2,7 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using Acceso_Dades;
+using System.Data;
 
 namespace BlibliotecaG2
 {
@@ -16,9 +17,14 @@ namespace BlibliotecaG2
         private void InitializeComponent()
         {
             this.SuspendLayout();
+            // 
+            // SWTextbox
+            // 
+            this.TextChanged += new System.EventHandler(this.SWTextbox_TextChanged);
             this.GotFocus += new System.EventHandler(this.SWTextbox_Enter);
             this.LostFocus += new System.EventHandler(this.SWTextbox_leave);
             this.ResumeLayout(false);
+
             }
 
         #region Declaracion Variables
@@ -26,12 +32,13 @@ namespace BlibliotecaG2
         {
             Text,
             Data,
-            Codi
+            Codi,
+            Num
         }
         bool _Foranea,_Obligatorio; 
         private TipusDada _DadaPermesa;
         string _datos;
-        String _NombreBBDD;
+        String _NombreBBDD, _ControllID;
 
         #endregion
 
@@ -63,71 +70,100 @@ namespace BlibliotecaG2
         public String dada
         {
             get { return _datos; }
-            set { _datos = value; }
+            set { _datos = value;
+            }
+        }
+
+        public string ControllID
+        {
+            get { return _ControllID; }
+            set { _ControllID = value; }
         }
         #endregion 
 
 
 
         #region Validacion de entrada
-        private void SWTextbox_Validate()
+        private bool SWTextbox_Validate()
         {
-            if (_DadaPermesa == TipusDada.Data)
+            if (obligatorio && this.Text == string.Empty)
             {
-                DateTime _val;
-                bool fecha = DateTime.TryParse(_datos, out _val);
-            
-                if (!fecha)
-                {                  
-                  MessageBox.Show("data invalida");
-                }
-            }
-            else if (_DadaPermesa == TipusDada.Codi)
-            {
-                Regex rx = new Regex(@"^[A-Z]{4}-\d{3}/[1,3,5,7,9][A-Z]{1}$");
-                if (obligatorio)
-                {
-                    MatchCollection matches = rx.Matches(_datos);
-                    if (matches.Count == 0)
-                    {
-                        String mensaje = "El campo esta vacio o los datos introducidos con Incorrectos";
-                        ShowAlert(mensaje);
-                    }
-                }   
-            }
-        }
-        #endregion
-
-
-        private void ShowAlert(String informacion)
-        {
-            NotifyIcon n = new NotifyIcon();
-            n.BalloonTipTitle = "Error de " + _DadaPermesa;
-            n.BalloonTipText = informacion;
-            n.Icon = SystemIcons.Warning;
-            n.BalloonTipIcon = ToolTipIcon.Warning;
-            n.Visible = true;
-            n.ShowBalloonTip(50000);
-            n.Dispose();
-
-        }
-
-        private void SWTextbox_leave(object sender, EventArgs e)
-        {
-            this.BackColor = System.Drawing.Color.White;
-            if (_Obligatorio && (_datos == ""))
-            {
-                String mensaje = "Este campo es obligatorio";
-                ShowAlert(mensaje);
+                
+                return false;
             }
             else
             {
-                SWTextbox_Validate();
+                if (_DadaPermesa == TipusDada.Data)
+                {
+                    DateTime _val;
+                    bool fecha = DateTime.TryParse(this.Text, out _val);
+                    if (!fecha)
+                    {
+                        this.Text = string.Empty;
+                        return false;
+                    }
+                }
+                else if (_DadaPermesa == TipusDada.Codi)
+                {
+                    Regex rx = new Regex(@"^[A-Z]{4}-\d{3}/[1,3,5,7,9][A-Z]{1}$");
+                    MatchCollection matches = rx.Matches(this.Text);
+                    if (matches.Count == 0)
+                    {
+                        this.Text = string.Empty;
+                        return false;
+                    }
+                }
+                else if (_DadaPermesa == TipusDada.Num)
+                {
+                    if (!(int.TryParse((this.Text), out int outbound)))
+                    {
+                        this.Text = string.Empty;
+                        return false;
+                    }
+                }
             }
+            return true;
+        }
+        #endregion
+
+        private void SWTextbox_leave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.PaleGreen;
+            this.ForeColor = Color.FromArgb(50, 60, 70);
+            if (!SWTextbox_Validate())
+            {
+                this.BackColor = Color.PaleGreen;
+                this.ForeColor = Color.FromArgb(50, 60, 70);
+            }
+
+        }
+
+        private void SWTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (SWTextbox_Validate())
+            {
+                if (_Foranea)
+                {
+                    Pasar_id();
+                }
+            }
+        }
+
+        private void Pasar_id()
+        {
+                Form frm = this.FindForm();
+                foreach (Control ctr in frm.Controls)
+                {
+                    if (ctr.Name == _ControllID)
+                    {
+                        ctr.Text = this.Text;
+                    }
+                }
         }
         private void SWTextbox_Enter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Red;
+            this.ForeColor = Color.PaleGreen;
+            this.BackColor = Color.FromArgb(50, 60, 70);
         }
     }
 }
