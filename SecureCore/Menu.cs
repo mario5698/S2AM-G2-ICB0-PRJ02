@@ -20,7 +20,6 @@ namespace SecureCore
         // Declaracion de variables 
         bool Hide_Panel = false;
         int Max_Size = 200, Min_Size = 0;
-        String InUse;
         public Menu(String user, String rango)
         {
             InitializeComponent();
