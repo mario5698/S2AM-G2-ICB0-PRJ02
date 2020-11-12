@@ -23,17 +23,24 @@ namespace SecureCore
         void LogIn(object sender, EventArgs e)
         {
             String message, titulo_Msgbox;
+            titulo_Msgbox = "ERROR";
             message = ("Usuario o Contraseña incorrecta");
-            titulo_Msgbox ="ERROR";
             MessageBoxButtons botones;
+            String user = txtUsername.Text;
+            String password = txtPassword.Text;
+            string rank = "idUserRank";
             Acceso acc = new Acceso();
-            
+            String rango = "";
 
-            string consulta = "select * from users where login = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
             string tabla = "users";
-            if (acc.PortarPerConsulta(consulta, tabla).Tables[tabla].Rows.Count > 0)
+            string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
+            
+            DataSet dts = acc.PortarPerConsulta(consulta, tabla);
+            int usuaris = dts.Tables[tabla].Rows.Count;
+            if (usuaris > 0)
             {
-                Splash obj = new Splash(txtUsername.Text);
+                rango = dts.Tables[0].Rows[0][rank].ToString();
+                Splash obj = new Splash(user, rango);
                 this.Hide();
                 obj.Show();
             }

@@ -1,4 +1,5 @@
 ﻿using Acceso_Dades;
+using BlibliotecaG2;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,27 +15,54 @@ namespace SecureCore
 {
     public partial class Menu : Form
     {
+        Acceso acc = new Acceso();
         // Declaracion de variables 
         bool Hide_Panel = false;
         int Max_Size = 200, Min_Size = 0;
         Form InUse;
-        public Menu(String user)
+        public Menu(String user, String rango)
         {
-
             InitializeComponent();
+            traerForms(rango);
             Welcome myForm = new Welcome(user);
             InUse = myForm;
-            InUse.Size = new Size(pnl_rigth.Width , pnl_rigth.Height);
+          //  InUse.Size = new Size(pnl_rigth.Width , pnl_rigth.Height);
             ShowFroms(myForm);
-            
             lblUser.Text = user;
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            
             Hide_panel_left(Hide_Panel);
          
         }
+
+
+        private void traerForms(String rango)
+        {
+            String tabla = "forms";
+            String consulta = "select namespace, form from " + tabla + " where Rank < " + rango;
+            DataSet dts = acc.PortarPerConsulta(consulta, tabla);
+            int numeroForms = dts.Tables[tabla].Rows.Count;
+
+
+            for (int i = 0; i < numeroForms; i++) create();
+        }
+
+        Button create()
+        {
+            Button myButton = new Button();
+            myButton.Text = "some text";
+            pnl_left.Controls.Add(myButton);
+            myButton.Dock = DockStyle.Top;
+            myButton.FlatStyle = FlatStyle.Flat;
+            myButton.ForeColor = Color.PaleGreen;
+            myButton.Size = new Size(200, 79);
+            return myButton;
+        }
+
+
 
         private void Hide_panel_left(bool  hide_panel) 
         {
@@ -82,27 +110,12 @@ namespace SecureCore
         }
 
 
-        private void btn_Opt2_Click(object sender, EventArgs e)
-        {
-
-            MaintenancePage();
-        }
-
-        private void btn_Opt4_Click(object sender, EventArgs e)
-        {
-            //Form_Base.Form_Base frm = new Form_Base.Form_Base();
-            //frm.Show();
-        }
-
-        private void btn_Opt3_Click(object sender, EventArgs e)
-        {
-            MaintenancePage();
-        }
-
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+      
 
         private void MaintenancePage()
         {

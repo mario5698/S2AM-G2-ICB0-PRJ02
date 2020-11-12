@@ -107,5 +107,4 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\SecureCore.exe.config
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\SecureCore.exe
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\SecureCore.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
-C:\Users\Mario\Desktop\Github\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.TestUserControl.resources
 C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.TestUserControl.resources

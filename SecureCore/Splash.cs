@@ -14,10 +14,11 @@ namespace SecureCore
     {
         String user;
         int contador = 1;
-        public Splash(String user)
+        public Splash(String user, String rango)
         {
             InitializeComponent();
             this.user = user;
+            this.Name = rango;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace SecureCore
             progressBar.Increment(4);
             if (contador == 31)
             {
-                Menu menu = new Menu(user);
+                Menu menu = new Menu(user, Name);
                 this.Hide();
                 menu.Show();
                 timer.Enabled = false;
