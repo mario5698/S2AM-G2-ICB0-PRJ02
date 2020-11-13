@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Acceso_Dades;
 using System.Data;
+using Controles_Usuario;
 
 namespace BlibliotecaG2
 {
@@ -25,7 +26,7 @@ namespace BlibliotecaG2
             this.LostFocus += new System.EventHandler(this.SWTextbox_leave);
             this.ResumeLayout(false);
 
-            }
+        }
 
         #region Declaracion Variables
         public enum TipusDada
@@ -35,7 +36,7 @@ namespace BlibliotecaG2
             Codi,
             Num
         }
-        bool _Foranea,_Obligatorio; 
+        bool _Foranea, _Obligatorio;
         private TipusDada _DadaPermesa;
         string _datos;
         String _NombreBBDD, _ControllID;
@@ -64,13 +65,15 @@ namespace BlibliotecaG2
         public TipusDada DadaPermesa
         {
             get { return _DadaPermesa; }
-            set{ _DadaPermesa = value;}
+            set { _DadaPermesa = value; }
         }
 
         public String dada
         {
             get { return _datos; }
-            set { _datos = value;
+            set
+            {
+                _datos = value;
             }
         }
 
@@ -88,7 +91,8 @@ namespace BlibliotecaG2
         {
             if (obligatorio && this.Text == string.Empty)
             {
-                
+                this.BackColor = Color.DarkRed;
+                this.ForeColor = Color.FromArgb(50, 60, 70);
                 return false;
             }
             else
@@ -115,7 +119,7 @@ namespace BlibliotecaG2
                 }
                 else if (_DadaPermesa == TipusDada.Num)
                 {
-                    if (!(int.TryParse((this.Text), out int outbound)))
+                    if ((!(int.TryParse((this.Text), out int outbound))))
                     {
                         this.Text = string.Empty;
                         return false;
@@ -128,37 +132,41 @@ namespace BlibliotecaG2
 
         private void SWTextbox_leave(object sender, EventArgs e)
         {
-            this.BackColor = Color.PaleGreen;
-            this.ForeColor = Color.FromArgb(50, 60, 70);
-            if (!SWTextbox_Validate())
+            if (SWTextbox_Validate())
             {
                 this.BackColor = Color.PaleGreen;
                 this.ForeColor = Color.FromArgb(50, 60, 70);
             }
-
         }
 
         private void SWTextbox_TextChanged(object sender, EventArgs e)
         {
             if (SWTextbox_Validate())
             {
+                this.BackColor = Color.PaleGreen;
+                this.ForeColor = Color.FromArgb(50, 60, 70);
                 if (_Foranea)
                 {
                     Pasar_id();
                 }
             }
+            else
+            {
+                this.BackColor = Color.DarkRed;
+                this.ForeColor = Color.FromArgb(50, 60, 70);
+            }
         }
 
         private void Pasar_id()
         {
-                Form frm = this.FindForm();
-                foreach (Control ctr in frm.Controls)
+            Form frm = this.FindForm();
+            foreach (Control ctr in frm.Controls)
+            {
+                if (ctr.Name == _ControllID)
                 {
-                    if (ctr.Name == _ControllID)
-                    {
-                        ctr.Text = this.Text;
-                    }
+                    ctr.Text = this.Text;
                 }
+            }
         }
         private void SWTextbox_Enter(object sender, EventArgs e)
         {

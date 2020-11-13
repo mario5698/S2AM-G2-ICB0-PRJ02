@@ -64,7 +64,7 @@ namespace Formularios
         private void ValidarTextBox(object sender, EventArgs e)
         {
             if (!nuevo)
-            ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+                ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
 
 
@@ -87,7 +87,7 @@ namespace Formularios
                     ctr.DataBindings.Clear();
                     ctr.Text = string.Empty;
                     user_id_swtxb.Text = "0";
-                    specie_id_swtxb.Text = "0";
+                    specie_id_swtxb.Text = "1";
                 }
             }
         }
@@ -114,7 +114,7 @@ namespace Formularios
                         }
                         else
                         {
-                             row[((SWTextbox)ctr).Nom_BBDD.ToString()] = ctr.Text;
+                            row[((SWTextbox)ctr).Nom_BBDD.ToString()] = ctr.Text;
                         }
                     }
                 }
@@ -138,7 +138,7 @@ namespace Formularios
         {
             if (Int32.TryParse((specie_id_swtxb.Text), out int outbound))
             {
-                if (outbound < 0 || outbound > 17)
+                if (outbound <= 0 || outbound > 17)
                 {
                     MessageBox.Show("DATO FUERA DE RANGO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     specie_id_swtxb.Text = string.Empty;

@@ -35,3 +35,6 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Pruebas.exe.config
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Pruebas.exe
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Pruebas.pdb
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Pruebas.exe.config
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Pruebas.exe
+C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Pruebas.pdb

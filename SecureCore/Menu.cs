@@ -41,47 +41,50 @@ namespace SecureCore
         private void traerForms(String rango)
         {
             String tabla = "forms";
-            String consulta = "select namespace, form from " + tabla + " where Rank < " + rango;
+            String consulta = "select * from " + tabla + " where Rank <= " + rango;
             DataSet dts = acc.PortarPerConsulta(consulta, tabla);
             int numeroForms = dts.Tables[tabla].Rows.Count;
             String dll = "";
             String FormName = "";
+            String Nombre = "";
 
             for (int i = 0; i < numeroForms; i++)
             {
-                dll = dts.Tables[0].Rows[i]["Namespaces"].ToString();
-                FormName = dts.Tables[0].Rows[i]["form"].ToString();
-                 loadForm(dll, FormName, i );
+                dll = dts.Tables[0].Rows[i]["Namespace"].ToString();
+                FormName = dts.Tables[0].Rows[i]["Form"].ToString();
+                Nombre = dts.Tables[0].Rows[i]["Name"].ToString();
+                loadForm(dll, FormName, Nombre);
             };
         }
 
 
-        private void loadForm(string dll, string FormName, int i)
+        private void loadForm(string dll, string FormName, string Nombre)
         {
             Object dllBD;
             Type tipus;
-            Assembly ensamblat = Assembly.LoadFrom(dll);
-            tipus = ensamblat.GetType(FormName + "." + FormName);
+            Assembly ensamblat = Assembly.LoadFrom(dll + ".dll");
+            tipus = ensamblat.GetType(dll + "." + FormName);
             dllBD = Activator.CreateInstance(tipus);
             Form formulario = ((Form)dllBD);
-            create(formulario, i );
+            create(formulario, Nombre);
         }
 
-        Button create(Form newFormulario, int i )
+        Button create(Form newFormulario, string Nombre)
         {
             Button myButton = new Button();
-            myButton.Text = "some text";
+            myButton.Text = Nombre;
             pnl_left.Controls.Add(myButton);
             myButton.Dock = DockStyle.Top;
             myButton.FlatStyle = FlatStyle.Flat;
             myButton.ForeColor = Color.PaleGreen;
             myButton.Size = new Size(200, 79);
-            myButton.Click += new EventHandler(myButton_click);
+            myButton.Click += new EventHandler((sender, e) => myButton_click(sender, e, newFormulario));
             return myButton;
         }
 
-        private void myButton_click (object sender, EventArgs e)
+        private void myButton_click (object sender, EventArgs e, Form frm)
         {
+            ShowFroms(frm);
 
         }
 
@@ -121,12 +124,6 @@ namespace SecureCore
         {
             Application.Exit();
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Busqueda form = new Busqueda();
-            ShowFroms(form);
         }
 
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)

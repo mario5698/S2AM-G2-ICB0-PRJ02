@@ -68,6 +68,10 @@
       <Project>{cff4959d-dc40-4103-855d-b5f76864326e}</Project>
       <Name>Acceso_Dades</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Controles_Usuario\Controles_Usuario.csproj">
+      <Project>{49db4e3f-ea22-4fd4-91f8-d99c5eee9126}</Project>
+      <Name>Controles_Usuario</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
