@@ -125,7 +125,7 @@ namespace SecureCore
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Users form = new Users();
+            Busqueda form = new Busqueda();
             ShowFroms(form);
         }
 
