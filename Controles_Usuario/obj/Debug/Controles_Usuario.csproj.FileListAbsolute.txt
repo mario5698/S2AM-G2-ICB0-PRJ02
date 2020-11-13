@@ -20,3 +20,14 @@ C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controle
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.csproj.CopyComplete
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.dll
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\bin\Debug\Controles_Usuario.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\bin\Debug\Controles_Usuario.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\bin\Debug\Acceso_Dades.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\bin\Debug\Acceso_Dades.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.csprojAssemblyReference.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.SWCodi.resources
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.csproj.GenerateResource.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.csproj.CoreCompileInputs.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.csproj.CopyComplete
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Controles_Usuario\obj\Debug\Controles_Usuario.pdb

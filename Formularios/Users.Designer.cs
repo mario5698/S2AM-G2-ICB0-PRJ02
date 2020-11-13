@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgUsers = new System.Windows.Forms.DataGridView();
             this.cancel = new System.Windows.Forms.Button();
             this.Actualizar_Base = new System.Windows.Forms.Button();
@@ -60,14 +64,48 @@
             // dtgUsers
             // 
             this.dtgUsers.AllowUserToAddRows = false;
+            this.dtgUsers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.dtgUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUsers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgUsers.Location = new System.Drawing.Point(0, 643);
+            this.dtgUsers.EnableHeadersVisualStyles = false;
+            this.dtgUsers.GridColor = System.Drawing.Color.PaleGreen;
+            this.dtgUsers.Location = new System.Drawing.Point(0, 228);
+            this.dtgUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.ReadOnly = true;
+            this.dtgUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgUsers.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.PaleGreen;
+            this.dtgUsers.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgUsers.RowTemplate.Height = 28;
-            this.dtgUsers.Size = new System.Drawing.Size(1920, 437);
+            this.dtgUsers.Size = new System.Drawing.Size(924, 284);
             this.dtgUsers.TabIndex = 93;
             // 
             // cancel
@@ -77,9 +115,10 @@
             this.cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.ForeColor = System.Drawing.Color.PaleGreen;
-            this.cancel.Location = new System.Drawing.Point(466, 427);
+            this.cancel.Location = new System.Drawing.Point(311, 278);
+            this.cancel.Margin = new System.Windows.Forms.Padding(2);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(114, 43);
+            this.cancel.Size = new System.Drawing.Size(76, 28);
             this.cancel.TabIndex = 108;
             this.cancel.Text = "CANCEL";
             this.cancel.UseVisualStyleBackColor = false;
@@ -92,9 +131,10 @@
             this.Actualizar_Base.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.Actualizar_Base.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Actualizar_Base.ForeColor = System.Drawing.Color.PaleGreen;
-            this.Actualizar_Base.Location = new System.Drawing.Point(646, 427);
+            this.Actualizar_Base.Location = new System.Drawing.Point(431, 278);
+            this.Actualizar_Base.Margin = new System.Windows.Forms.Padding(2);
             this.Actualizar_Base.Name = "Actualizar_Base";
-            this.Actualizar_Base.Size = new System.Drawing.Size(114, 43);
+            this.Actualizar_Base.Size = new System.Drawing.Size(76, 28);
             this.Actualizar_Base.TabIndex = 106;
             this.Actualizar_Base.Text = "SAVE";
             this.Actualizar_Base.UseVisualStyleBackColor = false;
@@ -107,9 +147,10 @@
             this.add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add.ForeColor = System.Drawing.Color.PaleGreen;
-            this.add.Location = new System.Drawing.Point(283, 427);
+            this.add.Location = new System.Drawing.Point(189, 278);
+            this.add.Margin = new System.Windows.Forms.Padding(2);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(114, 43);
+            this.add.Size = new System.Drawing.Size(76, 28);
             this.add.TabIndex = 107;
             this.add.Text = "ADD";
             this.add.UseVisualStyleBackColor = false;
@@ -121,9 +162,10 @@
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl1.Location = new System.Drawing.Point(171, 92);
+            this.lbl1.Location = new System.Drawing.Point(114, 60);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(97, 29);
+            this.lbl1.Size = new System.Drawing.Size(66, 20);
             this.lbl1.TabIndex = 81;
             this.lbl1.Text = "User_Id";
             // 
@@ -133,9 +175,10 @@
             this.lbl6.AutoSize = true;
             this.lbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl6.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl6.Location = new System.Drawing.Point(536, 97);
+            this.lbl6.Location = new System.Drawing.Point(357, 63);
+            this.lbl6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(165, 29);
+            this.lbl6.Size = new System.Drawing.Size(113, 20);
             this.lbl6.TabIndex = 145;
             this.lbl6.Text = "User_Id_Rank";
             // 
@@ -145,9 +188,10 @@
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl5.Location = new System.Drawing.Point(148, 247);
+            this.lbl5.Location = new System.Drawing.Point(99, 161);
+            this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(120, 29);
+            this.lbl5.Size = new System.Drawing.Size(78, 20);
             this.lbl5.TabIndex = 143;
             this.lbl5.Text = "Password";
             // 
@@ -157,9 +201,10 @@
             this.lbl7.AutoSize = true;
             this.lbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl7.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl7.Location = new System.Drawing.Point(494, 135);
+            this.lbl7.Location = new System.Drawing.Point(329, 88);
+            this.lbl7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(207, 29);
+            this.lbl7.Size = new System.Drawing.Size(139, 20);
             this.lbl7.TabIndex = 146;
             this.lbl7.Text = "User_Id_Category";
             // 
@@ -169,9 +214,10 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl3.Location = new System.Drawing.Point(126, 171);
+            this.lbl3.Location = new System.Drawing.Point(84, 111);
+            this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(142, 29);
+            this.lbl3.Size = new System.Drawing.Size(94, 20);
             this.lbl3.TabIndex = 140;
             this.lbl3.Text = "User_Name";
             // 
@@ -181,9 +227,10 @@
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl4.Location = new System.Drawing.Point(195, 209);
+            this.lbl4.Location = new System.Drawing.Point(130, 136);
+            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(73, 29);
+            this.lbl4.Size = new System.Drawing.Size(48, 20);
             this.lbl4.TabIndex = 139;
             this.lbl4.Text = "Login";
             // 
@@ -193,9 +240,10 @@
             this.lbl9.AutoSize = true;
             this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl9.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl9.Location = new System.Drawing.Point(585, 209);
+            this.lbl9.Location = new System.Drawing.Point(390, 136);
+            this.lbl9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(114, 29);
+            this.lbl9.Size = new System.Drawing.Size(77, 20);
             this.lbl9.TabIndex = 149;
             this.lbl9.Text = "Planet_Id";
             // 
@@ -205,9 +253,10 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl2.Location = new System.Drawing.Point(132, 133);
+            this.lbl2.Location = new System.Drawing.Point(88, 86);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(136, 29);
+            this.lbl2.Size = new System.Drawing.Size(90, 20);
             this.lbl2.TabIndex = 137;
             this.lbl2.Text = "User_Code";
             // 
@@ -217,9 +266,10 @@
             this.lbl8.AutoSize = true;
             this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl8.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl8.Location = new System.Drawing.Point(619, 171);
+            this.lbl8.Location = new System.Drawing.Point(413, 111);
+            this.lbl8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(80, 29);
+            this.lbl8.Size = new System.Drawing.Size(54, 20);
             this.lbl8.TabIndex = 150;
             this.lbl8.Text = "Image";
             // 
@@ -229,9 +279,10 @@
             this.lbl10.AutoSize = true;
             this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl10.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl10.Location = new System.Drawing.Point(577, 247);
+            this.lbl10.Location = new System.Drawing.Point(385, 161);
+            this.lbl10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(122, 29);
+            this.lbl10.Size = new System.Drawing.Size(81, 20);
             this.lbl10.TabIndex = 153;
             this.lbl10.Text = "Specie_Id";
             // 
@@ -241,9 +292,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label1.Location = new System.Drawing.Point(107, 312);
+            this.label1.Location = new System.Drawing.Point(71, 203);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 29);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 156;
             this.label1.Text = "Specie_Code";
             // 
@@ -254,11 +306,12 @@
             this.specie_id_swtxb.dada = null;
             this.specie_id_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Num;
             this.specie_id_swtxb.Foranea = true;
-            this.specie_id_swtxb.Location = new System.Drawing.Point(742, 251);
+            this.specie_id_swtxb.Location = new System.Drawing.Point(495, 163);
+            this.specie_id_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.specie_id_swtxb.Name = "specie_id_swtxb";
             this.specie_id_swtxb.Nom_BBDD = "idspecie";
             this.specie_id_swtxb.obligatorio = true;
-            this.specie_id_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.specie_id_swtxb.Size = new System.Drawing.Size(86, 20);
             this.specie_id_swtxb.TabIndex = 10;
             this.specie_id_swtxb.Tag = "";
             this.specie_id_swtxb.TextChanged += new System.EventHandler(this.specie_id_swtxb_TextChanged);
@@ -270,11 +323,12 @@
             this.planet_id_swtxb.dada = null;
             this.planet_id_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Num;
             this.planet_id_swtxb.Foranea = false;
-            this.planet_id_swtxb.Location = new System.Drawing.Point(742, 213);
+            this.planet_id_swtxb.Location = new System.Drawing.Point(495, 138);
+            this.planet_id_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.planet_id_swtxb.Name = "planet_id_swtxb";
             this.planet_id_swtxb.Nom_BBDD = "idplanet";
             this.planet_id_swtxb.obligatorio = true;
-            this.planet_id_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.planet_id_swtxb.Size = new System.Drawing.Size(86, 20);
             this.planet_id_swtxb.TabIndex = 8;
             this.planet_id_swtxb.Tag = "";
             // 
@@ -285,11 +339,12 @@
             this.photo_swtxb.dada = null;
             this.photo_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.photo_swtxb.Foranea = false;
-            this.photo_swtxb.Location = new System.Drawing.Point(742, 175);
+            this.photo_swtxb.Location = new System.Drawing.Point(495, 114);
+            this.photo_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.photo_swtxb.Name = "photo_swtxb";
             this.photo_swtxb.Nom_BBDD = "photo";
             this.photo_swtxb.obligatorio = false;
-            this.photo_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.photo_swtxb.Size = new System.Drawing.Size(86, 20);
             this.photo_swtxb.TabIndex = 7;
             this.photo_swtxb.Tag = "";
             // 
@@ -300,11 +355,12 @@
             this.user_id_category_swtxb.dada = null;
             this.user_id_category_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Num;
             this.user_id_category_swtxb.Foranea = true;
-            this.user_id_category_swtxb.Location = new System.Drawing.Point(742, 139);
+            this.user_id_category_swtxb.Location = new System.Drawing.Point(495, 90);
+            this.user_id_category_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.user_id_category_swtxb.Name = "user_id_category_swtxb";
             this.user_id_category_swtxb.Nom_BBDD = "idusercategory";
             this.user_id_category_swtxb.obligatorio = true;
-            this.user_id_category_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.user_id_category_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_id_category_swtxb.TabIndex = 6;
             this.user_id_category_swtxb.Tag = "";
             // 
@@ -315,11 +371,12 @@
             this.id_user_rank_swtxb.dada = null;
             this.id_user_rank_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Num;
             this.id_user_rank_swtxb.Foranea = true;
-            this.id_user_rank_swtxb.Location = new System.Drawing.Point(742, 101);
+            this.id_user_rank_swtxb.Location = new System.Drawing.Point(495, 66);
+            this.id_user_rank_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.id_user_rank_swtxb.Name = "id_user_rank_swtxb";
             this.id_user_rank_swtxb.Nom_BBDD = "iduserrank";
             this.id_user_rank_swtxb.obligatorio = true;
-            this.id_user_rank_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.id_user_rank_swtxb.Size = new System.Drawing.Size(86, 20);
             this.id_user_rank_swtxb.TabIndex = 5;
             this.id_user_rank_swtxb.Tag = "";
             // 
@@ -330,12 +387,13 @@
             this.user_id_swtxb.dada = null;
             this.user_id_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.user_id_swtxb.Foranea = false;
-            this.user_id_swtxb.Location = new System.Drawing.Point(307, 96);
+            this.user_id_swtxb.Location = new System.Drawing.Point(205, 62);
+            this.user_id_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.user_id_swtxb.Name = "user_id_swtxb";
             this.user_id_swtxb.Nom_BBDD = "iduser";
             this.user_id_swtxb.obligatorio = false;
             this.user_id_swtxb.ReadOnly = true;
-            this.user_id_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.user_id_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_id_swtxb.TabIndex = 161;
             this.user_id_swtxb.Tag = "";
             // 
@@ -346,11 +404,12 @@
             this.login_swtxb.dada = null;
             this.login_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.login_swtxb.Foranea = false;
-            this.login_swtxb.Location = new System.Drawing.Point(307, 210);
+            this.login_swtxb.Location = new System.Drawing.Point(205, 136);
+            this.login_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.login_swtxb.Name = "login_swtxb";
             this.login_swtxb.Nom_BBDD = "login";
             this.login_swtxb.obligatorio = false;
-            this.login_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.login_swtxb.Size = new System.Drawing.Size(86, 20);
             this.login_swtxb.TabIndex = 3;
             this.login_swtxb.Tag = "";
             // 
@@ -361,11 +420,12 @@
             this.password_swtxb.dada = null;
             this.password_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.password_swtxb.Foranea = false;
-            this.password_swtxb.Location = new System.Drawing.Point(307, 248);
+            this.password_swtxb.Location = new System.Drawing.Point(205, 161);
+            this.password_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.password_swtxb.Name = "password_swtxb";
             this.password_swtxb.Nom_BBDD = "password";
             this.password_swtxb.obligatorio = false;
-            this.password_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.password_swtxb.Size = new System.Drawing.Size(86, 20);
             this.password_swtxb.TabIndex = 4;
             this.password_swtxb.Tag = "";
             // 
@@ -377,15 +437,14 @@
             this.swCodi1.ControlID = "specie_id_swtxb";
             this.swCodi1.ForeColor = System.Drawing.Color.Black;
             this.swCodi1.FormCS = null;
-            this.swCodi1.Location = new System.Drawing.Point(307, 312);
-            this.swCodi1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swCodi1.Location = new System.Drawing.Point(205, 203);
             this.swCodi1.Name = "swCodi1";
             this.swCodi1.NomCodi = "codespecie";
             this.swCodi1.NomDesc = "descspecie";
             this.swCodi1.NomId = "idspecie";
             this.swCodi1.NomTaula = "species";
             this.swCodi1.Requerit = false;
-            this.swCodi1.Size = new System.Drawing.Size(562, 43);
+            this.swCodi1.Size = new System.Drawing.Size(375, 28);
             this.swCodi1.TabIndex = 9;
             // 
             // user_cod_swtxb
@@ -395,11 +454,12 @@
             this.user_cod_swtxb.dada = null;
             this.user_cod_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.user_cod_swtxb.Foranea = false;
-            this.user_cod_swtxb.Location = new System.Drawing.Point(307, 133);
+            this.user_cod_swtxb.Location = new System.Drawing.Point(205, 86);
+            this.user_cod_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.user_cod_swtxb.Name = "user_cod_swtxb";
             this.user_cod_swtxb.Nom_BBDD = "codeuser";
             this.user_cod_swtxb.obligatorio = false;
-            this.user_cod_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.user_cod_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_cod_swtxb.TabIndex = 1;
             this.user_cod_swtxb.Tag = "";
             // 
@@ -410,20 +470,21 @@
             this.user_name_swtxb.dada = null;
             this.user_name_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.user_name_swtxb.Foranea = false;
-            this.user_name_swtxb.Location = new System.Drawing.Point(307, 172);
+            this.user_name_swtxb.Location = new System.Drawing.Point(205, 112);
+            this.user_name_swtxb.Margin = new System.Windows.Forms.Padding(2);
             this.user_name_swtxb.Name = "user_name_swtxb";
             this.user_name_swtxb.Nom_BBDD = "username";
             this.user_name_swtxb.obligatorio = false;
-            this.user_name_swtxb.Size = new System.Drawing.Size(127, 26);
+            this.user_name_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_name_swtxb.TabIndex = 2;
             this.user_name_swtxb.Tag = "";
             // 
             // Users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(924, 512);
             this.Controls.Add(this.lbl10);
             this.Controls.Add(this.lbl8);
             this.Controls.Add(this.lbl9);
@@ -451,6 +512,7 @@
             this.Controls.Add(this.user_cod_swtxb);
             this.Controls.Add(this.user_name_swtxb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Users";
             this.Text = "Users";
             this.Load += new System.EventHandler(this.Users_Load);

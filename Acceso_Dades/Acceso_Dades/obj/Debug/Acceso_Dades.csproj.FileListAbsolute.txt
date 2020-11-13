@@ -30,3 +30,5 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Acceso_Dades.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Acceso_Dades.pdb
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Acceso_Dades.dll
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Acceso_Dades.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ejecutables\Acceso_Dades.dll
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ejecutables\Acceso_Dades.pdb
