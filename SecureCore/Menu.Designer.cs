@@ -53,7 +53,7 @@
             // 
             // pnl_rigth
             // 
-            this.pnl_rigth.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_rigth.BackColor = System.Drawing.Color.Gainsboro;
             this.pnl_rigth.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_rigth.Location = new System.Drawing.Point(200, 29);
             this.pnl_rigth.Name = "pnl_rigth";

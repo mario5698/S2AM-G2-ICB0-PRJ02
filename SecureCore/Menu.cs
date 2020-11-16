@@ -21,12 +21,14 @@ namespace SecureCore
         // Declaracion de variables 
         bool Hide_Panel = false;
         int Max_Size = 200, Min_Size = 0;
+        Form Inuse;
         public Menu(String user, String rango)
         {
             InitializeComponent();
             traerForms(rango);
             lblUser.Text = user;
             Welcome myForm = new Welcome(user);
+            Inuse = myForm;
             ShowFroms(myForm);
 
         }
@@ -96,8 +98,10 @@ namespace SecureCore
                 for (int i = Max_Size; i >= Min_Size; i--)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                    pnl_rigth.Size = new Size(pnl_rigth.Width + Max_Size, panel2.Height );
+                    Inuse.Size = new Size(pnl_rigth.Width + i+1, pnl_rigth.Height);
+
                 }
+                
                 Hide_Panel = true;
             }
             else
@@ -105,7 +109,11 @@ namespace SecureCore
                 for (int i = Min_Size; i <= Max_Size; i++)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
+              
+
                 }
+
+
                 Hide_Panel = false;
             }
         }
@@ -113,6 +121,7 @@ namespace SecureCore
   
         private void ShowFroms( Form myForm ) 
         {
+            Inuse = myForm;
             pnl_rigth.Controls.Clear();
             myForm.TopLevel = false;
             myForm.AutoScroll = false;

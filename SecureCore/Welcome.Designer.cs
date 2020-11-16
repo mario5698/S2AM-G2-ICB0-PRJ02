@@ -45,12 +45,13 @@
             // 
             // Logged_User_Name
             // 
-            this.Logged_User_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logged_User_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Logged_User_Name.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold);
             this.Logged_User_Name.ForeColor = System.Drawing.Color.PaleGreen;
             this.Logged_User_Name.Location = new System.Drawing.Point(0, 0);
             this.Logged_User_Name.Name = "Logged_User_Name";
-            this.Logged_User_Name.Size = new System.Drawing.Size(1940, 1080);
+            this.Logged_User_Name.Size = new System.Drawing.Size(1920, 1080);
             this.Logged_User_Name.TabIndex = 1;
             this.Logged_User_Name.Text = "User_Name";
             this.Logged_User_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
