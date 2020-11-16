@@ -40,7 +40,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(1940, 1080);
             this.panel1.TabIndex = 0;
             // 
             // Logged_User_Name
@@ -50,7 +50,7 @@
             this.Logged_User_Name.ForeColor = System.Drawing.Color.PaleGreen;
             this.Logged_User_Name.Location = new System.Drawing.Point(0, 0);
             this.Logged_User_Name.Name = "Logged_User_Name";
-            this.Logged_User_Name.Size = new System.Drawing.Size(800, 450);
+            this.Logged_User_Name.Size = new System.Drawing.Size(1940, 1080);
             this.Logged_User_Name.TabIndex = 1;
             this.Logged_User_Name.Text = "User_Name";
             this.Logged_User_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,7 +61,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1940, 1080);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Welcome";

@@ -96,6 +96,7 @@ namespace SecureCore
                 for (int i = Max_Size; i >= Min_Size; i--)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
+                    pnl_rigth.Size = new Size(pnl_rigth.Width + Max_Size, panel2.Height );
                 }
                 Hide_Panel = true;
             }
