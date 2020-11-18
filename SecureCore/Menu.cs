@@ -93,9 +93,11 @@ namespace SecureCore
 
         private void Hide_panel_left(bool  hide_panel) 
         {
+            int speed = 25;
+
             if (hide_panel != true)
             {
-                for (int i = Max_Size; i >= Min_Size; i--)
+                for (int i = Max_Size; i >= Min_Size; i-=speed)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
                     Inuse.Size = new Size(pnl_rigth.Width + i+1, pnl_rigth.Height);
@@ -106,7 +108,7 @@ namespace SecureCore
             }
             else
             {
-                for (int i = Min_Size; i <= Max_Size; i++)
+                for (int i = Min_Size; i <= Max_Size; i+=speed)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
                     //Inuse.Size = new Size(pnl_rigth.Width - i + 1, pnl_rigth.Height);
