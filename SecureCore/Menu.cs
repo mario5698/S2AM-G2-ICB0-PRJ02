@@ -109,7 +109,7 @@ namespace SecureCore
                 for (int i = Min_Size; i <= Max_Size; i++)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-              
+                    //Inuse.Size = new Size(pnl_rigth.Width - i + 1, pnl_rigth.Height);
 
                 }
 
@@ -134,6 +134,12 @@ namespace SecureCore
         {
             Application.Exit();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Formularios.Busqueda formulario = new Formularios.Busqueda();
+            ShowFroms(formulario);
         }
 
         private void pnl_rigth_Paint(object sender, PaintEventArgs e)

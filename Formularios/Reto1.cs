@@ -87,5 +87,10 @@ namespace Formularios
                 }
             }
         }
+
+        private void Reto1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

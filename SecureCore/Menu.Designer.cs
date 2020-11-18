@@ -36,7 +36,9 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_HideLeftPanel = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.pnl_left.SuspendLayout();
             this.pnl_top.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,7 @@
             // pnl_left
             // 
             this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.pnl_left.Controls.Add(this.button2);
             this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_left.Location = new System.Drawing.Point(0, 29);
             this.pnl_left.Name = "pnl_left";
@@ -122,6 +125,16 @@
             this.btn_HideLeftPanel.UseVisualStyleBackColor = true;
             this.btn_HideLeftPanel.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(110, 221);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +149,7 @@
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
+            this.pnl_left.ResumeLayout(false);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             this.ResumeLayout(false);
@@ -150,5 +164,6 @@
         private System.Windows.Forms.Button btn_HideLeftPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button button2;
     }
 }

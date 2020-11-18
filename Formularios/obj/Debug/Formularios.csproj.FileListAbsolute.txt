@@ -9,7 +9,6 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\bin\Debug\BlibliotecaG2.p
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\bin\Debug\Controles_Usuario.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\bin\Debug\Form_Base.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csprojAssemblyReference.cache
-C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.Busqueda.resources
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.Reto1.resources
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.Users.resources
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.GenerateResource.cache
