@@ -20,8 +20,18 @@ namespace SecureCore
             InitializeComponent();
         }
 
+        private static string generateSalt()
+        {
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var stringChars = new char[5];
+            var random = new Random();
+            for (int i = 0; i < 5; i++) stringChars[i] = chars[random.Next(chars.Length)];
+            return new String(stringChars);
+        }
+
         void LogIn(object sender, EventArgs e)
         {
+            generateSalt();
             String message, titulo_Msgbox;
             titulo_Msgbox = "ERROR";
             message = ("Usuario o Contraseña incorrecta");
@@ -31,14 +41,13 @@ namespace SecureCore
             string rank = "idUserRank";
             Acceso acc = new Acceso();
             String rango = "";
-
             string tabla = "users";
             string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
-            
-            DataSet dts = acc.PortarPerConsulta(consulta, tabla);
-            int usuaris = dts.Tables[tabla].Rows.Count;
-            if (usuaris > 0)
+
+            if (acc.LoginCorrecto(user, password))
             {
+                DataSet dts = acc.PortarPerConsulta(consulta, tabla);
+                //int usuaris = dts.Tables[tabla].Rows.Count;
                 rango = dts.Tables[0].Rows[0][rank].ToString();
                 Splash obj = new Splash(user, rango);
                 this.Hide();

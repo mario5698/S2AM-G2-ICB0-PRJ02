@@ -38,3 +38,14 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\ejecutables\Pruebas.pdb
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Pruebas.exe.config
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Pruebas.exe
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Pruebas.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ejecutables\Pruebas.exe.config
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ejecutables\Pruebas.exe
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\ejecutables\Pruebas.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.csprojAssemblyReference.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.Properties.Resources.resources
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.Prueba.resources
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.csproj.GenerateResource.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.csproj.CoreCompileInputs.cache
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.csproj.CopyComplete
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.exe
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Pruebas\obj\Debug\Pruebas.pdb

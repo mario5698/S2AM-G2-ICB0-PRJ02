@@ -73,6 +73,9 @@ namespace Formularios
             Info_Textbox();
             Dtg_header();
             cancel.Hide();
+            Encrypt crypto = new Encrypt();
+            string x = crypto.HashString("hehehe");
+            MessageBox.Show(x);
         }
 
         private void add_Click(object sender, EventArgs e)

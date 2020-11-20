@@ -22,7 +22,7 @@ namespace Acceso_Dades
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
         }
 
-        private void Conectar(string query)
+        private void Conectar(string query = "select * from species")
         {
             conexion = new SqlConnection(connectionString);
 
@@ -96,9 +96,9 @@ namespace Acceso_Dades
             return registresAfectats;
         }
 
-        public int NoSQLInjection(string user, string pass)
+        public bool LoginCorrecto(string user, string pass)
         {
-            conexion.Open();
+            Conectar();
             SqlCommand command = conexion.CreateCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = "SELECT COUNT(*) FROM [Users] " +
@@ -106,9 +106,9 @@ namespace Acceso_Dades
             "AND [Password] = @Password";
             command.Parameters.Add(new SqlParameter("@User", user));
             command.Parameters.Add(new SqlParameter("@Password", pass));
-            int x = (int) command.ExecuteScalar();
+            int rows = (int) command.ExecuteScalar();
             conexion.Close();
-            return x;
+            return rows == 1;
         }
 
         public void Store()
@@ -117,7 +117,7 @@ namespace Acceso_Dades
             SqlCommand cmd = new SqlCommand("Ten Most Expensive Products", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@Login", "1"));
-         //   cmd.ExecuteNonQuery();
+            //cmd.ExecuteNonQuery();
             conexion.Close();
         }
     }
