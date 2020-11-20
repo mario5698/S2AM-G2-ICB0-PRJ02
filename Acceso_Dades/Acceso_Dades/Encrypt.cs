@@ -14,6 +14,15 @@ namespace Acceso_Dades
 
         }
 
+        public static string Xd(string inputString)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in Hash(inputString, Sal()))
+                sb.Append(b.ToString("X3"));
+
+            return sb.ToString();
+        }
+
         public static byte[] Hash
         (string password, byte[] salt, int iterations = 30000, int hashByteSize = 32)
         {
@@ -22,7 +31,7 @@ namespace Acceso_Dades
             return hashGenerator.GetBytes(hashByteSize);
         }
 
-        public byte[] Sal(int saltByteSize = 8)
+        public static byte[] Sal(int saltByteSize = 8)
         {
             RNGCryptoServiceProvider saltGenerator = new RNGCryptoServiceProvider();
             byte[] sal = new byte[saltByteSize];
@@ -48,7 +57,5 @@ namespace Acceso_Dades
                 xor |= hash1[i] ^ hash2[i];
             return 0 == xor;
         }
-
-
     }
 }

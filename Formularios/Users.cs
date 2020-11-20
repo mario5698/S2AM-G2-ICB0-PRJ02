@@ -123,8 +123,6 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
-                    
-
                     row["salt"] = "saladito, bien fresco, chopeadito";
                     row["Password"] = "ignorame soy un hash";
                     infotabla.Rows.Add(row);
