@@ -97,6 +97,7 @@
             this.dgw.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgw.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgw.EnableHeadersVisualStyles = false;
+            this.dgw.GridColor = System.Drawing.Color.PaleGreen;
             this.dgw.Location = new System.Drawing.Point(0, 124);
             this.dgw.Margin = new System.Windows.Forms.Padding(2);
             this.dgw.Name = "dgw";
@@ -116,7 +117,6 @@
             this.dgw.RowTemplate.Height = 28;
             this.dgw.Size = new System.Drawing.Size(800, 326);
             this.dgw.TabIndex = 94;
-            
             // 
             // btnBuscar
             // 
