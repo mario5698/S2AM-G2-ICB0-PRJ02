@@ -15,15 +15,26 @@ namespace Formularios
 {
     public partial class Users : Form
     {
-        Acceso obj = new Acceso();
+        Acceso obj;
+        Encrypt cry;
         DataTable infotabla;
         string tabla = "users";
         bool nuevo = false;
         DataRow row;
+
         public Users()
         {
             InitializeComponent();
+            obj = new Acceso();
+            cry = new Encrypt();
             Portar_Dades();
+        }
+
+        private void Users_Load(object sender, EventArgs e)
+        {
+            Info_Textbox();
+            Dtg_header();
+            cancel.Hide();
         }
 
         private void Portar_Dades()
@@ -65,17 +76,6 @@ namespace Formularios
         {
             if (!nuevo)
                 ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
-        }
-
-
-        private void Users_Load(object sender, EventArgs e)
-        {
-            Info_Textbox();
-            Dtg_header();
-            cancel.Hide();
-            Encrypt crypto = new Encrypt();
-            string x = crypto.HashString("hehehe");
-            MessageBox.Show(x);
         }
 
         private void add_Click(object sender, EventArgs e)
@@ -123,6 +123,9 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
+                    row["salt"] = cry.Sal();
+                    row["Password"] = cry.Hash(password_swtxb.Text);
+                    MessageBox.Show(row["Password"].ToString());
                     infotabla.Rows.Add(row);
                 }
                 else

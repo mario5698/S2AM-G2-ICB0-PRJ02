@@ -31,7 +31,7 @@ namespace Acceso_Dades
             return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
         }
 
-        public string HashString(string inputString)
+        public string Hash(string inputString)
         {
             StringBuilder sb = new StringBuilder();
             foreach (byte b in GetHash(inputString)) sb.Append(b.ToString("X3"));
