@@ -9,33 +9,46 @@ namespace Acceso_Dades
 {
     public class Encrypt
     {
-        int saltLength;
-
         public Encrypt()
         {
-            saltLength = 5;
+
         }
 
-        public string Sal()
+        public static byte[] Hash
+        (string password, byte[] salt, int iterations = 30000, int hashByteSize = 32)
         {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var stringChars = new char[5];
-            var random = new Random();
-            for (int i = 0; i < saltLength; i++) stringChars[i] = chars[random.Next(chars.Length)];
-            return new String(stringChars);
+            Rfc2898DeriveBytes hashGenerator = new Rfc2898DeriveBytes(password, salt);
+            hashGenerator.IterationCount = iterations;
+            return hashGenerator.GetBytes(hashByteSize);
         }
 
-        private byte[] GetHash(string inputString)
+        public byte[] Sal(int saltByteSize = 8)
         {
-            using (HashAlgorithm algorithm = SHA256.Create())
-            return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
+            RNGCryptoServiceProvider saltGenerator = new RNGCryptoServiceProvider();
+            byte[] sal = new byte[saltByteSize];
+            saltGenerator.GetBytes(sal);
+            return sal;
         }
 
-        public string Hash(string inputString)
+        public static bool VerificarPass
+        (String password, byte[] passwordSal, byte[] passwordHash)
+
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (byte b in GetHash(inputString)) sb.Append(b.ToString("X3"));
-            return sb.ToString();
+            byte[] computedHash = Hash(password, passwordSal);
+            return HashesIguales(computedHash, passwordHash);
         }
+
+        private static bool HashesIguales(byte[] hash1, byte[] hash2)
+        {
+            int minHashLenght = hash1.Length <= hash2.Length ?
+            hash1.Length : hash2.Length;
+
+            var xor = hash1.Length ^ hash2.Length;
+            for (int i = 0; i < minHashLenght; i++)
+                xor |= hash1[i] ^ hash2[i];
+            return 0 == xor;
+        }
+
+
     }
 }

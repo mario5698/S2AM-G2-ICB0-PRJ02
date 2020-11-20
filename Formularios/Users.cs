@@ -123,9 +123,17 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
-                    row["salt"] = cry.Sal();
-                    row["Password"] = cry.Hash(password_swtxb.Text);
-                    MessageBox.Show(row["Password"].ToString());
+                    byte[] bSal = cry.Sal();
+                    string sal = Convert.ToBase64String(bSal);
+
+                    byte[] bHash = Encrypt.Hash(password_swtxb.Text, bSal);
+                    string hash = Convert.ToBase64String(bHash);
+
+                    MessageBox.Show(sal + Environment.NewLine + Environment.NewLine +
+                        hash + Environment.NewLine + hash.Length.ToString());
+
+                    row["salt"] = "salado";
+                    row["Password"] = "ignorame soy un hash";
                     infotabla.Rows.Add(row);
                 }
                 else
