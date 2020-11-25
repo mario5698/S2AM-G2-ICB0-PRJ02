@@ -15,6 +15,8 @@ namespace SecureCore
 {
     public partial class Login : Form
     {
+        Encrypt cry;
+
         public Login()
         {
             InitializeComponent();
@@ -40,9 +42,38 @@ namespace SecureCore
             String password = txtPassword.Text;
             string rank = "idUserRank";
             Acceso acc = new Acceso();
+            cry = new Encrypt();
             String rango = "";
             string tabla = "users";
             string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
+
+            string query = "select * from " + tabla + " where login = '" + user + "'";
+            DataSet set = acc.PortarPerConsulta(query, tabla);
+
+            string salDB = set.Tables[0].Rows[0]["salt"].ToString();
+            string passwordDB = set.Tables[0].Rows[0]["Password"].ToString();
+
+            byte[] bSal = cry.StringToBytes(salDB);
+            byte[] bPass = cry.StringToBytes(passwordDB);
+
+            MessageBox.Show(
+                "Sal BD" + Environment.NewLine + salDB + Environment.NewLine +
+                "Sal LOCAL" + Environment.NewLine + cry.BytesToString(bSal)
+                );
+
+            byte[] prueba = cry.Hash(txtPassword.Text, bSal);
+
+            MessageBox.Show(
+                "Password BD:" + Environment.NewLine + passwordDB + Environment.NewLine +
+                "Password LO:" + Environment.NewLine + cry.BytesToString(prueba)
+                );
+
+            bool log = cry.BytesToString(prueba) == passwordDB;
+
+            //bool log = cry.VerificarPass(txtPassword.Text, bSal, bPass);
+
+            MessageBox.Show(log.ToString());
+
 
             if (acc.LoginCorrecto(user, password))
             {

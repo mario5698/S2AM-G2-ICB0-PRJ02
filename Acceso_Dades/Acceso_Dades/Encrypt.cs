@@ -14,22 +14,20 @@ namespace Acceso_Dades
 
         }
 
-        public string Salt(int length)
+        public byte[] StringToBytes(string text)
         {
-            Random random = new Random();
-            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
+            string[] array = text.Split('-');
+            byte[] bytes = new byte[text.Length];
+            for (int i = 0; i < array.Length; i++) bytes[i] = Convert.ToByte(array[i], 16);
+            return bytes;
         }
 
-        public string Xd(string inputString)
+        public string BytesToString(byte[] bytes)
         {
-            StringBuilder sb = new StringBuilder();
-            foreach (byte b in Hash(inputString, Sal())) sb.Append(b.ToString("X3"));
-            return sb.ToString();
+            return BitConverter.ToString(bytes, 0, 8);
         }
 
-        public static byte[] Hash
+        public byte[] Hash
         (string password, byte[] salt, int iterations = 30000, int hashByteSize = 32)
         {
             Rfc2898DeriveBytes hashGenerator = new Rfc2898DeriveBytes(password, salt);
@@ -45,15 +43,14 @@ namespace Acceso_Dades
             return sal;
         }
 
-        public static bool VerificarPass
-        (String password, byte[] passwordSal, byte[] passwordHash)
-
+        public bool VerificarPass
+        (string password, byte[] passwordSal, byte[] passwordHash)
         {
             byte[] computedHash = Hash(password, passwordSal);
             return HashesIguales(computedHash, passwordHash);
         }
 
-        private static bool HashesIguales(byte[] hash1, byte[] hash2)
+        public bool HashesIguales(byte[] hash1, byte[] hash2)
         {
             int minHashLenght = hash1.Length <= hash2.Length ?
             hash1.Length : hash2.Length;
