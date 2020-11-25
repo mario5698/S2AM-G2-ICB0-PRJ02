@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 
-namespace Acceso_Dades
+namespace Acceso_Dades 
 {
-    public class Acceso
+    public class Acceso : Conexion
     {
         private string connectionString;
         private SqlConnection conexion;
@@ -22,79 +22,6 @@ namespace Acceso_Dades
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
         }
 
-        private void Conectar(string query = "select * from species")
-        {
-            conexion = new SqlConnection(connectionString);
-
-            if (query != null && query != "")
-            try
-            {
-                if (query != null && query != "")
-                {
-                    adaptador = new SqlDataAdapter(query, conexion);
-                    if (conexion.State == ConnectionState.Closed) conexion.Open();
-                }
-            }
-            catch (SqlException)
-            {
-
-            }
-        }
-
-        public DataTable PortarTaula(string tabla)
-        {
-            dts = new DataSet();
-            query = "select * from " + tabla;
-            Conectar(query);
-            adaptador.Fill(dts, tabla);
-            conexion.Close();
-            return dts.Tables[tabla];   
-        }
-
-        public void Actualitzar()
-        {
-            conexion.Open();
-            SqlDataAdapter adaptador;
-            adaptador = new SqlDataAdapter(query, conexion);
-            adaptador.RowUpdated += new SqlRowUpdatedEventHandler(OnRowUpdated);
-            SqlCommandBuilder cmdBuilder;
-            cmdBuilder = new SqlCommandBuilder(adaptador);
-            adaptador.Update(dts.Tables[0]);
-            conexion.Close();
-        }
-
-        private void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
-        {
-            if (args.Status == UpdateStatus.ErrorsOccurred)
-            {
-                args.Status = UpdateStatus.SkipCurrentRow;
-            }
-        }
-
-        public DataSet PortarPerConsulta(string consulta)
-        {
-            dts = new DataSet();
-            Conectar(consulta);
-            adaptador.Fill(dts);
-            conexion.Close();
-            return dts;
-        }
-        public DataSet PortarPerConsulta(string consulta, string tabla)
-        {
-            dts = new DataSet();
-            Conectar(consulta);
-            adaptador.Fill(dts, tabla);
-            conexion.Close();
-            return dts;
-        }
-
-        public int Executa(string consult)
-        {
-            Conectar(consult);
-            SqlCommand cmd = new SqlCommand(consult, conexion);
-            int registresAfectats = cmd.ExecuteNonQuery();
-            return registresAfectats;
-        }
 
         public bool LoginCorrecto(string user, string pass)
         {
@@ -106,19 +33,9 @@ namespace Acceso_Dades
             "AND [Password] = @Password";
             command.Parameters.Add(new SqlParameter("@User", user));
             command.Parameters.Add(new SqlParameter("@Password", pass));
-            int rows = (int) command.ExecuteScalar();
+            int rows = (int)command.ExecuteScalar();
             conexion.Close();
             return rows == 1;
-        }
-
-        public void Store()
-        {
-            conexion.Open();
-            SqlCommand cmd = new SqlCommand("Ten Most Expensive Products", conexion);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@Login", "1"));
-            //cmd.ExecuteNonQuery();
-            conexion.Close();
         }
     }
 }

@@ -14,12 +14,18 @@ namespace Acceso_Dades
 
         }
 
-        public static string Xd(string inputString)
+        public string Salt(int length)
+        {
+            Random random = new Random();
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        public string Xd(string inputString)
         {
             StringBuilder sb = new StringBuilder();
-            foreach (byte b in Hash(inputString, Sal()))
-                sb.Append(b.ToString("X3"));
-
+            foreach (byte b in Hash(inputString, Sal())) sb.Append(b.ToString("X3"));
             return sb.ToString();
         }
 
@@ -31,7 +37,7 @@ namespace Acceso_Dades
             return hashGenerator.GetBytes(hashByteSize);
         }
 
-        public static byte[] Sal(int saltByteSize = 8)
+        public byte[] Sal(int saltByteSize = 8)
         {
             RNGCryptoServiceProvider saltGenerator = new RNGCryptoServiceProvider();
             byte[] sal = new byte[saltByteSize];

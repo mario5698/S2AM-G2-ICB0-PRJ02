@@ -35,6 +35,11 @@ namespace Formularios
             Info_Textbox();
             Dtg_header();
             cancel.Hide();
+
+            string x = cry.Xd("hehe234");
+            //string s = Encoding.Unicode.GetString(x, 0, x.Length);
+
+            MessageBox.Show(x);
         }
 
         private void Portar_Dades()
@@ -123,6 +128,7 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
+                    
                     row["salt"] = "saladito, bien fresco, chopeadito";
                     row["Password"] = "ignorame soy un hash";
                     infotabla.Rows.Add(row);
