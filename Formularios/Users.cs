@@ -124,22 +124,18 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
-                    byte[] sal = cry.Sal();
-                    byte[] pass = cry.Hash(password_swtxb.Text, sal);
-                    row["salt"] = cry.BytesToString(sal);
-                    row["Password"] = cry.BytesToString(pass);
                     infotabla.Rows.Add(row);
+                    nuevo = false;
+                    obj.Actualitzar();
+                    Portar_Dades();
+                    Info_Textbox();
+                    cancel.Hide();
                 }
                 else
                 {
                     MessageBox.Show("CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            nuevo = false;
-            obj.Actualitzar();
-            Portar_Dades();
-            Info_Textbox();
-            cancel.Hide();
         }
 
         private void specie_id_swtxb_TextChanged(object sender, EventArgs e)

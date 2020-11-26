@@ -92,8 +92,7 @@ namespace Form_Base
                 if (ctr.GetType() == typeof(SWTextbox))
                 {
                     ctr.DataBindings.Clear();
-                    ctr.Text = string.Empty;
-                    
+                    ctr.Text = string.Empty; 
                 }
             }
         }
@@ -106,15 +105,13 @@ namespace Form_Base
         }
 
         private void Actualizar_Base_Click(object sender, EventArgs e)
-        {
-        
+        {       
             nuevo = false;
             obj.Actualitzar();
             Portar_Dades();
             Info_Textbox();
             cancel.Hide();
-        }
-     
-            }
-        }
+        }     
+    }
+}
     

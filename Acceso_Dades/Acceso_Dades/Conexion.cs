@@ -22,7 +22,7 @@ namespace Acceso_Dades
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
         }
 
-        private protected void Conectar(string query = "select * from species")
+        private protected void Conectar(string query)
         {
             conexion = new SqlConnection(connectionString);
 
