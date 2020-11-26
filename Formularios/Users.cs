@@ -29,9 +29,7 @@ namespace Formularios
         }
 
         private void Users_Load(object sender, EventArgs e)
-        {
-            if (DesignMode) return;
-            
+        {            
             obj = new Acceso();
             cry = new Encrypt();
             Portar_Dades();

@@ -49,10 +49,6 @@
     <Compile Include="species.Designer.cs">
       <DependentUpon>species.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs" />
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>

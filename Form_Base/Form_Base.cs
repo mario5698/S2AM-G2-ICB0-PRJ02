@@ -36,7 +36,7 @@ namespace Form_Base
             cry = new Encrypt(); 
             Portar_Dades();
             Info_Textbox();
-            Dtg_header();
+           // Dtg_header();
             cancel.Hide();
             
         }
@@ -93,8 +93,7 @@ namespace Form_Base
                 {
                     ctr.DataBindings.Clear();
                     ctr.Text = string.Empty;
-                    user_id_swtxb.Text = "0";
-                    specie_id_swtxb.Text = "1";
+                    
                 }
             }
         }
@@ -108,54 +107,14 @@ namespace Form_Base
 
         private void Actualizar_Base_Click(object sender, EventArgs e)
         {
-            bool vacios = false;
-            if (nuevo)
-            {
-                foreach (Control ctr in this.Controls)
-                {
-                    if (ctr.GetType() == typeof(SWTextbox))
-                    {
-                        if (((SWTextbox)ctr).obligatorio && ctr.Text == string.Empty)
-                        {
-                            vacios = true;
-                        }
-                        else
-                        {
-                            row[((SWTextbox)ctr).Nom_BBDD.ToString()] = ctr.Text;
-                        }
-                    }
-                }
-                if (!vacios)
-                {
-                    byte[] sal = cry.Sal();
-                    byte[] pass = cry.Hash(password_swtxb.Text, sal);
-                    row["salt"] = cry.BytesToString(sal);
-                    row["Password"] = cry.BytesToString(pass);
-                    infotabla.Rows.Add(row);
-                }
-                else
-                {
-                    MessageBox.Show("CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+        
             nuevo = false;
             obj.Actualitzar();
             Portar_Dades();
             Info_Textbox();
             cancel.Hide();
         }
-
-        private void specie_id_swtxb_TextChanged(object sender, EventArgs e)
-        {
-            if (Int32.TryParse((specie_id_swtxb.Text), out int outbound))
-            {
-                if (outbound <= 0 || outbound > 17)
-                {
-                    MessageBox.Show("DATO FUERA DE RANGO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    specie_id_swtxb.Text = string.Empty;
-                }
+     
             }
         }
-    }
-}
-
+    
