@@ -24,8 +24,7 @@ namespace Form_Base
 
         public Form_base()
         {
-            InitializeComponent();
-         
+            InitializeComponent();   
         }
 
         private void Users_Load(object sender, EventArgs e)
