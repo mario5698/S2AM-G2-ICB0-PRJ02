@@ -147,6 +147,14 @@
       <Project>{c24f59f5-5af2-4ef5-ba01-9603f1a1310f}</Project>
       <Name>Form_Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Pruebas\Pruebas.csproj">
+      <Project>{b38e99ca-106d-4878-8377-f211d9e63b77}</Project>
+      <Name>Pruebas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\species\species.csproj">
+      <Project>{e636bc28-56bf-4038-8455-eb0c8abe9a03}</Project>
+      <Name>species</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />

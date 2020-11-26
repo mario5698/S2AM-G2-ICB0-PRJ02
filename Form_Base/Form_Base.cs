@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acceso_Dades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,43 +8,152 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Acceso_Dades;
+using BlibliotecaG2;
+using Controles_Usuario;
 
 namespace Form_Base
 {
-    public partial class Form_Base : Form
+    public partial class Form_base : Form
     {
-        public Form_Base()
+        Acceso obj;
+        Encrypt cry;
+        DataTable infotabla;
+        string tabla = "users";
+        bool nuevo = false;
+        DataRow row;
+
+        public Form_base()
         {
             InitializeComponent();
-            infotabla = obj.PortarTaula(tabla);
-            dtgUsers.DataSource = infotabla;
-            Info_Textbox();
+            obj = new Acceso();
+            cry = new Encrypt();
+            Portar_Dades();
         }
 
-        Acceso obj = new Acceso();
-        DataTable infotabla;
-        string tabla = "species";
+        private void Users_Load(object sender, EventArgs e)
+        {
+            Info_Textbox();
+            Dtg_header();
+            cancel.Hide();
+
+            
+        }
+
+        private void Portar_Dades()
+        {
+            infotabla = obj.PortarTaula(tabla);
+            dtgUsers.DataSource = infotabla;
+        }
+
+        private void Dtg_header()
+        {
+            dtgUsers.Columns[0].HeaderText = "ID";
+            dtgUsers.Columns[1].HeaderText = "U_CODE";
+            dtgUsers.Columns[2].HeaderText = "U_NAME";
+            dtgUsers.Columns[3].HeaderText = "LOGIN";
+            dtgUsers.Columns[4].HeaderText = "PASS";
+            dtgUsers.Columns[5].HeaderText = "U_ID_RANK";
+            dtgUsers.Columns[6].HeaderText = "U_ID_CATEG";
+            dtgUsers.Columns[7].HeaderText = "PHOTO";
+            dtgUsers.Columns[8].HeaderText = "PLANET_ID";
+            dtgUsers.Columns[9].HeaderText = "SPECIE_ID";
+        }
 
         private void Info_Textbox()
         {
-            foreach (Control ctr in panel1.Controls)
+            foreach (Control ctr in this.Controls)
             {
-                if (ctr.GetType() == typeof(TextBox))
+                if (ctr.GetType() == typeof(SWTextbox))
                 {
-                    ctr.DataBindings.Add("Text", infotabla, ctr.Tag.ToString());
+                    ctr.BackColor = Color.PaleGreen;
+                    ctr.ForeColor = Color.FromArgb(50, 60, 70);
+                    ctr.DataBindings.Clear();
+                    ctr.Text = string.Empty;
+                    ctr.DataBindings.Add("Text", infotabla, ((SWTextbox)ctr).Nom_BBDD.ToString());
                     ctr.Validated += new System.EventHandler(this.ValidarTextBox);
                 }
             }
         }
         private void ValidarTextBox(object sender, EventArgs e)
         {
-            ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            if (!nuevo)
+                ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            cancel.Show();
+            row = infotabla.NewRow();
+            nuevo = true;
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr.GetType() == typeof(SWTextbox))
+                {
+                    ctr.DataBindings.Clear();
+                    ctr.Text = string.Empty;
+                    user_id_swtxb.Text = "0";
+                    specie_id_swtxb.Text = "1";
+                }
+            }
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            nuevo = false;
+            Info_Textbox();
+            cancel.Hide();
         }
 
         private void Actualizar_Base_Click(object sender, EventArgs e)
         {
+            bool vacios = false;
+            if (nuevo)
+            {
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr.GetType() == typeof(SWTextbox))
+                    {
+                        if (((SWTextbox)ctr).obligatorio && ctr.Text == string.Empty)
+                        {
+                            vacios = true;
+                        }
+                        else
+                        {
+                            row[((SWTextbox)ctr).Nom_BBDD.ToString()] = ctr.Text;
+                        }
+                    }
+                }
+                if (!vacios)
+                {
+                    byte[] sal = cry.Sal();
+                    byte[] pass = cry.Hash(password_swtxb.Text, sal);
+                    row["salt"] = cry.BytesToString(sal);
+                    row["Password"] = cry.BytesToString(pass);
+                    infotabla.Rows.Add(row);
+                }
+                else
+                {
+                    MessageBox.Show("CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            nuevo = false;
             obj.Actualitzar();
+            Portar_Dades();
+            Info_Textbox();
+            cancel.Hide();
+        }
+
+        private void specie_id_swtxb_TextChanged(object sender, EventArgs e)
+        {
+            if (Int32.TryParse((specie_id_swtxb.Text), out int outbound))
+            {
+                if (outbound <= 0 || outbound > 17)
+                {
+                    MessageBox.Show("DATO FUERA DE RANGO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    specie_id_swtxb.Text = string.Empty;
+                }
+            }
         }
     }
 }
+
