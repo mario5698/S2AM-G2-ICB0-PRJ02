@@ -25,19 +25,20 @@ namespace Formularios
         public Users()
         {
             InitializeComponent();
-            obj = new Acceso();
-            cry = new Encrypt();
-            Portar_Dades();
+           
         }
 
         private void Users_Load(object sender, EventArgs e)
         {
+            if (DesignMode) return;
+            
+            obj = new Acceso();
+            cry = new Encrypt();
+            Portar_Dades();
             Info_Textbox();
             Dtg_header();
             cancel.Hide();
-
-            
-        }
+}
 
         private void Portar_Dades()
         {
