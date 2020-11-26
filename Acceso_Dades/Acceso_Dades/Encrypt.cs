@@ -9,36 +9,39 @@ namespace Acceso_Dades
 {
     public class Encrypt
     {
+        private int byteSize;
+        private int saltSize;
+        private int iterations;
+
         public Encrypt()
         {
-
+            byteSize = 24;
+            saltSize = 24;
+            iterations = 30000;
         }
 
-        public byte[] StringToBytes(string text)
+        public byte[] ToBytes(string text)
         {
-            string[] array = text.Split('-');
-            byte[] bytes = new byte[text.Length];
-            for (int i = 0; i < array.Length; i++) bytes[i] = Convert.ToByte(array[i], 16);
-            return bytes;
+            return Convert.FromBase64String(text);
         }
 
-        public string BytesToString(byte[] bytes)
+        public string ToString(byte[] bytes)
         {
-            return BitConverter.ToString(bytes, 0, 8);
+            return Convert.ToBase64String(bytes);
         }
 
         public byte[] Hash
-        (string password, byte[] salt, int iterations = 30000, int hashByteSize = 32)
+        (string password, byte[] salt)
         {
             Rfc2898DeriveBytes hashGenerator = new Rfc2898DeriveBytes(password, salt);
             hashGenerator.IterationCount = iterations;
-            return hashGenerator.GetBytes(hashByteSize);
+            return hashGenerator.GetBytes(byteSize);
         }
 
-        public byte[] Sal(int saltByteSize = 8)
+        public byte[] Sal()
         {
             RNGCryptoServiceProvider saltGenerator = new RNGCryptoServiceProvider();
-            byte[] sal = new byte[saltByteSize];
+            byte[] sal = new byte[saltSize];
             saltGenerator.GetBytes(sal);
             return sal;
         }

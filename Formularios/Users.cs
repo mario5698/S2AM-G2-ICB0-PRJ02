@@ -38,6 +38,7 @@ namespace Formularios
             cancel.Hide();
 }
 
+
         private void Portar_Dades()
         {
             infotabla = obj.PortarTaula(tabla);
@@ -124,6 +125,10 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
+                    byte [] sal = cry.Sal();
+                    byte[] pass = cry.Hash(password_swtxb.Text, sal);
+                    row["salt"] = cry.ToString(sal);
+                    row["Password"] = cry.ToString(pass);
                     infotabla.Rows.Add(row);
                     nuevo = false;
                     obj.Actualitzar();
@@ -133,7 +138,12 @@ namespace Formularios
                 }
                 else
                 {
-                    MessageBox.Show("CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO",
+                        "ERROR",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
             }
         }
@@ -144,7 +154,12 @@ namespace Formularios
             {
                 if (outbound <= 0 || outbound > 17)
                 {
-                    MessageBox.Show("DATO FUERA DE RANGO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "DATO FUERA DE RANGO",
+                        "ERROR",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                     specie_id_swtxb.Text = string.Empty;
                 }
             }

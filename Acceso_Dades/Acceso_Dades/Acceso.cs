@@ -14,21 +14,37 @@ namespace Acceso_Dades
         private string connectionString;
         private SqlConnection conexion;
         private SqlDataAdapter adaptador;
-        string query;
-        DataSet dts;
 
         public Acceso()
         {
             connectionString = ConfigurationManager.ConnectionStrings["SecureCore.Properties.Settings.SecureCoreConnectionString"].ConnectionString;
         }
 
+        private protected void Conectar(string query = "select * from species")
+        {
+            conexion = new SqlConnection(connectionString);
+
+            try
+            {
+                if (query != null && query != "")
+                {
+                    adaptador = new SqlDataAdapter(query, conexion);
+                    if (conexion.State == ConnectionState.Closed) conexion.Open();
+                }
+            }
+            catch (SqlException)
+            {
+
+            }
+        }
 
         public bool LoginCorrecto(string user, string pass)
         {
             Conectar();
             SqlCommand command = conexion.CreateCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT COUNT(*) FROM [Users] " +
+            command.CommandText =
+            "SELECT COUNT(*) FROM [Users] " +
             "WHERE [Login] = @User " +
             "AND [Password] = @Password";
             command.Parameters.Add(new SqlParameter("@User", user));

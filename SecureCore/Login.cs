@@ -16,70 +16,48 @@ namespace SecureCore
     public partial class Login : Form
     {
         Encrypt cry;
+        Acceso acc;
 
         public Login()
         {
             InitializeComponent();
         }
 
-        private static string generateSalt()
-        {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var stringChars = new char[5];
-            var random = new Random();
-            for (int i = 0; i < 5; i++) stringChars[i] = chars[random.Next(chars.Length)];
-            return new String(stringChars);
-        }
-
         void LogIn(object sender, EventArgs e)
         {
-            generateSalt();
-            String message, titulo_Msgbox;
-            titulo_Msgbox = "ERROR";
-            message = ("Usuario o Contraseña incorrecta");
-            MessageBoxButtons botones;
-            String user = txtUsername.Text;
-            String password = txtPassword.Text;
-            string rank = "idUserRank";
-            Acceso acc = new Acceso();
+            acc = new Acceso();
             cry = new Encrypt();
+
+            string user = txtUsername.Text;
+            string password = txtPassword.Text;
+            
             String rango = "";
             string tabla = "users";
-            string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
+            //string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
 
             string query = "select * from " + tabla + " where login = '" + user + "'";
             DataSet set = acc.PortarPerConsulta(query, tabla);
-
             string salDB = set.Tables[0].Rows[0]["salt"].ToString();
             string passwordDB = set.Tables[0].Rows[0]["Password"].ToString();
 
-            byte[] bSal = cry.StringToBytes(salDB);
-            byte[] bPass = cry.StringToBytes(passwordDB);
+            byte[] bSal = cry.ToBytes(salDB);
+            byte[] bPassLocal = cry.Hash(txtPassword.Text, bSal);
 
-            MessageBox.Show(
-                "Sal BD" + Environment.NewLine + salDB + Environment.NewLine +
-                "Sal LOCAL" + Environment.NewLine + cry.BytesToString(bSal)
-                );
+            string passwordHash = cry.ToString(bPassLocal);
+            bool log = passwordHash == passwordDB;
 
-            byte[] prueba = cry.Hash(txtPassword.Text, bSal);
-
-            MessageBox.Show(
-                "Password BD:" + Environment.NewLine + passwordDB + Environment.NewLine +
-                "Password LO:" + Environment.NewLine + cry.BytesToString(prueba)
-                );
-
-            bool log = cry.BytesToString(prueba) == passwordDB;
-
-            //bool log = cry.VerificarPass(txtPassword.Text, bSal, bPass);
-
-            MessageBox.Show(log.ToString());
+            //string consulta = "select * from " + tabla + " where login = '" + user + "' and password = '" + passwordHash + "'";
 
 
-            if (acc.LoginCorrecto(user, password))
+
+            if (acc.LoginCorrecto(user, passwordHash))
             {
+                string consulta = String.Format(
+                "select * from {0} where login = '{1}' and password = '{2}'",
+                tabla, user, passwordHash);
+                
                 DataSet dts = acc.PortarPerConsulta(consulta, tabla);
-                //int usuaris = dts.Tables[tabla].Rows.Count;
-                rango = dts.Tables[0].Rows[0][rank].ToString();
+                rango = dts.Tables[0].Rows[0]["idUserRank"].ToString();
                 Splash obj = new Splash(user, rango);
                 this.Hide();
                 obj.Show();
@@ -89,8 +67,11 @@ namespace SecureCore
                 System.IO.Stream str = Properties.Resources.alert;
                 SoundPlayer snd = new System.Media.SoundPlayer(str);
                 snd.Play();
-                botones = MessageBoxButtons.OK;
-                MessageBox.Show(message, titulo_Msgbox, botones);
+                MessageBox.Show(
+                    "Usuario o Contraseña incorrecta",
+                    "ERROR",
+                    MessageBoxButtons.OK
+                );
             }
         }
 
