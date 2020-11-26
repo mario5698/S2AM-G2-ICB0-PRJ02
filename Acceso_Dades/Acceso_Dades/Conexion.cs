@@ -12,8 +12,8 @@ namespace Acceso_Dades
     public abstract class Conexion
     {
         private string connectionString;
-        private SqlConnection conexion;
-        private SqlDataAdapter adaptador;
+        private protected SqlConnection conexion;
+        private protected SqlDataAdapter adaptador;
         string query;
         DataSet dts;
 
@@ -26,7 +26,6 @@ namespace Acceso_Dades
         {
             conexion = new SqlConnection(connectionString);
 
-            //if (query != null && query != "")
             try
             {
                 if (query != null && query != "")

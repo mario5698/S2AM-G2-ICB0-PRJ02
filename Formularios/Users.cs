@@ -36,7 +36,15 @@ namespace Formularios
             Dtg_header();
             cancel.Hide();
 
-            
+            byte[] sal = cry.Sal();
+            byte[] pass = cry.Hash("12345", sal);
+
+
+
+            string s = cry.ToString(sal);
+            string p = cry.ToString(pass);
+
+            Clipboard.SetText(s + "___" + p);
         }
 
         private void Portar_Dades()
@@ -106,6 +114,7 @@ namespace Formularios
 
         private void Actualizar_Base_Click(object sender, EventArgs e)
         {
+            byte[] sal = new byte[8];
             bool vacios = false;
             if (nuevo)
             {
@@ -125,15 +134,20 @@ namespace Formularios
                 }
                 if (!vacios)
                 {
-                    byte[] sal = cry.Sal();
+                    sal = cry.Sal();
                     byte[] pass = cry.Hash(password_swtxb.Text, sal);
-                    row["salt"] = cry.BytesToString(sal);
-                    row["Password"] = cry.BytesToString(pass);
+                    row["salt"] = cry.ToString(sal);
+                    row["Password"] = cry.ToString(pass);
                     infotabla.Rows.Add(row);
                 }
                 else
                 {
-                    MessageBox.Show("CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO",
+                        "ERROR",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
             }
             nuevo = false;
@@ -141,6 +155,10 @@ namespace Formularios
             Portar_Dades();
             Info_Textbox();
             cancel.Hide();
+
+            string x = "";
+            for (int i = 0; i < sal.Length; i++) x += sal[i];
+            MessageBox.Show(x);
         }
 
         private void specie_id_swtxb_TextChanged(object sender, EventArgs e)
@@ -149,7 +167,12 @@ namespace Formularios
             {
                 if (outbound <= 0 || outbound > 17)
                 {
-                    MessageBox.Show("DATO FUERA DE RANGO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "DATO FUERA DE RANGO",
+                        "ERROR",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                     specie_id_swtxb.Text = string.Empty;
                 }
             }
