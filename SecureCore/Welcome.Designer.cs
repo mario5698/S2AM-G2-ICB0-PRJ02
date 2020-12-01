@@ -39,8 +39,9 @@
             this.panel1.Controls.Add(this.Logged_User_Name);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1940, 1080);
+            this.panel1.Size = new System.Drawing.Size(1946, 1106);
             this.panel1.TabIndex = 0;
             // 
             // Logged_User_Name
@@ -49,9 +50,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Logged_User_Name.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold);
             this.Logged_User_Name.ForeColor = System.Drawing.Color.PaleGreen;
-            this.Logged_User_Name.Location = new System.Drawing.Point(0, 0);
+            this.Logged_User_Name.Location = new System.Drawing.Point(13, -329);
+            this.Logged_User_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Logged_User_Name.Name = "Logged_User_Name";
-            this.Logged_User_Name.Size = new System.Drawing.Size(1920, 1080);
+            this.Logged_User_Name.Size = new System.Drawing.Size(1916, 1662);
             this.Logged_User_Name.TabIndex = 1;
             this.Logged_User_Name.Text = "User_Name";
             this.Logged_User_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,12 +61,13 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1940, 1080);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";

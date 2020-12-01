@@ -39,8 +39,9 @@
             this.TXT_SWCodi.Font = new System.Drawing.Font("Arial", 10F);
             this.TXT_SWCodi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             this.TXT_SWCodi.Location = new System.Drawing.Point(0, 0);
+            this.TXT_SWCodi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TXT_SWCodi.Name = "TXT_SWCodi";
-            this.TXT_SWCodi.Size = new System.Drawing.Size(70, 23);
+            this.TXT_SWCodi.Size = new System.Drawing.Size(103, 30);
             this.TXT_SWCodi.TabIndex = 0;
             this.TXT_SWCodi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TXT_SWCodi.TextChanged += new System.EventHandler(this.TXT_SWCodi_TextChanged);
@@ -54,22 +55,24 @@
             this.TXT_SWDesc.Font = new System.Drawing.Font("Arial", 10F);
             this.TXT_SWDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             this.TXT_SWDesc.HideSelection = false;
-            this.TXT_SWDesc.Location = new System.Drawing.Point(116, 0);
+            this.TXT_SWDesc.Location = new System.Drawing.Point(176, 0);
+            this.TXT_SWDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TXT_SWDesc.Name = "TXT_SWDesc";
             this.TXT_SWDesc.ReadOnly = true;
-            this.TXT_SWDesc.Size = new System.Drawing.Size(229, 23);
+            this.TXT_SWDesc.Size = new System.Drawing.Size(342, 30);
             this.TXT_SWDesc.TabIndex = 0;
             this.TXT_SWDesc.TabStop = false;
             // 
             // SWCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.TXT_SWDesc);
             this.Controls.Add(this.TXT_SWCodi);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(345, 21);
+            this.Size = new System.Drawing.Size(518, 32);
             this.Load += new System.EventHandler(this.SWCodi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

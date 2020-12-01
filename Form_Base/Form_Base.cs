@@ -18,7 +18,7 @@ namespace Form_Base
         Acceso obj;
         Encrypt cry;
         DataTable infotabla;
-        string tabla = "users";
+        protected string tabla;
         bool nuevo = false;
         DataRow row;
 

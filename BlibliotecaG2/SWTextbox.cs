@@ -143,6 +143,7 @@ namespace BlibliotecaG2
         {
             if (SWTextbox_Validate())
             {
+
                 this.BackColor = Color.PaleGreen;
                 this.ForeColor = Color.FromArgb(50, 60, 70);
                 if (_Foranea)

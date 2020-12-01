@@ -52,10 +52,27 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj">
+      <Project>{cff4959d-dc40-4103-855d-b5f76864326e}</Project>
+      <Name>Acceso_Dades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlibliotecaG2\BibliotecaG2.csproj">
+      <Project>{67032f4e-7f9b-4f43-84b5-82c737a1573a}</Project>
+      <Name>BibliotecaG2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controles_Usuario\Controles_Usuario.csproj">
+      <Project>{49db4e3f-ea22-4fd4-91f8-d99c5eee9126}</Project>
+      <Name>Controles_Usuario</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Form_Base\Form_Base.csproj">
       <Project>{c24f59f5-5af2-4ef5-ba01-9603f1a1310f}</Project>
       <Name>Form_Base</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="planets.resx">
+      <DependentUpon>planets.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
