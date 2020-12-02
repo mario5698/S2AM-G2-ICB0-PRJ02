@@ -19,8 +19,10 @@ namespace Form_Base
         Encrypt cry;
         DataTable infotabla;
         protected string tabla;
+        protected bool has_pass;
         bool nuevo = false;
         DataRow row;
+        string pass_orig;
 
         public Form_base()
         {
@@ -38,7 +40,6 @@ namespace Form_Base
             Info_Textbox();
            // Dtg_header();
             cancel.Hide();
-            
         }
 
         private void Portar_Dades()
@@ -105,13 +106,89 @@ namespace Form_Base
         }
 
         private void Actualizar_Base_Click(object sender, EventArgs e)
-        {       
-            nuevo = false;
-            obj.Actualitzar();
-            Portar_Dades();
-            Info_Textbox();
-            cancel.Hide();
-        }     
+        {
+            bool vacios = false;
+            if (nuevo)
+            {
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr.GetType() == typeof(SWTextbox))
+                    {
+                        if (((SWTextbox)ctr).obligatorio && ctr.Text == string.Empty)
+                        {
+                            vacios = true;
+                        }
+                        else
+                        {
+                            row[((SWTextbox)ctr).Nom_BBDD.ToString()] = ctr.Text;
+                        }
+                    }
+                }
+                if (!vacios)
+                {
+                    infotabla.Rows.Add(row);
+                    Hash_Pass();
+                    nuevo = false;
+                    obj.Actualitzar();
+                    Portar_Dades();
+                    Info_Textbox();
+                    cancel.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "CAMPOS OBLIGATORIOS VACIOS O TIPO DE DATO INCORRECTO",
+                        "ERROR",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                }
+            }
+            else
+            {
+                nuevo = false;
+                Hash_Pass();
+                obj.Actualitzar();
+                Portar_Dades();
+                Info_Textbox();
+
+            }
+        }
+
+        private void Hash_Pass()
+        {
+            if (has_pass)
+            {
+                foreach (Control ctr in this.Controls)
+                {
+                    if (ctr.Name == "password_swtxb" && ctr.Text != pass_orig)
+                    {
+                        byte[] sal = cry.Sal();
+                        byte[] pass = cry.Hash(ctr.Text, sal);
+                        if (nuevo)
+                        {
+                            infotabla.Rows[dtgUsers.Rows.Count - 1]["salt"] = cry.ToString(sal);
+                            infotabla.Rows[dtgUsers.Rows.Count - 1]["Password"] = cry.ToString(pass);
+                            pass_orig = infotabla.Rows[dtgUsers.Rows.Count - 1]["Password"].ToString();
+                        }
+                        else
+                        {
+                            infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["salt"] = cry.ToString(sal);
+                            infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["Password"] = cry.ToString(pass);
+                            pass_orig = infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["Password"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void dtgUsers_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (has_pass)
+            {
+                pass_orig = infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["Password"].ToString();
+            }
+        }
     }
 }
     

@@ -43,8 +43,6 @@
             this.id_user_rank_swtxb = new BlibliotecaG2.SWTextbox();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.user_id_swtxb = new BlibliotecaG2.SWTextbox();
             this.login_swtxb = new BlibliotecaG2.SWTextbox();
             this.password_swtxb = new BlibliotecaG2.SWTextbox();
             this.swCodi1 = new Controles_Usuario.SWCodi();
@@ -175,7 +173,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl2.Location = new System.Drawing.Point(190, 126);
+            this.lbl2.Location = new System.Drawing.Point(190, 103);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(136, 29);
             this.lbl2.TabIndex = 173;
@@ -202,7 +200,7 @@
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl4.Location = new System.Drawing.Point(253, 203);
+            this.lbl4.Location = new System.Drawing.Point(253, 180);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(73, 29);
             this.lbl4.TabIndex = 174;
@@ -229,7 +227,7 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl3.Location = new System.Drawing.Point(184, 165);
+            this.lbl3.Location = new System.Drawing.Point(184, 142);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(142, 29);
             this.lbl3.TabIndex = 175;
@@ -241,39 +239,11 @@
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl5.Location = new System.Drawing.Point(206, 242);
+            this.lbl5.Location = new System.Drawing.Point(206, 219);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(120, 29);
             this.lbl5.TabIndex = 176;
             this.lbl5.Text = "Password";
-            // 
-            // lbl1
-            // 
-            this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl1.Location = new System.Drawing.Point(229, 86);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(97, 29);
-            this.lbl1.TabIndex = 172;
-            this.lbl1.Text = "User_Id";
-            // 
-            // user_id_swtxb
-            // 
-            this.user_id_swtxb.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.user_id_swtxb.ControllID = null;
-            this.user_id_swtxb.dada = null;
-            this.user_id_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
-            this.user_id_swtxb.Foranea = false;
-            this.user_id_swtxb.Location = new System.Drawing.Point(366, 89);
-            this.user_id_swtxb.Name = "user_id_swtxb";
-            this.user_id_swtxb.Nom_BBDD = "iduser";
-            this.user_id_swtxb.obligatorio = false;
-            this.user_id_swtxb.ReadOnly = true;
-            this.user_id_swtxb.Size = new System.Drawing.Size(127, 26);
-            this.user_id_swtxb.TabIndex = 183;
-            this.user_id_swtxb.Tag = "";
             // 
             // login_swtxb
             // 
@@ -282,7 +252,7 @@
             this.login_swtxb.dada = null;
             this.login_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.login_swtxb.Foranea = false;
-            this.login_swtxb.Location = new System.Drawing.Point(366, 203);
+            this.login_swtxb.Location = new System.Drawing.Point(366, 180);
             this.login_swtxb.Name = "login_swtxb";
             this.login_swtxb.Nom_BBDD = "login";
             this.login_swtxb.obligatorio = false;
@@ -297,7 +267,7 @@
             this.password_swtxb.dada = null;
             this.password_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.password_swtxb.Foranea = false;
-            this.password_swtxb.Location = new System.Drawing.Point(366, 242);
+            this.password_swtxb.Location = new System.Drawing.Point(366, 219);
             this.password_swtxb.Name = "password_swtxb";
             this.password_swtxb.Nom_BBDD = "password";
             this.password_swtxb.obligatorio = false;
@@ -331,7 +301,7 @@
             this.user_cod_swtxb.dada = null;
             this.user_cod_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.user_cod_swtxb.Foranea = false;
-            this.user_cod_swtxb.Location = new System.Drawing.Point(366, 126);
+            this.user_cod_swtxb.Location = new System.Drawing.Point(366, 103);
             this.user_cod_swtxb.Name = "user_cod_swtxb";
             this.user_cod_swtxb.Nom_BBDD = "codeuser";
             this.user_cod_swtxb.obligatorio = false;
@@ -346,7 +316,7 @@
             this.user_name_swtxb.dada = null;
             this.user_name_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.user_name_swtxb.Foranea = false;
-            this.user_name_swtxb.Location = new System.Drawing.Point(366, 166);
+            this.user_name_swtxb.Location = new System.Drawing.Point(366, 143);
             this.user_name_swtxb.Name = "user_name_swtxb";
             this.user_name_swtxb.Nom_BBDD = "username";
             this.user_name_swtxb.obligatorio = false;
@@ -374,8 +344,6 @@
             this.Controls.Add(this.id_user_rank_swtxb);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl5);
-            this.Controls.Add(this.lbl1);
-            this.Controls.Add(this.user_id_swtxb);
             this.Controls.Add(this.login_swtxb);
             this.Controls.Add(this.password_swtxb);
             this.Controls.Add(this.swCodi1);
@@ -388,8 +356,6 @@
             this.Controls.SetChildIndex(this.swCodi1, 0);
             this.Controls.SetChildIndex(this.password_swtxb, 0);
             this.Controls.SetChildIndex(this.login_swtxb, 0);
-            this.Controls.SetChildIndex(this.user_id_swtxb, 0);
-            this.Controls.SetChildIndex(this.lbl1, 0);
             this.Controls.SetChildIndex(this.lbl5, 0);
             this.Controls.SetChildIndex(this.lbl3, 0);
             this.Controls.SetChildIndex(this.id_user_rank_swtxb, 0);
@@ -427,8 +393,6 @@
         private BlibliotecaG2.SWTextbox id_user_rank_swtxb;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.Label lbl1;
-        private BlibliotecaG2.SWTextbox user_id_swtxb;
         private BlibliotecaG2.SWTextbox login_swtxb;
         private BlibliotecaG2.SWTextbox password_swtxb;
         private Controles_Usuario.SWCodi swCodi1;

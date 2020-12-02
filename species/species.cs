@@ -13,6 +13,15 @@ namespace species
 {
     public partial class species : Form_Base.Form_base
     {
-        
+        public species()
+        {
+            InitializeComponent();
+            tabla = "species";
+            has_pass = false;
+        }
+        private void species_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

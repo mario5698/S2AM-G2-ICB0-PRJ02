@@ -16,6 +16,7 @@ namespace Formularios
         {
             InitializeComponent();
             tabla = "users";
+            has_pass = true;
         }
     }
 }

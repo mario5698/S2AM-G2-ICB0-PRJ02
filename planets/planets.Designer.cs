@@ -36,7 +36,6 @@
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@
             this.natives_swtxb = new BlibliotecaG2.SWTextbox();
             this.parsecs_swtxb = new BlibliotecaG2.SWTextbox();
             this.lat_swtxb = new BlibliotecaG2.SWTextbox();
-            this.user_id_swtxb = new BlibliotecaG2.SWTextbox();
             this.id_sector_swtxb = new BlibliotecaG2.SWTextbox();
             this.long_swtxb = new BlibliotecaG2.SWTextbox();
             this.user_cod_swtxb = new BlibliotecaG2.SWTextbox();
@@ -68,7 +66,7 @@
             this.lbl8.AutoSize = true;
             this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl8.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl8.Location = new System.Drawing.Point(514, 110);
+            this.lbl8.Location = new System.Drawing.Point(514, 74);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(126, 29);
             this.lbl8.TabIndex = 202;
@@ -80,7 +78,7 @@
             this.lbl9.AutoSize = true;
             this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl9.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl9.Location = new System.Drawing.Point(509, 148);
+            this.lbl9.Location = new System.Drawing.Point(509, 112);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(131, 29);
             this.lbl9.TabIndex = 201;
@@ -92,7 +90,7 @@
             this.lbl7.AutoSize = true;
             this.lbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl7.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl7.Location = new System.Drawing.Point(541, 73);
+            this.lbl7.Location = new System.Drawing.Point(541, 37);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(100, 29);
             this.lbl7.TabIndex = 200;
@@ -104,7 +102,7 @@
             this.lbl6.AutoSize = true;
             this.lbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl6.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl6.Location = new System.Drawing.Point(595, 37);
+            this.lbl6.Location = new System.Drawing.Point(161, 183);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(45, 29);
             this.lbl6.TabIndex = 199;
@@ -116,7 +114,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl2.Location = new System.Drawing.Point(56, 71);
+            this.lbl2.Location = new System.Drawing.Point(56, 32);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(153, 29);
             this.lbl2.TabIndex = 195;
@@ -128,7 +126,7 @@
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl4.Location = new System.Drawing.Point(89, 148);
+            this.lbl4.Location = new System.Drawing.Point(89, 109);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(116, 29);
             this.lbl4.TabIndex = 196;
@@ -140,7 +138,7 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl3.Location = new System.Drawing.Point(56, 110);
+            this.lbl3.Location = new System.Drawing.Point(56, 71);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(149, 29);
             this.lbl3.TabIndex = 197;
@@ -152,23 +150,11 @@
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl5.Location = new System.Drawing.Point(138, 183);
+            this.lbl5.Location = new System.Drawing.Point(138, 144);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(67, 29);
             this.lbl5.TabIndex = 198;
             this.lbl5.Text = "Long";
-            // 
-            // lbl1
-            // 
-            this.lbl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lbl1.Location = new System.Drawing.Point(95, 30);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(114, 29);
-            this.lbl1.TabIndex = 194;
-            this.lbl1.Text = "Planet_Id";
             // 
             // label2
             // 
@@ -176,7 +162,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label2.Location = new System.Drawing.Point(472, 187);
+            this.label2.Location = new System.Drawing.Point(472, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 29);
             this.label2.TabIndex = 207;
@@ -188,7 +174,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label3.Location = new System.Drawing.Point(930, 41);
+            this.label3.Location = new System.Drawing.Point(525, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 29);
             this.label3.TabIndex = 209;
@@ -200,7 +186,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label4.Location = new System.Drawing.Point(908, 77);
+            this.label4.Location = new System.Drawing.Point(894, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 29);
             this.label4.TabIndex = 211;
@@ -212,7 +198,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.PaleGreen;
-            this.label5.Location = new System.Drawing.Point(898, 111);
+            this.label5.Location = new System.Drawing.Point(884, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 29);
             this.label5.TabIndex = 213;
@@ -318,7 +304,7 @@
             this.portplanet1_swtxb.dada = null;
             this.portplanet1_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.portplanet1_swtxb.Foranea = false;
-            this.portplanet1_swtxb.Location = new System.Drawing.Point(1086, 114);
+            this.portplanet1_swtxb.Location = new System.Drawing.Point(1072, 75);
             this.portplanet1_swtxb.Name = "portplanet1_swtxb";
             this.portplanet1_swtxb.Nom_BBDD = "PortPlanet1";
             this.portplanet1_swtxb.obligatorio = false;
@@ -333,7 +319,7 @@
             this.portplanet_swtxb.dada = null;
             this.portplanet_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.portplanet_swtxb.Foranea = false;
-            this.portplanet_swtxb.Location = new System.Drawing.Point(1086, 77);
+            this.portplanet_swtxb.Location = new System.Drawing.Point(1072, 38);
             this.portplanet_swtxb.Name = "portplanet_swtxb";
             this.portplanet_swtxb.Nom_BBDD = "PortPlanet";
             this.portplanet_swtxb.obligatorio = false;
@@ -348,7 +334,7 @@
             this.ipplanet_swtxb.dada = null;
             this.ipplanet_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.ipplanet_swtxb.Foranea = false;
-            this.ipplanet_swtxb.Location = new System.Drawing.Point(1086, 41);
+            this.ipplanet_swtxb.Location = new System.Drawing.Point(681, 187);
             this.ipplanet_swtxb.Name = "ipplanet_swtxb";
             this.ipplanet_swtxb.Nom_BBDD = "IPPlanet";
             this.ipplanet_swtxb.obligatorio = false;
@@ -363,7 +349,7 @@
             this.planet_pic_swtxb.dada = null;
             this.planet_pic_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.planet_pic_swtxb.Foranea = false;
-            this.planet_pic_swtxb.Location = new System.Drawing.Point(683, 187);
+            this.planet_pic_swtxb.Location = new System.Drawing.Point(683, 151);
             this.planet_pic_swtxb.Name = "planet_pic_swtxb";
             this.planet_pic_swtxb.Nom_BBDD = "PlanetPicture";
             this.planet_pic_swtxb.obligatorio = false;
@@ -378,7 +364,7 @@
             this.filiation_id_swtxb.dada = null;
             this.filiation_id_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Num;
             this.filiation_id_swtxb.Foranea = true;
-            this.filiation_id_swtxb.Location = new System.Drawing.Point(683, 151);
+            this.filiation_id_swtxb.Location = new System.Drawing.Point(683, 115);
             this.filiation_id_swtxb.Name = "filiation_id_swtxb";
             this.filiation_id_swtxb.Nom_BBDD = "idfiliation";
             this.filiation_id_swtxb.obligatorio = true;
@@ -393,7 +379,7 @@
             this.natives_swtxb.dada = null;
             this.natives_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Num;
             this.natives_swtxb.Foranea = true;
-            this.natives_swtxb.Location = new System.Drawing.Point(683, 114);
+            this.natives_swtxb.Location = new System.Drawing.Point(683, 78);
             this.natives_swtxb.Name = "natives_swtxb";
             this.natives_swtxb.Nom_BBDD = "idNatives";
             this.natives_swtxb.obligatorio = false;
@@ -408,7 +394,7 @@
             this.parsecs_swtxb.dada = null;
             this.parsecs_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.parsecs_swtxb.Foranea = false;
-            this.parsecs_swtxb.Location = new System.Drawing.Point(683, 77);
+            this.parsecs_swtxb.Location = new System.Drawing.Point(683, 41);
             this.parsecs_swtxb.Name = "parsecs_swtxb";
             this.parsecs_swtxb.Nom_BBDD = "parsecs";
             this.parsecs_swtxb.obligatorio = false;
@@ -423,29 +409,13 @@
             this.lat_swtxb.dada = null;
             this.lat_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.lat_swtxb.Foranea = false;
-            this.lat_swtxb.Location = new System.Drawing.Point(683, 41);
+            this.lat_swtxb.Location = new System.Drawing.Point(249, 187);
             this.lat_swtxb.Name = "lat_swtxb";
             this.lat_swtxb.Nom_BBDD = "lat";
             this.lat_swtxb.obligatorio = false;
             this.lat_swtxb.Size = new System.Drawing.Size(127, 26);
             this.lat_swtxb.TabIndex = 188;
             this.lat_swtxb.Tag = "";
-            // 
-            // user_id_swtxb
-            // 
-            this.user_id_swtxb.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.user_id_swtxb.ControllID = null;
-            this.user_id_swtxb.dada = null;
-            this.user_id_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
-            this.user_id_swtxb.Foranea = false;
-            this.user_id_swtxb.Location = new System.Drawing.Point(249, 34);
-            this.user_id_swtxb.Name = "user_id_swtxb";
-            this.user_id_swtxb.Nom_BBDD = "idplanet";
-            this.user_id_swtxb.obligatorio = false;
-            this.user_id_swtxb.ReadOnly = true;
-            this.user_id_swtxb.Size = new System.Drawing.Size(127, 26);
-            this.user_id_swtxb.TabIndex = 205;
-            this.user_id_swtxb.Tag = "";
             // 
             // id_sector_swtxb
             // 
@@ -454,7 +424,7 @@
             this.id_sector_swtxb.dada = null;
             this.id_sector_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.id_sector_swtxb.Foranea = true;
-            this.id_sector_swtxb.Location = new System.Drawing.Point(249, 148);
+            this.id_sector_swtxb.Location = new System.Drawing.Point(249, 109);
             this.id_sector_swtxb.Name = "id_sector_swtxb";
             this.id_sector_swtxb.Nom_BBDD = "idsector";
             this.id_sector_swtxb.obligatorio = false;
@@ -469,7 +439,7 @@
             this.long_swtxb.dada = null;
             this.long_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.long_swtxb.Foranea = false;
-            this.long_swtxb.Location = new System.Drawing.Point(249, 187);
+            this.long_swtxb.Location = new System.Drawing.Point(249, 148);
             this.long_swtxb.Name = "long_swtxb";
             this.long_swtxb.Nom_BBDD = "long";
             this.long_swtxb.obligatorio = false;
@@ -484,7 +454,7 @@
             this.user_cod_swtxb.dada = null;
             this.user_cod_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.user_cod_swtxb.Foranea = false;
-            this.user_cod_swtxb.Location = new System.Drawing.Point(249, 71);
+            this.user_cod_swtxb.Location = new System.Drawing.Point(249, 32);
             this.user_cod_swtxb.Name = "user_cod_swtxb";
             this.user_cod_swtxb.Nom_BBDD = "codeplanet";
             this.user_cod_swtxb.obligatorio = false;
@@ -499,7 +469,7 @@
             this.desc_planet_swtxb.dada = null;
             this.desc_planet_swtxb.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
             this.desc_planet_swtxb.Foranea = false;
-            this.desc_planet_swtxb.Location = new System.Drawing.Point(249, 111);
+            this.desc_planet_swtxb.Location = new System.Drawing.Point(249, 72);
             this.desc_planet_swtxb.Name = "desc_planet_swtxb";
             this.desc_planet_swtxb.Nom_BBDD = "descplanet";
             this.desc_planet_swtxb.obligatorio = false;
@@ -538,8 +508,6 @@
             this.Controls.Add(this.lat_swtxb);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl5);
-            this.Controls.Add(this.lbl1);
-            this.Controls.Add(this.user_id_swtxb);
             this.Controls.Add(this.id_sector_swtxb);
             this.Controls.Add(this.long_swtxb);
             this.Controls.Add(this.user_cod_swtxb);
@@ -551,8 +519,6 @@
             this.Controls.SetChildIndex(this.user_cod_swtxb, 0);
             this.Controls.SetChildIndex(this.long_swtxb, 0);
             this.Controls.SetChildIndex(this.id_sector_swtxb, 0);
-            this.Controls.SetChildIndex(this.user_id_swtxb, 0);
-            this.Controls.SetChildIndex(this.lbl1, 0);
             this.Controls.SetChildIndex(this.lbl5, 0);
             this.Controls.SetChildIndex(this.lbl3, 0);
             this.Controls.SetChildIndex(this.lat_swtxb, 0);
@@ -597,8 +563,6 @@
         private BlibliotecaG2.SWTextbox lat_swtxb;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.Label lbl1;
-        private BlibliotecaG2.SWTextbox user_id_swtxb;
         private BlibliotecaG2.SWTextbox id_sector_swtxb;
         private BlibliotecaG2.SWTextbox long_swtxb;
         private BlibliotecaG2.SWTextbox user_cod_swtxb;

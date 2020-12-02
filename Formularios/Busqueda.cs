@@ -44,7 +44,7 @@ namespace Formularios
                     ctr.ForeColor = Color.FromArgb(50, 60, 70);
                     ctr.DataBindings.Clear();
                     ctr.Text = string.Empty;
-                    ctr.DataBindings.Add("Text", infotabla, ctr.Tag.ToString()); //((SWTextbox)ctr).Nom_BBDD.ToString());
+                    ctr.DataBindings.Add("Text", infotabla, ((SWTextbox)ctr).Nom_BBDD.ToString()); //((SWTextbox)ctr).Nom_BBDD.ToString());
                     ctr.Validated += new System.EventHandler(ValidarTextBox);
                 }
 
@@ -62,7 +62,7 @@ namespace Formularios
                     if (c.Text != "")
                     {
                         consulta += where ? " where " : " and ";
-                        consulta += c.Tag + " = " + "'" + c.Text + "'";
+                        consulta += ((SWTextbox)c).Nom_BBDD.ToString() + " = " + "'" + c.Text + "'";
                         if (where) where = false;
                     }
                 }
