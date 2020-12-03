@@ -46,9 +46,10 @@
             this.cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.ForeColor = System.Drawing.Color.PaleGreen;
-            this.cancel.Location = new System.Drawing.Point(466, 428);
+            this.cancel.Location = new System.Drawing.Point(311, 278);
+            this.cancel.Margin = new System.Windows.Forms.Padding(2);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(114, 43);
+            this.cancel.Size = new System.Drawing.Size(76, 28);
             this.cancel.TabIndex = 108;
             this.cancel.Text = "CANCEL";
             this.cancel.UseVisualStyleBackColor = false;
@@ -61,9 +62,10 @@
             this.Actualizar_Base.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.Actualizar_Base.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Actualizar_Base.ForeColor = System.Drawing.Color.PaleGreen;
-            this.Actualizar_Base.Location = new System.Drawing.Point(646, 428);
+            this.Actualizar_Base.Location = new System.Drawing.Point(431, 278);
+            this.Actualizar_Base.Margin = new System.Windows.Forms.Padding(2);
             this.Actualizar_Base.Name = "Actualizar_Base";
-            this.Actualizar_Base.Size = new System.Drawing.Size(114, 43);
+            this.Actualizar_Base.Size = new System.Drawing.Size(76, 28);
             this.Actualizar_Base.TabIndex = 106;
             this.Actualizar_Base.Text = "SAVE";
             this.Actualizar_Base.UseVisualStyleBackColor = false;
@@ -76,9 +78,10 @@
             this.add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add.ForeColor = System.Drawing.Color.PaleGreen;
-            this.add.Location = new System.Drawing.Point(284, 428);
+            this.add.Location = new System.Drawing.Point(189, 278);
+            this.add.Margin = new System.Windows.Forms.Padding(2);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(114, 43);
+            this.add.Size = new System.Drawing.Size(76, 28);
             this.add.TabIndex = 107;
             this.add.Text = "ADD";
             this.add.UseVisualStyleBackColor = false;
@@ -110,7 +113,8 @@
             this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgUsers.EnableHeadersVisualStyles = false;
             this.dtgUsers.GridColor = System.Drawing.Color.PaleGreen;
-            this.dtgUsers.Location = new System.Drawing.Point(0, 351);
+            this.dtgUsers.Location = new System.Drawing.Point(0, 228);
+            this.dtgUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.ReadOnly = true;
             this.dtgUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -127,21 +131,23 @@
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.PaleGreen;
             this.dtgUsers.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgUsers.RowTemplate.Height = 28;
-            this.dtgUsers.Size = new System.Drawing.Size(1386, 437);
+            this.dtgUsers.Size = new System.Drawing.Size(924, 284);
             this.dtgUsers.TabIndex = 93;
             this.dtgUsers.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellEnter);
+            this.dtgUsers.CurrentCellChanged += new System.EventHandler(this.ChangeImage);
             // 
             // Form_base
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(924, 512);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.Actualizar_Base);
             this.Controls.Add(this.add);
             this.Controls.Add(this.dtgUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_base";
             this.Text = "Users";
             this.Load += new System.EventHandler(this.Users_Load);
