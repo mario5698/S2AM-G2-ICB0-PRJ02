@@ -49,6 +49,8 @@
             this.user_name_swtxb = new BlibliotecaG2.SWTextbox();
             this.btnImage = new System.Windows.Forms.Button();
             this.pic = new System.Windows.Forms.PictureBox();
+            this.swCodi2 = new Controles_Usuario.SWCodi();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -353,11 +355,45 @@
             this.pic.TabIndex = 184;
             this.pic.TabStop = false;
             // 
+            // swCodi2
+            // 
+            this.swCodi2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.swCodi2.BackColor = System.Drawing.Color.Transparent;
+            this.swCodi2.ClasseCS = null;
+            this.swCodi2.ControlID = "specie_id_swtxb";
+            this.swCodi2.ForeColor = System.Drawing.Color.Black;
+            this.swCodi2.FormCS = null;
+            this.swCodi2.Location = new System.Drawing.Point(244, 228);
+            this.swCodi2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swCodi2.Name = "swCodi2";
+            this.swCodi2.NomCodi = "codeplanet";
+            this.swCodi2.NomDesc = "descsplanet";
+            this.swCodi2.NomId = "idplanet";
+            this.swCodi2.NomTaula = "planets";
+            this.swCodi2.Requerit = false;
+            this.swCodi2.Size = new System.Drawing.Size(375, 28);
+            this.swCodi2.TabIndex = 185;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label2.Location = new System.Drawing.Point(112, 228);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 186;
+            this.label2.Text = "Planet_Code";
+            // 
             // usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 512);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.swCodi2);
             this.Controls.Add(this.pic);
             this.Controls.Add(this.btnImage);
             this.Controls.Add(this.lbl10);
@@ -403,6 +439,8 @@
             this.Controls.SetChildIndex(this.lbl10, 0);
             this.Controls.SetChildIndex(this.btnImage, 0);
             this.Controls.SetChildIndex(this.pic, 0);
+            this.Controls.SetChildIndex(this.swCodi2, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -432,5 +470,7 @@
         private BlibliotecaG2.SWTextbox user_name_swtxb;
         private System.Windows.Forms.Button btnImage;
         private System.Windows.Forms.PictureBox pic;
+        private Controles_Usuario.SWCodi swCodi2;
+        private System.Windows.Forms.Label label2;
     }
 }

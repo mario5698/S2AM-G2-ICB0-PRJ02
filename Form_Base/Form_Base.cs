@@ -21,8 +21,8 @@ namespace Form_Base
         public DataTable infotabla;
         protected string tabla;
         protected bool has_pass;
-        bool nuevo = false;
-        DataRow row;
+        protected bool nuevo = false;
+        protected DataRow row;
         string pass_orig;
 
         public Form_base()

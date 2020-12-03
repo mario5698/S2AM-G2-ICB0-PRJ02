@@ -31,11 +31,10 @@ namespace Formularios
 
         private void btnImage_Click(object sender, EventArgs e)
         {
-            OpenImage();
+            OpenImage(nuevo);
         }
 
-
-        protected void OpenImage()
+        private void OpenImage(bool nuevo)
         {
             OpenFileDialog ofd = new OpenFileDialog();
 
@@ -43,7 +42,9 @@ namespace Formularios
             {
                 Image img = new Bitmap(ofd.FileName);
                 byte[] imgBytes = imageToByteArray(img);
-                infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["photo"] = imgBytes;
+
+                if(nuevo) row["photo"] = imgBytes;
+                else infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["photo"] = imgBytes;
 
                 foreach (Control ctr in Controls)
                 {
