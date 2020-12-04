@@ -17,6 +17,7 @@ namespace species
         {
             InitializeComponent();
             tabla = "species";
+            dtg_head = new string[2] { "Codigo Specie", "Descripcion Specie" };
             has_pass = false;
         }
         private void species_Load(object sender, EventArgs e)

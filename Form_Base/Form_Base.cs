@@ -23,6 +23,7 @@ namespace Form_Base
         bool nuevo = false;
         DataRow row;
         string pass_orig;
+        protected string[] dtg_head;
 
         public Form_base()
         {
@@ -38,7 +39,7 @@ namespace Form_Base
             cry = new Encrypt(); 
             Portar_Dades();
             Info_Textbox();
-           // Dtg_header();
+            Dtg_header();
             cancel.Hide();
         }
 
@@ -50,16 +51,10 @@ namespace Form_Base
 
         private void Dtg_header()
         {
-            dtgUsers.Columns[0].HeaderText = "ID";
-            dtgUsers.Columns[1].HeaderText = "U_CODE";
-            dtgUsers.Columns[2].HeaderText = "U_NAME";
-            dtgUsers.Columns[3].HeaderText = "LOGIN";
-            dtgUsers.Columns[4].HeaderText = "PASS";
-            dtgUsers.Columns[5].HeaderText = "U_ID_RANK";
-            dtgUsers.Columns[6].HeaderText = "U_ID_CATEG";
-            dtgUsers.Columns[7].HeaderText = "PHOTO";
-            dtgUsers.Columns[8].HeaderText = "PLANET_ID";
-            dtgUsers.Columns[9].HeaderText = "SPECIE_ID";
+            for (int i = 0; i < dtg_head.Length; i++)
+            {
+                dtgUsers.Columns[i].HeaderText = dtg_head[i].ToString();
+            }
         }
 
         private void Info_Textbox()

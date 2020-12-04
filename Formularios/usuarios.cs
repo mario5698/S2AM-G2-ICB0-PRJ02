@@ -17,6 +17,8 @@ namespace Formularios
             InitializeComponent();
             tabla = "users";
             has_pass = true;
+            dtg_head = new string[11] { "Id", "Codigo", "Nombre", "Login", "Contraseña", "Rango",
+                "Categoria", "Imagen", "Id Planeta", "Id Specie", "Sal"};
         }
     }
 }
