@@ -130,6 +130,7 @@
             this.dtgUsers.Size = new System.Drawing.Size(1386, 437);
             this.dtgUsers.TabIndex = 93;
             this.dtgUsers.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsers_CellEnter);
+            this.dtgUsers.CurrentCellChanged += new System.EventHandler(this.ChangeImage);
             // 
             // Form_base
             // 

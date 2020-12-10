@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BlibliotecaG2;
 using Controles_Usuario;
+using System.IO;
 
 namespace Form_Base
 {
@@ -17,11 +18,11 @@ namespace Form_Base
     {
         Acceso obj;
         Encrypt cry;
-        DataTable infotabla;
+        public DataTable infotabla;
         protected string tabla;
         protected bool has_pass;
-        bool nuevo = false;
-        DataRow row;
+        protected bool nuevo = false;
+        protected DataRow row;
         string pass_orig;
         protected string[] dtg_head;
 
@@ -182,6 +183,57 @@ namespace Form_Base
             if (has_pass)
             {
                 pass_orig = infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["Password"].ToString();
+            }
+        }
+
+        public byte[] imageToByteArray(Image i)
+        {
+            using (var ms = new MemoryStream())
+            {
+                i.Save(ms, i.RawFormat);
+                return ms.ToArray();
+            }
+        }
+
+        public Image byteArrayToImage(byte[] array)
+        {
+            using (var ms = new MemoryStream(array))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        protected void OpenImage(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Image img = new Bitmap(ofd.FileName);
+                byte[] imgBytes = imageToByteArray(img);
+                infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["photo"] = imgBytes;
+
+                foreach (Control ctr in Controls)
+                {
+                    if (ctr.GetType() == typeof(PictureBox))
+                    {
+                        ctr.BackgroundImage = img;
+                    }
+                }
+            }
+        }
+
+        private void ChangeImage(Object sender, EventArgs e)
+        {
+
+            foreach (Control ctr in Controls)
+            {
+                if (ctr.GetType() == typeof(PictureBox) && dtgUsers.CurrentCell != null &&
+                    infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["photo"] != DBNull.Value)
+                {
+                    byte[] b = (byte[])infotabla.Rows[dtgUsers.CurrentCell.RowIndex]["photo"];
+                    ctr.BackgroundImage = byteArrayToImage(b);
+                }
             }
         }
     }

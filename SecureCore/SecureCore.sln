@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "species", "..\species\speci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "planets", "..\planets\planets.csproj", "{02D50ABD-FE1F-4D6F-BB8B-1E55BEB93526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "menuOptions", "..\menuOptions\menuOptions.csproj", "{5BA971A2-81BE-4B82-BB56-F48458B507CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categories", "..\Categories\Categories.csproj", "{BA5BBF26-DC5E-411F-920C-8B6B5591485D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{02D50ABD-FE1F-4D6F-BB8B-1E55BEB93526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02D50ABD-FE1F-4D6F-BB8B-1E55BEB93526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02D50ABD-FE1F-4D6F-BB8B-1E55BEB93526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA971A2-81BE-4B82-BB56-F48458B507CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA971A2-81BE-4B82-BB56-F48458B507CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA971A2-81BE-4B82-BB56-F48458B507CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA971A2-81BE-4B82-BB56-F48458B507CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
