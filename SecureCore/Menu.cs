@@ -40,34 +40,35 @@ namespace SecureCore
          
         }
 
-        private void traerForms(String rango)
+        private void traerForms(string rango)
         {
-            String tabla = "forms";
-            String consulta = "select * from " + tabla + " where Rank <= " + rango;
+            string tabla = "forms";
+            string consulta = "select * from " + tabla + " where Rank <= " + rango;
             DataSet dts = acc.PortarPerConsulta(consulta, tabla);
             int numeroForms = dts.Tables[tabla].Rows.Count;
-            String dll = "";
-            String FormName = "";
-            String Nombre = "";
+            string dll = "";
+            string FormName = "";
+            string Nombre = "";
 
             for (int i = 0; i < numeroForms; i++)
             {
                 dll = dts.Tables[0].Rows[i]["Namespace"].ToString();
                 FormName = dts.Tables[0].Rows[i]["Form"].ToString();
                 Nombre = dts.Tables[0].Rows[i]["Name"].ToString();
-                loadForm(dll, FormName, Nombre);
-            };
+                if (!(Int32.Parse(rango) >= 100 && FormName == "normal_users"))
+                {
+                    loadForm(dll, FormName, Nombre);
+                }
+            }
         }
-
 
         private void loadForm(string dll, string FormName, string Nombre)
         {
             Object dllBD;
-            Type tipus;
             Assembly ensamblat = Assembly.LoadFrom(dll + ".dll");
-            tipus = ensamblat.GetType(dll + "." + FormName);
+            Type tipus = ensamblat.GetType(dll + "." + FormName);
             dllBD = Activator.CreateInstance(tipus);
-            Form formulario = ((Form)dllBD);
+            Form formulario = (Form)dllBD;
             create(formulario, Nombre);
         }
 
@@ -87,9 +88,7 @@ namespace SecureCore
         private void myButton_click (object sender, EventArgs e, Form frm)
         {
             ShowFroms(frm);
-
         }
-
 
         private void Hide_panel_left(bool  hide_panel) 
         {

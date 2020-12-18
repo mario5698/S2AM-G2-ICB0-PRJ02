@@ -20,7 +20,7 @@ namespace Form_Base
         Encrypt cry;
         public DataTable infotabla;
         protected string tabla;
-        protected bool has_pass;
+        protected bool has_pass = false;
         protected bool nuevo = false;
         protected DataRow row;
         string pass_orig;

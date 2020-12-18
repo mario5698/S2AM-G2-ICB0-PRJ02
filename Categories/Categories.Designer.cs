@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cancel = new System.Windows.Forms.Button();
             this.Actualizar_Base = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.dtgUsers = new System.Windows.Forms.DataGridView();
+            this.access_swtbx = new BlibliotecaG2.SWTextbox();
+            this.desc_swtbx = new BlibliotecaG2.SWTextbox();
+            this.code_swtbx = new BlibliotecaG2.SWTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +55,7 @@
             this.cancel.TabIndex = 112;
             this.cancel.Text = "CANCEL";
             this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // Actualizar_Base
             // 
@@ -66,6 +70,7 @@
             this.Actualizar_Base.TabIndex = 110;
             this.Actualizar_Base.Text = "SAVE";
             this.Actualizar_Base.UseVisualStyleBackColor = false;
+            this.Actualizar_Base.Click += new System.EventHandler(this.Actualizar_Base_Click);
             // 
             // add
             // 
@@ -80,6 +85,7 @@
             this.add.TabIndex = 111;
             this.add.Text = "ADD";
             this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // dtgUsers
             // 
@@ -87,23 +93,23 @@
             this.dtgUsers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.dtgUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUsers.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgUsers.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgUsers.EnableHeadersVisualStyles = false;
             this.dtgUsers.GridColor = System.Drawing.Color.PaleGreen;
@@ -111,21 +117,66 @@
             this.dtgUsers.Name = "dtgUsers";
             this.dtgUsers.ReadOnly = true;
             this.dtgUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgUsers.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.PaleGreen;
-            this.dtgUsers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.PaleGreen;
+            this.dtgUsers.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgUsers.RowTemplate.Height = 28;
             this.dtgUsers.Size = new System.Drawing.Size(1386, 437);
             this.dtgUsers.TabIndex = 109;
+            // 
+            // access_swtbx
+            // 
+            this.access_swtbx.BackColor = System.Drawing.Color.PaleGreen;
+            this.access_swtbx.ControllID = null;
+            this.access_swtbx.dada = null;
+            this.access_swtbx.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
+            this.access_swtbx.Foranea = false;
+            this.access_swtbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.access_swtbx.Location = new System.Drawing.Point(673, 232);
+            this.access_swtbx.Name = "access_swtbx";
+            this.access_swtbx.Nom_BBDD = "accesslevel";
+            this.access_swtbx.obligatorio = false;
+            this.access_swtbx.Size = new System.Drawing.Size(100, 26);
+            this.access_swtbx.TabIndex = 115;
+            // 
+            // desc_swtbx
+            // 
+            this.desc_swtbx.BackColor = System.Drawing.Color.PaleGreen;
+            this.desc_swtbx.ControllID = null;
+            this.desc_swtbx.dada = null;
+            this.desc_swtbx.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
+            this.desc_swtbx.Foranea = false;
+            this.desc_swtbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.desc_swtbx.Location = new System.Drawing.Point(673, 190);
+            this.desc_swtbx.Name = "desc_swtbx";
+            this.desc_swtbx.Nom_BBDD = "DescCategory";
+            this.desc_swtbx.obligatorio = false;
+            this.desc_swtbx.Size = new System.Drawing.Size(100, 26);
+            this.desc_swtbx.TabIndex = 114;
+            // 
+            // code_swtbx
+            // 
+            this.code_swtbx.BackColor = System.Drawing.Color.PaleGreen;
+            this.code_swtbx.ControllID = null;
+            this.code_swtbx.dada = null;
+            this.code_swtbx.DadaPermesa = BlibliotecaG2.SWTextbox.TipusDada.Text;
+            this.code_swtbx.Foranea = false;
+            this.code_swtbx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.code_swtbx.Location = new System.Drawing.Point(673, 147);
+            this.code_swtbx.Name = "code_swtbx";
+            this.code_swtbx.Nom_BBDD = "CodeCategory";
+            this.code_swtbx.obligatorio = false;
+            this.code_swtbx.Size = new System.Drawing.Size(100, 26);
+            this.code_swtbx.TabIndex = 113;
             // 
             // Categories
             // 
@@ -133,6 +184,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.access_swtbx);
+            this.Controls.Add(this.desc_swtbx);
+            this.Controls.Add(this.code_swtbx);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.Actualizar_Base);
             this.Controls.Add(this.add);
@@ -143,6 +197,7 @@
             this.Load += new System.EventHandler(this.Categories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,5 +207,8 @@
         private System.Windows.Forms.Button Actualizar_Base;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.DataGridView dtgUsers;
+        private BlibliotecaG2.SWTextbox code_swtbx;
+        private BlibliotecaG2.SWTextbox desc_swtbx;
+        private BlibliotecaG2.SWTextbox access_swtbx;
     }
 }

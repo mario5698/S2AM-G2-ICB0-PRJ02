@@ -13,10 +13,10 @@ namespace Categories
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RankEntities : DbContext
+    public partial class CategoriesEntities : DbContext
     {
-        public RankEntities()
-            : base("name=RankEntities")
+        public CategoriesEntities()
+            : base("name=CategoriesEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace Categories
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<UserRank> UserRanks { get; set; }
+        public virtual DbSet<UserCategory> UserCategories { get; set; }
     }
 }

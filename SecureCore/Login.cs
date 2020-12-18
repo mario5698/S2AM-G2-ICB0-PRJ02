@@ -31,7 +31,7 @@ namespace SecureCore
             string user = txtUsername.Text;
             string password = txtPassword.Text;
             
-            String rango = "";
+            string rango = "", acc_level = "";
             string tabla = "users";
             //string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
 
@@ -55,10 +55,13 @@ namespace SecureCore
                 string consulta = String.Format(
                 "select * from {0} where login = '{1}' and password = '{2}'",
                 tabla, user, passwordHash);
-                
                 DataSet dts = acc.PortarPerConsulta(consulta, tabla);
-                rango = dts.Tables[0].Rows[0]["idUserRank"].ToString();
-                Splash obj = new Splash(user, rango);
+                rango = dts.Tables[0].Rows[0]["idUserCategory"].ToString();
+                string table = "UserCategories";
+                string cons = "select AccessLevel from " + table + "where idUserCategory = " + rango;
+                DataSet dt = acc.PortarPerConsulta(cons, table);
+                acc_level = dt.Tables[0].Rows[0]["AccessLevel"].ToString();
+                Splash obj = new Splash(user, acc_level);
                 this.Hide();
                 obj.Show();
             }

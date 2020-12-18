@@ -12,10 +12,11 @@ namespace Categories
     using System;
     using System.Collections.Generic;
     
-    public partial class UserRank
+    public partial class UserCategory
     {
-        public int idUserRank { get; set; }
-        public string CodeRank { get; set; }
-        public string DescRank { get; set; }
+        public int idUserCategory { get; set; }
+        public string CodeCategory { get; set; }
+        public string DescCategory { get; set; }
+        public Nullable<int> AccessLevel { get; set; }
     }
 }
