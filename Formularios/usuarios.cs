@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Acceso_Dades;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Windows.Forms;
+
+using System.Data;
+using System.Data.SqlClient;
+using CrystalDecisions.Shared;
 
 namespace Formularios
 {
@@ -173,6 +180,35 @@ namespace Formularios
         private void pic_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            ReportDocument cryRpt = new ReportDocument();
+            ConnectionInfo crConnectionInfo = new ConnectionInfo();
+            TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();
+
+            cryRpt.Load("../Formularios/report.rpt");
+            crConnectionInfo.ServerName = "ATHERIS\\SQLEXPRESS";
+            crConnectionInfo.IntegratedSecurity = true;
+            crConnectionInfo.DatabaseName = "SecureCore";
+            Tables CrTables = cryRpt.Database.Tables;
+
+            foreach (CrystalDecisions.CrystalReports.Engine.Table CrTable in CrTables)
+            {
+                crtableLogoninfo = CrTable.LogOnInfo;
+                crtableLogoninfo.ConnectionInfo = crConnectionInfo;
+                CrTable.ApplyLogOnInfo(crtableLogoninfo);
+            }
+
+            cryRpt.RecordSelectionFormula = "{Command.idUser} = " + int.Parse(infotabla.Rows[dtgUsers.CurrentRow.Index][0].ToString());
+            
+            int printerId = 0;
+            do printerId++;
+            while (PrinterSettings.InstalledPrinters[printerId] != "Microsoft Print to PDF");
+
+            cryRpt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, @"C:\Users\Snake\Desktop\Card.pdf");
+            
         }
     }
 }

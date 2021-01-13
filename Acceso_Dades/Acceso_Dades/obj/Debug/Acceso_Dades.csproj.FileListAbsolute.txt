@@ -13,3 +13,4 @@ C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\ejecutables\Acceso_Dades.pdb
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csproj.CoreCompileInputs.cache
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.dll
 C:\Users\Miguel\Desktop\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.pdb
+C:\Users\Snake\Documents\GitHub\S2AM-G2-Team\Acceso_Dades\Acceso_Dades\obj\Debug\Acceso_Dades.csprojAssemblyReference.cache
