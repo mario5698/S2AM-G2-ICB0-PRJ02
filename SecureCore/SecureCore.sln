@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "menuOptions", "..\menuOptio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categories", "..\Categories\Categories.csproj", "{BA5BBF26-DC5E-411F-920C-8B6B5591485D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edi_Proces", "..\Edi_Proces\Edi_Proces.csproj", "{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,14 @@ Global
 		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Release|x86.ActiveCfg = Release|Any CPU
 		{BA5BBF26-DC5E-411F-920C-8B6B5591485D}.Release|x86.Build.0 = Release|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Debug|x86.Build.0 = Debug|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|x86.ActiveCfg = Release|Any CPU
+		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
