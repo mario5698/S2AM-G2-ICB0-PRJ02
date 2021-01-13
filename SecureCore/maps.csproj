@@ -147,6 +147,10 @@
       <Project>{c24f59f5-5af2-4ef5-ba01-9603f1a1310f}</Project>
       <Name>Form_Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\planets\planets.csproj">
+      <Project>{02d50abd-fe1f-4d6f-bb8b-1e55beb93526}</Project>
+      <Name>planets</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pruebas\Pruebas.csproj">
       <Project>{b38e99ca-106d-4878-8377-f211d9e63b77}</Project>
       <Name>Pruebas</Name>

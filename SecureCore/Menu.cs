@@ -64,12 +64,14 @@ namespace SecureCore
 
         private void loadForm(string dll, string FormName, string Nombre)
         {
+
             Object dllBD;
             Assembly ensamblat = Assembly.LoadFrom(dll + ".dll");
             Type tipus = ensamblat.GetType(dll + "." + FormName);
             dllBD = Activator.CreateInstance(tipus);
             Form formulario = (Form)dllBD;
             create(formulario, Nombre);
+        
         }
 
         Button create(Form newFormulario, string Nombre)

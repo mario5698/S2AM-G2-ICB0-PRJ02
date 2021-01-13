@@ -16,8 +16,7 @@ namespace SecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splash("admin", "150"));
-            //Application.Run(new Menu("admin", "5"));
+            Application.Run(new Menu("admin", "5"));
         }
     }
 }
