@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net;
-using System.IO; 
 using Acceso_Dades;
 
 namespace Edi_Proces
@@ -16,43 +14,17 @@ namespace Edi_Proces
         string ord_id = "", id_op_a = "", id_fac = "", id_ag = "";
         string order = "", ord_date = "", order_id_type = "";
         string id_pla = "", id_ref = "", quant = "", fecha_ent = "";
-        String serverip = "ftp://192.168.10.1/DadesClients.edi";
-        String LocalDestinationPath = "..\\ejecutables\\OrdersEdi.edi";
-        String user = "g2";
-        String passwd = "12345aA";
+
 
         public void Split()
         {
             db = new EdiEntities();
             string line;
             int counter = 0;
-           
 
-
-            // Get the object used to communicate with the server.
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverip);
-            request.Method = WebRequestMethods.Ftp.DownloadFile;
-
-            // This example assumes the FTP site uses anonymous logon.
-            request.Credentials = new NetworkCredential(user, passwd);
-
-            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
-            Stream responseStream = response.GetResponseStream();
-            StreamReader file_ = new StreamReader(responseStream);
-
-            //FileStream fParameter = new FileStream(LocalDestinationPath, FileMode.Create, FileAccess.Write);
-
-            using (StreamWriter sw = File.CreateText(LocalDestinationPath))
-            {
-                    sw.WriteLine(file_.ReadToEnd());
-            }
-
-
-
-
-            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath);
-            while ((file.ReadLine()) != null)
+            System.IO.StreamReader file =
+            new System.IO.StreamReader("..\\ejecutables\\DadesClients.edi");
+            while ((line = file.ReadLine()) != null)
             {
                 counter++;
             }
@@ -60,8 +32,8 @@ namespace Edi_Proces
             string[] array = new string[counter];
 
             int arrayCounter = 0;
-            file = new System.IO.StreamReader(LocalDestinationPath);
 
+            file = new System.IO.StreamReader("..\\ejecutables\\DadesClients.edi");
             while ((line = file.ReadLine()) != null)
             {
                 array[arrayCounter] = line;
@@ -106,7 +78,6 @@ namespace Edi_Proces
                     Insert_OD();
                 }
             }
-            UploadFile();
         }
 
         private void Insert_O()
@@ -158,28 +129,6 @@ namespace Edi_Proces
             string consulta = "select " + want + " from [dbo].[" + table + "] where " + give + " = '" + have + "'";
             return con.PortarPerConsulta(consulta).Tables[0].Rows[0][0].ToString();
         }
-
-
-        public void UploadFile()
-        {
-
-            string ftpUrl = serverip;
-            string fileToUploaded = LocalDestinationPath;
-            FtpWebRequest peticion = (FtpWebRequest)WebRequest.Create(ftpUrl);
-            peticion.Method = WebRequestMethods.Ftp.UploadFile;
-            peticion.Credentials = new NetworkCredential(user, passwd);
-            using (var requestStream = peticion.GetRequestStream())
-            {
-                using (var input = File.OpenRead(fileToUploaded))
-                {
-                    input.CopyTo(requestStream);
-                }
-            }
-        }
-
-
     }
-
-
 }
 
