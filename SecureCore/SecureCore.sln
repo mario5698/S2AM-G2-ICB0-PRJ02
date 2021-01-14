@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categories", "..\Categories
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edi_Proces", "..\Edi_Proces\Edi_Proces.csproj", "{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadFromFtp", "..\DownloadFromFtp\DownloadFromFtp.csproj", "{FA94D5D4-314D-497E-AF25-828F56577A6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,14 @@ Global
 		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|x86.ActiveCfg = Release|Any CPU
 		{C31F33B8-7F9F-454C-85DD-04F4DD36F48E}.Release|x86.Build.0 = Release|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

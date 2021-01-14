@@ -33,9 +33,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(647, 377);
+            this.button1.Location = new System.Drawing.Point(431, 245);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 126);
+            this.button1.Size = new System.Drawing.Size(136, 82);
             this.button1.TabIndex = 8;
             this.button1.Text = "Process";
             this.button1.UseVisualStyleBackColor = true;
@@ -43,10 +44,11 @@
             // 
             // Edi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.ClientSize = new System.Drawing.Size(1265, 666);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Edi";
             this.Text = "Edi";
             this.ResumeLayout(false);

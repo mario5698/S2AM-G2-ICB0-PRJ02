@@ -20,8 +20,15 @@ namespace Edi_Proces
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Procesar_Edi edi = new Procesar_Edi();
-            edi.Split();
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Procesar_Edi edi = new Procesar_Edi();
+                edi.Split(ofd.FileName,ofd.SafeFileName);
+            }
+
+
         }
     }
 }
