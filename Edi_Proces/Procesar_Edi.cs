@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 using Acceso_Dades;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace Edi_Proces
 {
@@ -17,49 +20,60 @@ namespace Edi_Proces
         string order = "", ord_date = "", order_id_type = "";
         string id_pla = "", id_ref = "", quant = "", fecha_ent = "";
 
+        NameValueCollection appconfig = ConfigurationManager.AppSettings;
+                
+        int counter = 0;
+        string line;
 
-        public void Split()
+
+        private void getFileFromFPTServer()
         {
-            db = new EdiEntities();
-            string line;
-            int counter = 0;
-            string ipserver = "192.168.10.1";
-            string namedocument = "DadesClients.edi";
-            String LocalDestinationPath = "..\\ejecutables\\OrdersEdi.edi";
+
+            string ftpServer = appconfig.Get("ftpServer");
+            string nameDownload = appconfig.Get("nameDownload");
+            string user = appconfig.Get("user");
+            string passwd = appconfig.Get("passwd");
+            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
 
 
 
-
-            // Get the object used to communicate with the server.
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://"+ipserver+"/"+nomedocument);
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer + nameDownload);
             request.Method = WebRequestMethods.Ftp.DownloadFile;
-
-            // This example assumes the FTP site uses anonymous logon.
-            request.Credentials = new NetworkCredential("g2", "12345aA");
+            request.Credentials = new NetworkCredential(user, passwd);
 
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 
             Stream responseStream = response.GetResponseStream();
             StreamReader file_ = new StreamReader(responseStream);
-
-            //FileStream fParameter = new FileStream(LocalDestinationPath, FileMode.Create, FileAccess.Write);
-
             using (StreamWriter sw = File.CreateText(LocalDestinationPath))
             {
                 sw.WriteLine(file_.ReadToEnd());
             }
+        }
 
+        public void Split()
+        {
+            db = new EdiEntities();
+            //descarga el documento del servidor ftp 
+            getFileFromFPTServer();
 
-            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath);
-            while ((file.ReadLine()) != null)
-            {
-                counter++;
-            }
+            
+            //cuenta las lineas del documento descargador del ftp server 
+              countLines();
+            //obtiene los varlores del edi y los sube a la base de datos 
+              getSplitVar();
+            //sube el docuemento a el servidor ftp 
+            uploadFileToFtpServer();
+        }
+
+        private void getSplitVar()
+        {
+            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
 
             string[] array = new string[counter];
 
             int arrayCounter = 0;
-            file = new System.IO.StreamReader(LocalDestinationPath);
+            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath);
 
             while ((line = file.ReadLine()) != null)
             {
@@ -105,6 +119,20 @@ namespace Edi_Proces
                     Insert_OD();
                 }
             }
+    }
+
+
+
+        private void countLines()
+        {
+            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
+
+            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath);
+            while ((file.ReadLine()) != null)
+            {
+                counter++;
+            }
+
         }
 
         private void Insert_O()
@@ -155,6 +183,40 @@ namespace Edi_Proces
         {
             string consulta = "select " + want + " from [dbo].[" + table + "] where " + give + " = '" + have + "'";
             return con.PortarPerConsulta(consulta).Tables[0].Rows[0][0].ToString();
+        }
+
+
+        private void uploadFileToFtpServer()
+        {
+            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
+            string ftpServer = appconfig.Get("ftpServer");
+            string user = appconfig.Get("user");
+            string passwd = appconfig.Get("passwd");
+            string nameUpload = appconfig.Get("nameUpload");
+
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer+nameUpload);
+            request.Method = WebRequestMethods.Ftp.UploadFile;
+            request.Credentials = new NetworkCredential(user, passwd);
+
+
+            byte[] fileContents;
+            using (StreamReader sourceStream = new StreamReader(LocalDestinationPath))
+            {
+                fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+            }
+
+            request.ContentLength = fileContents.Length;
+
+            using (Stream requestStream = request.GetRequestStream())
+            {
+                requestStream.Write(fileContents, 0, fileContents.Length);
+            }
+
+            using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
+            {
+                Console.WriteLine($"Upload File Complete, status {response.StatusDescription}");
+            }
+
         }
     }
 }
