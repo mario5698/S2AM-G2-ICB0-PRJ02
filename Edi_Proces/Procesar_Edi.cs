@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.IO;
 using Acceso_Dades;
 
 namespace Edi_Proces
@@ -21,10 +23,35 @@ namespace Edi_Proces
             db = new EdiEntities();
             string line;
             int counter = 0;
+            string ipserver = "192.168.10.1";
+            string namedocument = "DadesClients.edi";
+            String LocalDestinationPath = "..\\ejecutables\\OrdersEdi.edi";
 
-            System.IO.StreamReader file =
-            new System.IO.StreamReader("..\\ejecutables\\DadesClients.edi");
-            while ((line = file.ReadLine()) != null)
+
+
+
+            // Get the object used to communicate with the server.
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://"+ipserver+"/"+nomedocument);
+            request.Method = WebRequestMethods.Ftp.DownloadFile;
+
+            // This example assumes the FTP site uses anonymous logon.
+            request.Credentials = new NetworkCredential("g2", "12345aA");
+
+            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+            Stream responseStream = response.GetResponseStream();
+            StreamReader file_ = new StreamReader(responseStream);
+
+            //FileStream fParameter = new FileStream(LocalDestinationPath, FileMode.Create, FileAccess.Write);
+
+            using (StreamWriter sw = File.CreateText(LocalDestinationPath))
+            {
+                sw.WriteLine(file_.ReadToEnd());
+            }
+
+
+            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath);
+            while ((file.ReadLine()) != null)
             {
                 counter++;
             }
@@ -32,8 +59,8 @@ namespace Edi_Proces
             string[] array = new string[counter];
 
             int arrayCounter = 0;
+            file = new System.IO.StreamReader(LocalDestinationPath);
 
-            file = new System.IO.StreamReader("..\\ejecutables\\DadesClients.edi");
             while ((line = file.ReadLine()) != null)
             {
                 array[arrayCounter] = line;
