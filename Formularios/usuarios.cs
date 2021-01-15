@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Acceso_Dades;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Windows.Forms;
+using System.Data.SqlClient;
+using CrystalDecisions.Shared;
+
 
 namespace Formularios
 {
@@ -173,6 +179,36 @@ namespace Formularios
         private void pic_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReportDocument report = new ReportDocument();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            TableLogOnInfo logonInfo = new TableLogOnInfo();
+
+            report.Load("../Formularios/card.rpt");
+            //cryRpt.Load("../Formularios/order.rpt");
+            connectionInfo.ServerName = "DESKTOP-2991IQ4\\SQLEXPRESS";
+            connectionInfo.DatabaseName = "SecureCore";
+            connectionInfo.IntegratedSecurity = true;
+            Tables tables = report.Database.Tables;
+
+            foreach (Table table in tables)
+            {
+                logonInfo = table.LogOnInfo;
+                logonInfo.ConnectionInfo = connectionInfo;
+                table.ApplyLogOnInfo(logonInfo);
+            }
+
+            report.RecordSelectionFormula = "{Command.idUser} = " + int.Parse(infotabla.Rows[dtgUsers.CurrentRow.Index][0].ToString());
+            //cryRpt.RecordSelectionFormula = "{Command.codeOrder} = 'Ord01'";
+
+            int printerId = 0;
+            do printerId++;
+            while (PrinterSettings.InstalledPrinters[printerId] != "Microsoft Print to PDF");
+
+            report.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Mario\Desktop\Card.pdf");
         }
     }
 }

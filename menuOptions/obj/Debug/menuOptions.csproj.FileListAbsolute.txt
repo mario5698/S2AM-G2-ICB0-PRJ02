@@ -15,3 +15,4 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csp
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.pdb
+C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csprojAssemblyReference.cache
