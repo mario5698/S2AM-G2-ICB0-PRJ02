@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_Base", "..\Form_Base\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controles_Usuario", "..\Controles_Usuario\Controles_Usuario.csproj", "{49DB4E3F-EA22-4FD4-91F8-D99C5EEE9126}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas", "..\Pruebas\Pruebas.csproj", "{B38E99CA-106D-4878-8377-F211D9E63B77}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formularios", "..\Formularios\Formularios.csproj", "{D7E42C39-5862-4080-962C-929C9377FE15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "species", "..\species\species.csproj", "{E636BC28-56BF-4038-8455-EB0C8ABE9A03}"
@@ -79,14 +77,6 @@ Global
 		{49DB4E3F-EA22-4FD4-91F8-D99C5EEE9126}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49DB4E3F-EA22-4FD4-91F8-D99C5EEE9126}.Release|x86.ActiveCfg = Release|Any CPU
 		{49DB4E3F-EA22-4FD4-91F8-D99C5EEE9126}.Release|x86.Build.0 = Release|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Debug|x86.Build.0 = Debug|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Release|x86.ActiveCfg = Release|Any CPU
-		{B38E99CA-106D-4878-8377-F211D9E63B77}.Release|x86.Build.0 = Release|Any CPU
 		{D7E42C39-5862-4080-962C-929C9377FE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D7E42C39-5862-4080-962C-929C9377FE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7E42C39-5862-4080-962C-929C9377FE15}.Debug|x86.ActiveCfg = Debug|Any CPU

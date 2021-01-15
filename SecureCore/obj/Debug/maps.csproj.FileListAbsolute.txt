@@ -58,3 +58,7 @@ C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Deb
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\SecureCore.exe.manifest
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\SecureCore.application
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe.manifest
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.application

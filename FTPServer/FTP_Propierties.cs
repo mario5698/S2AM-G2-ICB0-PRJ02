@@ -124,7 +124,10 @@ namespace FTPServer
             };
             db.Orders.Add(o);
             db.SaveChanges();
-            ord_id = (Select(order, "idOrder", "codeOrder", "Orders"));
+
+            string cons = "select top 1 idOrder from orders order by idOrder desc";
+            ord_id = con.PortarPerConsulta(cons).Tables[0].Rows[0][0].ToString();
+
         }
 
         private void Insert_OD()
