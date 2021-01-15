@@ -98,7 +98,6 @@
     <Compile Include="Priority.cs">
       <DependentUpon>EdiModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Procesar_Edi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reference.cs">
       <DependentUpon>EdiModel.tt</DependentUpon>
@@ -110,9 +109,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Acceso_Dades\Acceso_Dades\Acceso_Dades.csproj">
-      <Project>{cff4959d-dc40-4103-855d-b5f76864326e}</Project>
-      <Name>Acceso_Dades</Name>
+    <ProjectReference Include="..\DownloadFromFtp\DownloadFromFtp.csproj">
+      <Project>{fa94d5d4-314d-497e-af25-828f56577a6a}</Project>
+      <Name>DownloadFromFtp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FTPServer\FTPServer.csproj">
+      <Project>{9b54420e-d0af-4930-8fe6-06df2a73c85d}</Project>
+      <Name>FTPServer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

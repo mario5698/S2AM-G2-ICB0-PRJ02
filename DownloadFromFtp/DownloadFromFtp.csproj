@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Edi_Proces\Edi_Proces.csproj">
-      <Project>{c31f33b8-7f9f-454c-85dd-04f4dd36f48e}</Project>
-      <Name>Edi_Proces</Name>
+    <ProjectReference Include="..\FTPServer\FTPServer.csproj">
+      <Project>{9b54420e-d0af-4930-8fe6-06df2a73c85d}</Project>
+      <Name>FTPServer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

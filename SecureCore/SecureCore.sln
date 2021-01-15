@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edi_Proces", "..\Edi_Proces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadFromFtp", "..\DownloadFromFtp\DownloadFromFtp.csproj", "{FA94D5D4-314D-497E-AF25-828F56577A6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTPServer", "..\FTPServer\FTPServer.csproj", "{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,14 @@ Global
 		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|x86.ActiveCfg = Release|Any CPU
 		{FA94D5D4-314D-497E-AF25-828F56577A6A}.Release|x86.Build.0 = Release|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Debug|x86.Build.0 = Debug|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B54420E-D0AF-4930-8FE6-06DF2A73C85D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
