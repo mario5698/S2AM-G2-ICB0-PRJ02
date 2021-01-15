@@ -99,7 +99,6 @@
             this.Controls.Add(this.desc_planet_swtxb);
             this.Name = "species";
             this.Text = "species";
-            this.Load += new System.EventHandler(this.species_Load);
             this.Controls.SetChildIndex(this.desc_planet_swtxb, 0);
             this.Controls.SetChildIndex(this.user_cod_swtxb, 0);
             this.Controls.SetChildIndex(this.lbl3, 0);

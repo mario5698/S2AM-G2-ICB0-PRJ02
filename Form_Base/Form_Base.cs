@@ -35,7 +35,6 @@ namespace Form_Base
         {
 
             if (DesignMode) return;
-
             obj = new Acceso();
             cry = new Encrypt(); 
             Portar_Dades();
@@ -147,7 +146,6 @@ namespace Form_Base
                 obj.Actualitzar();
                 Portar_Dades();
                 Info_Textbox();
-
             }
         }
 

@@ -67,7 +67,6 @@ namespace Formularios
                 txtDepratamento.Text = "Comercial";
                 txtBestreta.Text = "120";
                 e.Cancel = true;
-
             }
             else
             {
@@ -86,11 +85,6 @@ namespace Formularios
                     txtBestreta.BackColor = Color.Red;
                 }
             }
-        }
-
-        private void Reto1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

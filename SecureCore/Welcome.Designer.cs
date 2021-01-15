@@ -57,7 +57,6 @@
             this.Logged_User_Name.TabIndex = 1;
             this.Logged_User_Name.Text = "User_Name";
             this.Logged_User_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Logged_User_Name.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Welcome
             // 

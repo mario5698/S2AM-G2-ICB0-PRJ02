@@ -34,7 +34,6 @@ namespace Acceso_Dades
             }
             catch (SqlException)
             {
-
             }
         }
 

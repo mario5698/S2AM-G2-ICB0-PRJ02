@@ -10,7 +10,6 @@ namespace Acceso_Dades
     {
         public  String getdesc(String codigo)
         {
-            
             string Desc;
             if (codigo == "S1J")
             {
@@ -22,7 +21,5 @@ namespace Acceso_Dades
             }
             return Desc;
         }
-
-
     }
 }

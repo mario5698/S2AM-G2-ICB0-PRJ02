@@ -47,7 +47,6 @@ namespace Formularios
                     ctr.DataBindings.Add("Text", infotabla, ((SWTextbox)ctr).Nom_BBDD.ToString()); //((SWTextbox)ctr).Nom_BBDD.ToString());
                     ctr.Validated += new System.EventHandler(ValidarTextBox);
                 }
-
             }
         }
 

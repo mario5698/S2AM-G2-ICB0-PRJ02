@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using FTPServer;
 using DownloadFromFtp;
 using System.Diagnostics;
-
 namespace Edi_Proces
 {
     public partial class Edi : Form
@@ -33,9 +32,7 @@ namespace Edi_Proces
                 {
                     ftp_p.upload(ofd.FileName, ofd.SafeFileName);
                     MessageBox.Show("Upload Complete");
-
                 }
-
             }
             catch (Exception)
             {
@@ -43,9 +40,6 @@ namespace Edi_Proces
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
-            
-           
-
         }
         //descarga
         private void button2_Click(object sender, EventArgs e)
@@ -68,8 +62,6 @@ namespace Edi_Proces
                 {
                     ftp_p.Split(prc.SafeFileName);
                 }
-
-
                 MessageBox.Show("Process Complete");
             }
             catch (Exception)

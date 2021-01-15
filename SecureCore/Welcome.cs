@@ -15,17 +15,7 @@ namespace SecureCore
         public Welcome(String nombre)
         {
             InitializeComponent();
-            Logged_User_Name.Text = "Welcome "+nombre;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            Logged_User_Name.Text = "Welcome " + nombre;
         }
     }
 }

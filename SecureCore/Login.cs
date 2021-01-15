@@ -33,7 +33,6 @@ namespace SecureCore
             
             string rango = "", acc_level = "";
             string tabla = "users";
-            //string consulta = "select * from "+ tabla +" where login = '" + user + "' and password = '" + password + "'";
 
             string query = "select * from " + tabla + " where login = '" + user + "'";
             DataSet set = acc.PortarPerConsulta(query, tabla);
@@ -46,10 +45,6 @@ namespace SecureCore
             string passwordHash = cry.ToString(bPassLocal);
             bool log = passwordHash == passwordDB;
 
-            //string consulta = "select * from " + tabla + " where login = '" + user + "' and password = '" + passwordHash + "'";
-
-
-
             if (acc.LoginCorrecto(user, passwordHash))
             {
                 string consulta = String.Format(
@@ -58,7 +53,7 @@ namespace SecureCore
                 DataSet dts = acc.PortarPerConsulta(consulta, tabla);
                 rango = dts.Tables[0].Rows[0]["idUserCategory"].ToString();
                 string table = "UserCategories";
-                string cons = "select AccessLevel from " + table + "where idUserCategory = " + rango;
+                string cons = "select AccessLevel from " + table + " where idUserCategory = " + rango;
                 DataSet dt = acc.PortarPerConsulta(cons, table);
                 acc_level = dt.Tables[0].Rows[0]["AccessLevel"].ToString();
                 Splash obj = new Splash(user, acc_level);
@@ -108,11 +103,6 @@ namespace SecureCore
         private void timerPassword_Tick(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = '\0';
-        }
-
-        private void panelLogin_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

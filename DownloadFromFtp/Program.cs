@@ -40,6 +40,8 @@ namespace DownloadFromFtp
                             {
                                 Console.WriteLine(ftp_p.getFileFromFPTServer(DocumentName));
                                 Console.WriteLine("Download Complete - Press any key to exit.");
+                                Console.ReadKey();
+
                             }
                             catch (Exception)
                             {
@@ -54,9 +56,6 @@ namespace DownloadFromFtp
                             Console.WriteLine("Press any key to exit.");
                             Console.ReadKey();
                         }
-
-
-
                     }
                 }
                 else
