@@ -170,6 +170,7 @@
             this.btnPassword.Size = new System.Drawing.Size(36, 36);
             this.btnPassword.TabIndex = 9;
             this.btnPassword.UseVisualStyleBackColor = false;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             this.btnPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.StartTimer);
             this.btnPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.StopTimer);
             // 

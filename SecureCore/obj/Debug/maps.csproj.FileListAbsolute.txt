@@ -62,3 +62,29 @@ C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\Secure
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\SecureCore.application
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe.manifest
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.application
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\App.config
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\DownloadFromFtp.exe.config
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\SecureCore.exe.config
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\SecureCore.exe.manifest
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\SecureCore.application
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\SecureCore.exe
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\maps.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Login.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Mantenimiento.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Menu.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Properties.Resources.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Splash.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.Welcome.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.TrustInfo.xml
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe.manifest
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.application
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\maps.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.exe
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\SecureCore\obj\Debug\SecureCore.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\card.rpt
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\card.cs
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\order.rpt
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\order.cs

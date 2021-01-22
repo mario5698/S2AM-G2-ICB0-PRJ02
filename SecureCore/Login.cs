@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Acceso_Dades;
+using System.IO;
 using System.Data.SqlClient;
 
 namespace SecureCore
@@ -103,6 +104,11 @@ namespace SecureCore
         private void timerPassword_Tick(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = '\0';
+        }
+
+        private void btnPassword_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Path.GetFullPath("."));
         }
     }
 }
