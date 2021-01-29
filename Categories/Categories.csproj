@@ -107,10 +107,6 @@
       <Project>{c24f59f5-5af2-4ef5-ba01-9603f1a1310f}</Project>
       <Name>Form_Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SecureCore\maps.csproj">
-      <Project>{395d367e-52f2-4646-b935-aadbbb723e94}</Project>
-      <Name>maps</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="CategoriesModel.edmx">

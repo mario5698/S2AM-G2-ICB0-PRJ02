@@ -73,9 +73,8 @@ namespace Formularios
             TableLogOnInfo logonInfo = new TableLogOnInfo();
             int printerId = 0;
 
-
-            report.Load("../Formularios/card.rpt");
-            //cryRpt.Load("../Formularios/order.rpt");
+            string path = (Path.GetFullPath("."));
+            report.Load(path + "\\card.rpt");
             connectionInfo.ServerName = "DESKTOP-2991IQ4\\SQLEXPRESS";
             connectionInfo.DatabaseName = "SecureCore";
             connectionInfo.IntegratedSecurity = true;
@@ -89,12 +88,11 @@ namespace Formularios
             }
 
             report.RecordSelectionFormula = "{Command.idUser} = " + int.Parse(infotabla.Rows[dtgUsers.CurrentRow.Index][0].ToString());
-            //cryRpt.RecordSelectionFormula = "{Command.codeOrder} = 'Ord01'";
 
             do printerId++;
             while (PrinterSettings.InstalledPrinters[printerId] != "Microsoft Print to PDF");
 
-            report.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\Mario\Desktop\Card.pdf");
+            report.ExportToDisk(ExportFormatType.PortableDocFormat, ".\\card.pdf");
         }
     }
 }

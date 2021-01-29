@@ -75,3 +75,15 @@ C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Formularios\obj\De
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Formularios\obj\Debug\Formularios.dll
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Formularios\obj\Debug\Formularios.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Formularios.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Formularios.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.Busqueda.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.normal_users.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.Reto1.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.usuarios.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Formularios\obj\Debug\Formularios.pdb

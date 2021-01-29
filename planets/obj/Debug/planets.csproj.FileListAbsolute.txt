@@ -34,3 +34,12 @@ C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\planets\obj\Debug\
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\planets\obj\Debug\planets.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\planets\obj\Debug\planets.dll
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\planets\obj\Debug\planets.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\planets.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\planets.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.planets.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\planets\obj\Debug\planets.pdb

@@ -28,3 +28,13 @@ C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Categories\obj\Deb
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Categories\obj\Debug\Categories.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Categories\obj\Debug\Categories.dll
 C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Categories\obj\Debug\Categories.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Categories.dll.config
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Categories.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Categories.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.Categories.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Categories\obj\Debug\Categories.pdb
