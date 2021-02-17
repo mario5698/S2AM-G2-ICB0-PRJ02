@@ -25,3 +25,21 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\Form_Base.dll
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\Form_Base.pdb
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.Form_base.resources
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Form_Base.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\Form_Base.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.Form_base.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\Form_Base\obj\Debug\Form_Base.pdb

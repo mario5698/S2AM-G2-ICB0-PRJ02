@@ -31,14 +31,7 @@ namespace SecureCore
                 this.Hide();
                 menu.Show();
                 timer.Enabled = false;
-
             }
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

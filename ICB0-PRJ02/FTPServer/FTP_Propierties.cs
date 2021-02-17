@@ -13,30 +13,27 @@ namespace FTPServer
 {
     public class FTP_Propierties
     {
-
+        NameValueCollection appconfig = ConfigurationManager.AppSettings;
         Acceso con = new Acceso();
         OrderEntities db;
         string ord_id = "", id_op_a = "", id_fac = "", id_ag = "";
         string order = "", ord_date = "", order_id_type = "";
         string id_pla = "", id_ref = "", quant = "", fecha_ent = "";
-
-        NameValueCollection appconfig = ConfigurationManager.AppSettings;
-
-        int counter = 0;
+        int counter;
         string line;
 
-        public void Split( string name)
+        public void Split( string name, string folder)
         {
-
+            counter = 0;
             db = new OrderEntities();
             //descarga el documento del servidor ftp
             //getFileFromFPTServer();
 
 
             //cuenta las lineas del documento descargador del ftp server
-            countLines(name);
+            countLines(name, folder);
             //obtiene los varlores del edi y los sube a la base de datos
-            getSplitVar(name);
+            getSplitVar(name, folder);
             //sube el docuemento a el servidor ftp
             //uploadFileToFtpServer(filepath, name);
         }
@@ -44,18 +41,15 @@ namespace FTPServer
         public void upload(string filepath, string name)
         {
             uploadFileToFtpServer(filepath, name);
-
         }
 
 
-        private void getSplitVar(String name)
+        private void getSplitVar(string name, string folder)
         {
-            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
-
             string[] array = new string[counter];
 
             int arrayCounter = 0;
-            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath+name);
+            System.IO.StreamReader file = new System.IO.StreamReader(folder);
 
             while ((line = file.ReadLine()) != null)
             {
@@ -101,28 +95,23 @@ namespace FTPServer
                     Insert_OD();
                 }
             }
-
-
-
+            file.Close();
         }
 
 
 
-        private void countLines(string name)
+        private void countLines(string name, string folder)
         {
-            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
-
-            System.IO.StreamReader file = new System.IO.StreamReader(LocalDestinationPath+name);
+            System.IO.StreamReader file = new System.IO.StreamReader(folder);
             while ((file.ReadLine()) != null)
             {
                 counter++;
             }
-
+            file.Close();
         }
 
         private void Insert_O()
         {
-
             DateTime fecha_ord = DateTime.ParseExact(ord_date, "yyyyMMdd", null);
             Order o = new Order
             {
@@ -133,7 +122,10 @@ namespace FTPServer
             };
             db.Orders.Add(o);
             db.SaveChanges();
-            ord_id = (Select(order, "idOrder", "codeOrder", "Orders"));
+
+            string cons = "select top 1 idOrder from orders order by idOrder desc";
+            ord_id = con.PortarPerConsulta(cons).Tables[0].Rows[0][0].ToString();
+
         }
 
         private void Insert_OD()
@@ -163,28 +155,25 @@ namespace FTPServer
             db.SaveChanges();
         }
 
-
         private string Select(string have, string want, string give, string table)
         {
             string consulta = "select " + want + " from [dbo].[" + table + "] where " + give + " = '" + have + "'";
             return con.PortarPerConsulta(consulta).Tables[0].Rows[0][0].ToString();
         }
 
-
         private void uploadFileToFtpServer(string filepath, string name)
         {
-            //string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
             string ftpServer = appconfig.Get("ftpServer");
-            string user = appconfig.Get("user");
+            string nameDownload = appconfig.Get("nameDownload");
+            string user = appconfig.Get("user"); ;
             string passwd = appconfig.Get("passwd");
-            // string nameUpload = appconfig.Get("nameUpload");
+
+            byte[] fileContents;
 
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer + "/" + name);
             request.Method = WebRequestMethods.Ftp.UploadFile;
             request.Credentials = new NetworkCredential(user, passwd);
 
-
-            byte[] fileContents;
 
             using (StreamReader sourceStream = new StreamReader(@filepath))
             {
@@ -202,19 +191,13 @@ namespace FTPServer
             {
                 Console.WriteLine($"Upload File Complete, status {response.StatusDescription}");
             }
-
         }
-
-
-
-
 
         public string ConnectFtpserver()
         {
-
             string ftpServer = appconfig.Get("ftpServer");
             string nameDownload = appconfig.Get("nameDownload");
-            string user = appconfig.Get("user");
+            string user = appconfig.Get("user"); ;
             string passwd = appconfig.Get("passwd");
 
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer);
@@ -233,12 +216,10 @@ namespace FTPServer
         {
             string ftpServer = appconfig.Get("ftpServer");
             string nameDownload = appconfig.Get("nameDownload");
-            string user = appconfig.Get("user");
+            string user = appconfig.Get("user"); ;
             string passwd = appconfig.Get("passwd");
-            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
 
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer);
-            //request.Method = WebRequestMethods.Ftp.DownloadFile;
             request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
             request.Credentials = new NetworkCredential(user, passwd);
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
@@ -249,9 +230,9 @@ namespace FTPServer
             {
                 Console.WriteLine(reader.ReadToEnd());
                 reader.Close();
+
                 return true;            
             } else {
-
                 return false;
             }
         }
@@ -260,12 +241,10 @@ namespace FTPServer
         {
             string ftpServer = appconfig.Get("ftpServer");
             string nameDownload = appconfig.Get("nameDownload");
-            string user = appconfig.Get("user");
+            string user = appconfig.Get("user"); ;
             string passwd = appconfig.Get("passwd");
-            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
 
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer);
-            //request.Method = WebRequestMethods.Ftp.DownloadFile;
             request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
             request.Credentials = new NetworkCredential(user, passwd);
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
@@ -278,20 +257,16 @@ namespace FTPServer
             }
             else
             {
-
                 return false;
             }
         }
-
-
 
         public string getFileFromFPTServer(string namedocument)
         {
             string ftpServer = appconfig.Get("ftpServer");
             string nameDownload = appconfig.Get("nameDownload");
-            string user = appconfig.Get("user");
+            string user = appconfig.Get("user"); ;
             string passwd = appconfig.Get("passwd");
-            string LocalDestinationPath = appconfig.Get("LocalDestinationPath");
 
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpServer + "/" + namedocument);
             request.Method = WebRequestMethods.Ftp.DownloadFile;
@@ -300,7 +275,7 @@ namespace FTPServer
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
             Stream responseStream = response.GetResponseStream();
             StreamReader file_ = new StreamReader(responseStream);
-            using (StreamWriter sw = File.CreateText(LocalDestinationPath + namedocument))
+            using (StreamWriter sw = File.CreateText(".\\" + namedocument))
             {
                 sw.WriteLine(file_.ReadToEnd());
             }
@@ -309,9 +284,5 @@ namespace FTPServer
                 return "Download File Complete, status " + peticion.StatusDescription;
             }
         }
-
-
-
-
     }
 }

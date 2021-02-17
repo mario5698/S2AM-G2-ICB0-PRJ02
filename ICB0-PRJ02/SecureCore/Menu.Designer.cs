@@ -59,7 +59,6 @@
             this.pnl_rigth.Name = "pnl_rigth";
             this.pnl_rigth.Size = new System.Drawing.Size(1186, 759);
             this.pnl_rigth.TabIndex = 2;
-            this.pnl_rigth.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_rigth_Paint);
             // 
             // pnl_left
             // 

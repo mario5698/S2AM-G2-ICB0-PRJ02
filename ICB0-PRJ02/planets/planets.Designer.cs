@@ -514,7 +514,6 @@
             this.Controls.Add(this.desc_planet_swtxb);
             this.Name = "planets";
             this.Text = "planets";
-            this.Load += new System.EventHandler(this.planets_Load);
             this.Controls.SetChildIndex(this.desc_planet_swtxb, 0);
             this.Controls.SetChildIndex(this.user_cod_swtxb, 0);
             this.Controls.SetChildIndex(this.long_swtxb, 0);

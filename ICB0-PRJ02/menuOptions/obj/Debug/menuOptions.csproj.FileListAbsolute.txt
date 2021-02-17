@@ -16,3 +16,21 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csp
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.pdb
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\menuOptions.dll
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\menuOptions.pdb
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.menuOptions.resources
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.dll
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\menuOptions.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\menuOptions.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.menuOptions.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\menuOptions\obj\Debug\menuOptions.pdb

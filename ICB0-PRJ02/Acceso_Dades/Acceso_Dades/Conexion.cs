@@ -95,8 +95,6 @@ namespace Acceso_Dades
             return registresAfectats;
         }
 
-        
-
         public void Store()
         {
             conexion.Open();

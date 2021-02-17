@@ -30,14 +30,11 @@ namespace SecureCore
             Welcome myForm = new Welcome(user);
             Inuse = myForm;
             ShowFroms(myForm);
-
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            
             Hide_panel_left(Hide_Panel);
-         
         }
 
         private void traerForms(string rango)
@@ -46,9 +43,7 @@ namespace SecureCore
             string consulta = "select * from " + tabla + " where Rank <= " + rango;
             DataSet dts = acc.PortarPerConsulta(consulta, tabla);
             int numeroForms = dts.Tables[tabla].Rows.Count;
-            string dll = "";
-            string FormName = "";
-            string Nombre = "";
+            string dll , FormName ,Nombre ;
 
             for (int i = 0; i < numeroForms; i++)
             {
@@ -64,14 +59,12 @@ namespace SecureCore
 
         private void loadForm(string dll, string FormName, string Nombre)
         {
-
             Object dllBD;
             Assembly ensamblat = Assembly.LoadFrom(dll + " .dll");
             Type tipus = ensamblat.GetType(dll + "." + FormName);
             dllBD = Activator.CreateInstance(tipus);
             Form formulario = (Form)dllBD;
             create(formulario, Nombre);
-        
         }
 
         Button create(Form newFormulario, string Nombre)
@@ -102,7 +95,6 @@ namespace SecureCore
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
                     Inuse.Size = new Size(pnl_rigth.Width + i+1, pnl_rigth.Height);
-
                 }
                 
                 Hide_Panel = true;
@@ -112,16 +104,11 @@ namespace SecureCore
                 for (int i = Min_Size; i <= Max_Size; i+=speed)
                 {
                     pnl_left.Size = new Size(i, pnl_left.Height);
-                    //Inuse.Size = new Size(pnl_rigth.Width - i + 1, pnl_rigth.Height);
-
                 }
-
-
                 Hide_Panel = false;
             }
         }
 
-  
         private void ShowFroms( Form myForm ) 
         {
             Inuse = myForm;
@@ -143,11 +130,6 @@ namespace SecureCore
         {
             Formularios.Busqueda formulario = new Formularios.Busqueda();
             ShowFroms(formulario);
-        }
-
-        private void pnl_rigth_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

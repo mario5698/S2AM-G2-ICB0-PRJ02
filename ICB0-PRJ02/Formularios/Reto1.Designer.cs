@@ -165,7 +165,6 @@
             this.Name = "Reto1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reto1";
-            this.Load += new System.EventHandler(this.Reto1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -67,7 +67,6 @@
             this.lbl10.Size = new System.Drawing.Size(81, 20);
             this.lbl10.TabIndex = 181;
             this.lbl10.Text = "Specie_Id";
-            this.lbl10.Click += new System.EventHandler(this.lbl10_Click);
             // 
             // lbl8
             // 
@@ -81,7 +80,6 @@
             this.lbl8.Size = new System.Drawing.Size(54, 20);
             this.lbl8.TabIndex = 180;
             this.lbl8.Text = "Image";
-            this.lbl8.Click += new System.EventHandler(this.lbl8_Click);
             // 
             // lbl9
             // 
@@ -95,7 +93,6 @@
             this.lbl9.Size = new System.Drawing.Size(77, 20);
             this.lbl9.TabIndex = 179;
             this.lbl9.Text = "Planet_Id";
-            this.lbl9.Click += new System.EventHandler(this.lbl9_Click);
             // 
             // lbl7
             // 
@@ -109,7 +106,6 @@
             this.lbl7.Size = new System.Drawing.Size(139, 20);
             this.lbl7.TabIndex = 178;
             this.lbl7.Text = "User_Id_Category";
-            this.lbl7.Click += new System.EventHandler(this.lbl7_Click);
             // 
             // lbl6
             // 
@@ -123,7 +119,6 @@
             this.lbl6.Size = new System.Drawing.Size(113, 20);
             this.lbl6.TabIndex = 177;
             this.lbl6.Text = "User_Id_Rank";
-            this.lbl6.Click += new System.EventHandler(this.lbl6_Click);
             // 
             // specie_id_swtxb
             // 
@@ -140,7 +135,6 @@
             this.specie_id_swtxb.Size = new System.Drawing.Size(86, 20);
             this.specie_id_swtxb.TabIndex = 171;
             this.specie_id_swtxb.Tag = "";
-            this.specie_id_swtxb.TextChanged += new System.EventHandler(this.specie_id_swtxb_TextChanged);
             // 
             // planet_id_swtxb
             // 
@@ -157,7 +151,6 @@
             this.planet_id_swtxb.Size = new System.Drawing.Size(86, 20);
             this.planet_id_swtxb.TabIndex = 169;
             this.planet_id_swtxb.Tag = "";
-            this.planet_id_swtxb.TextChanged += new System.EventHandler(this.planet_id_swtxb_TextChanged);
             // 
             // label1
             // 
@@ -171,7 +164,6 @@
             this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 182;
             this.label1.Text = "Specie_Code";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl2
             // 
@@ -185,7 +177,6 @@
             this.lbl2.Size = new System.Drawing.Size(90, 20);
             this.lbl2.TabIndex = 173;
             this.lbl2.Text = "User_Code";
-            this.lbl2.Click += new System.EventHandler(this.lbl2_Click);
             // 
             // user_id_category_swtxb
             // 
@@ -202,7 +193,6 @@
             this.user_id_category_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_id_category_swtxb.TabIndex = 167;
             this.user_id_category_swtxb.Tag = "";
-            this.user_id_category_swtxb.TextChanged += new System.EventHandler(this.user_id_category_swtxb_TextChanged);
             // 
             // lbl4
             // 
@@ -216,7 +206,6 @@
             this.lbl4.Size = new System.Drawing.Size(48, 20);
             this.lbl4.TabIndex = 174;
             this.lbl4.Text = "Login";
-            this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
             // 
             // id_user_rank_swtxb
             // 
@@ -233,7 +222,6 @@
             this.id_user_rank_swtxb.Size = new System.Drawing.Size(86, 20);
             this.id_user_rank_swtxb.TabIndex = 166;
             this.id_user_rank_swtxb.Tag = "";
-            this.id_user_rank_swtxb.TextChanged += new System.EventHandler(this.id_user_rank_swtxb_TextChanged);
             // 
             // lbl3
             // 
@@ -247,7 +235,6 @@
             this.lbl3.Size = new System.Drawing.Size(94, 20);
             this.lbl3.TabIndex = 175;
             this.lbl3.Text = "User_Name";
-            this.lbl3.Click += new System.EventHandler(this.lbl3_Click);
             // 
             // lbl5
             // 
@@ -261,7 +248,6 @@
             this.lbl5.Size = new System.Drawing.Size(78, 20);
             this.lbl5.TabIndex = 176;
             this.lbl5.Text = "Password";
-            this.lbl5.Click += new System.EventHandler(this.lbl5_Click);
             // 
             // login_swtxb
             // 
@@ -278,7 +264,6 @@
             this.login_swtxb.Size = new System.Drawing.Size(86, 20);
             this.login_swtxb.TabIndex = 164;
             this.login_swtxb.Tag = "";
-            this.login_swtxb.TextChanged += new System.EventHandler(this.login_swtxb_TextChanged);
             // 
             // password_swtxb
             // 
@@ -295,7 +280,6 @@
             this.password_swtxb.Size = new System.Drawing.Size(86, 20);
             this.password_swtxb.TabIndex = 165;
             this.password_swtxb.Tag = "";
-            this.password_swtxb.TextChanged += new System.EventHandler(this.password_swtxb_TextChanged);
             // 
             // swCodi1
             // 
@@ -315,7 +299,6 @@
             this.swCodi1.Requerit = false;
             this.swCodi1.Size = new System.Drawing.Size(375, 28);
             this.swCodi1.TabIndex = 170;
-            this.swCodi1.Load += new System.EventHandler(this.swCodi1_Load);
             // 
             // user_cod_swtxb
             // 
@@ -332,7 +315,6 @@
             this.user_cod_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_cod_swtxb.TabIndex = 162;
             this.user_cod_swtxb.Tag = "";
-            this.user_cod_swtxb.TextChanged += new System.EventHandler(this.user_cod_swtxb_TextChanged);
             // 
             // user_name_swtxb
             // 
@@ -349,7 +331,6 @@
             this.user_name_swtxb.Size = new System.Drawing.Size(86, 20);
             this.user_name_swtxb.TabIndex = 163;
             this.user_name_swtxb.Tag = "";
-            this.user_name_swtxb.TextChanged += new System.EventHandler(this.user_name_swtxb_TextChanged);
             // 
             // btnImage
             // 
@@ -369,12 +350,11 @@
             // 
             this.pic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic.Location = new System.Drawing.Point(588, 35);
+            this.pic.Location = new System.Drawing.Point(282, 35);
             this.pic.Name = "pic";
             this.pic.Size = new System.Drawing.Size(259, 211);
             this.pic.TabIndex = 184;
             this.pic.TabStop = false;
-            this.pic.Click += new System.EventHandler(this.pic_Click);
             // 
             // swCodi2
             // 
@@ -394,7 +374,6 @@
             this.swCodi2.Requerit = false;
             this.swCodi2.Size = new System.Drawing.Size(375, 28);
             this.swCodi2.TabIndex = 185;
-            this.swCodi2.Load += new System.EventHandler(this.swCodi2_Load);
             // 
             // label2
             // 
@@ -408,7 +387,6 @@
             this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 186;
             this.label2.Text = "Planet_Code";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
@@ -459,7 +437,6 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "usuarios";
             this.Text = "usuarios";
-            this.Load += new System.EventHandler(this.usuarios_Load);
             this.Controls.SetChildIndex(this.pic, 0);
             this.Controls.SetChildIndex(this.user_name_swtxb, 0);
             this.Controls.SetChildIndex(this.user_cod_swtxb, 0);

@@ -20,9 +20,5 @@ namespace planets
             dtg_head = new string[13] { "Id", "Codigo", "Descripcion", "Id Sector", "Longitud", "Latitud", "Parsecs",
                 "Id Specie", "Id Filiacion", "Imagen", "IP", "Puerto", "Puerto*"};
         }
-
-        private void planets_Load(object sender, EventArgs e)
-        {
-        }
     }
 }

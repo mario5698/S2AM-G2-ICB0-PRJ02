@@ -19,10 +19,5 @@ namespace menuOptions
             tabla = "forms";
             dtg_head = new string[6] { "Id", "Rango", "NameSpace", "Form", "Nombre", "Descripcion"};
         }
-
-        private void menuOptions_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

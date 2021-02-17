@@ -25,3 +25,21 @@ C:\Users\Mario\Desktop\Github\S2AM-G2-Team\species\obj\Debug\species.csproj.Core
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\species\obj\Debug\species.csproj.CopyComplete
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\species\obj\Debug\species.dll
 C:\Users\Mario\Desktop\Github\S2AM-G2-Team\species\obj\Debug\species.pdb
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\species.dll
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\ejecutables\species.pdb
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.species.resources
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.dll
+C:\Users\Mario\Desktop\Github\comprobar projecto\S2AM-G2-Team\species\obj\Debug\species.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\species.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\ejecutables\species.pdb
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.species.resources
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.csproj.CopyComplete
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.dll
+C:\Users\Mario\Desktop\Github\comprobar\S2AM-G2-Team\species\obj\Debug\species.pdb
